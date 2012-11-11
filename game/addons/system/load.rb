@@ -1,7 +1,7 @@
 module AresMUSH
-  module EventHandlers
-    class Load
-      def initialize(container)
+  module System
+    class Load      
+      def on_registered
         @addon_manager = container.addon_manager
       end
 
@@ -20,6 +20,8 @@ module AresMUSH
           client.emit_failure "Error loading '#{addon_name}' addon: #{e.to_s}"
         end
       end
+      
+      include AresMUSH::Addon      
     end
   end
 end

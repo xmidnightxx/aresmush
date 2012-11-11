@@ -1,24 +1,27 @@
 module AresMUSH
-
+  
   class Bootstrapper 
 
     attr_reader :command_line
+    
+    def self.addon_manager
+      @@addon_manager
+    end
     
     def initialize
       game_dir = File.join(Dir.pwd, "game")
       config_reader = ConfigReader.new(game_dir)
       ares_logger = AresLogger.new(config_reader)
       locale = Locale.new(config_reader, File.join(Dir.pwd, "locales"))
-      addon_factory = AddonFactory.new
-      addon_manager = AddonManager.new(addon_factory, game_dir)
-      dispatcher = Dispatcher.new(addon_manager)
+      @@addon_manager = AddonManager.new(game_dir)
+      dispatcher = Dispatcher.new(@@addon_manager)
       client_monitor = ClientMonitor.new(config_reader, dispatcher)
       server = Server.new(config_reader, client_monitor)
-      db = Database.new(config_reader, Dir.pwd)
+      db = Database.new(config_reader)
       
       # Now that everything's created, give the factory a container of the main addon 
       # objects so that it can pass those along to the individual addons
-      addon_factory.container = Container.new(config_reader, client_monitor, addon_manager, dispatcher)
+      @@addon_manager.container = Container.new(config_reader, client_monitor, @@addon_manager, dispatcher)
 
       # Configure a trap for exiting.
       at_exit do
@@ -36,7 +39,7 @@ module AresMUSH
       ares_logger.start
       db.connect
       locale.setup
-      addon_manager.load_all
+      @@addon_manager.load_all
       
       logger.debug config_reader.config
 

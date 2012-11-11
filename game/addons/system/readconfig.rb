@@ -1,7 +1,7 @@
 module AresMUSH
-  module EventHandlers
+  module System
     class ReadConfig
-      def initialize(container)
+      def on_registered
         @client_monitor = container.client_monitor
         @config_reader = container.config_reader
       end
@@ -14,6 +14,8 @@ module AresMUSH
         @config_reader.read
         client.emit_success "You reload the config files."
       end
+      
+      include AresMUSH::Addon      
     end
   end
 end

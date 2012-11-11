@@ -6,25 +6,33 @@ module AresMUSH
   end
   
   class AddonManager
-    def initialize(addon_factory, game_dir)
+    def initialize(game_dir)
       @addons_path = File.join(game_dir, "addons")
-      @addon_factory = addon_factory
       @addons = []
     end
     
     attr_reader :addons
+    attr_accessor :container
 
+    def register_addon(sym)
+      addon = sym.new(@container)
+      logger.debug "Registering #{addon}. commands: #{addon.commands}."
+      addon.on_registered
+      @addons << addon
+      @addons.each { |a| puts "#{a} #{a.respond_to?(:on_player_command)}"}
+    end
+    
     def load_all
       addon_files = Dir[File.join(@addons_path, "**", "*.rb")]
+      @addons = []
       load_addon_code(addon_files)
-      @addons = @addon_factory.create_addon_classes
     end
     
     def load_addon(name)
+      puts addons
       addon_files = Dir[File.join(@addons_path, name, "**", "*.rb")]
       raise SystemNotFoundException if addon_files.empty?
-      load_addon_code(addon_files)
-      @addons = @addon_factory.create_addon_classes
+      load_addon_code(addon_files)      
     end
       
     private    

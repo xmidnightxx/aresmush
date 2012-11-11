@@ -1,7 +1,7 @@
 module AresMUSH
-  module EventHandlers
+  module Who
     class Who
-      def initialize(container)
+      def on_registered
         @client_monitor = container.client_monitor
       end
 
@@ -12,6 +12,8 @@ module AresMUSH
       def on_player_command(client, cmd)
         client.emit_ooc t('players_connected', :count => @client_monitor.clients.count)
       end
+
+    include AresMUSH::Addon      
     end
   end
 end

@@ -1,7 +1,7 @@
 module AresMUSH
-  module EventHandlers
+  module Pose
     class Say
-      def initialize(container)
+      def on_registered
         @client_monitor = container.client_monitor
       end
       
@@ -12,6 +12,8 @@ module AresMUSH
       def on_player_command(client, cmd)
         @client_monitor.tell_all "Client #{client.id} says \"#{cmd[:msg]}\""
       end
+      
+      include AresMUSH::Addon      
     end
   end
 end

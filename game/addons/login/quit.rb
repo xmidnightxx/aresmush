@@ -1,9 +1,6 @@
 module AresMUSH
-  module EventHandlers
-    class Quit
-      def initialize(container)
-      end
-
+  module Login
+    class Quit      
       def commands
         ["quit"]
       end
@@ -11,6 +8,8 @@ module AresMUSH
       def on_player_command(client, cmd)
         client.disconnect
       end
-    end
+      
+      include AresMUSH::Addon
+    end    
   end
 end

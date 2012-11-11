@@ -1,7 +1,7 @@
 module AresMUSH
-  module EventHandlers
+  module Login
     class LoginEvents
-      def initialize(container)
+      def on_registered
         @client_monitor = container.client_monitor
       end
       
@@ -14,6 +14,8 @@ module AresMUSH
         client = args[:client]
         @client_monitor.tell_all t('login.player_has_disconnected', :name => client.id)
       end
+      
+      include AresMUSH::Addon
     end
   end
 end

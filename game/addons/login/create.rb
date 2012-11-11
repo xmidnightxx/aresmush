@@ -1,9 +1,6 @@
 module AresMUSH
-  module EventHandlers
+  module Login
     class Create
-      def initialize(container)
-      end
-
       def commands
         ["create (?<name>\\S+) (?<password>\\S+)"]
       end
@@ -22,6 +19,9 @@ module AresMUSH
           client.emit_success(t('login.player_created', :name => name))
         end
       end
+      
+      include AresMUSH::Addon
+      
     end
   end
 end
