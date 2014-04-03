@@ -3,10 +3,11 @@ module AresMUSH
     class HideCmd
       include AresMUSH::Plugin
 
-      # Validators
-      no_args
-      no_switches
-      must_be_logged_in
+      def setup_error_checkers
+        self.class.no_args
+        self.class.no_switches
+        self.class.must_be_logged_in
+      end
       
       def want_command?(client, cmd)
          cmd.root_is?("hide") || cmd.root_is?("unhide")

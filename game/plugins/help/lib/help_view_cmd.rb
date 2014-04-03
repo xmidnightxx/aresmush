@@ -7,9 +7,11 @@ module AresMUSH
       attr_accessor :category
       attr_accessor :topic
       
-      no_switches
-      argument_must_be_present "category", "help"
-      argument_must_be_present "topic", "help"
+      def setup_error_checkers
+        self.class.no_switches
+        self.class.argument_must_be_present "category", "help"
+        self.class.argument_must_be_present "topic", "help"
+      end
             
       def want_command?(client, cmd)
         Help.valid_commands.include?(cmd.root) && !cmd.args.nil?

@@ -2,7 +2,6 @@ module AresMUSH
   module Who
     class WhoEvents
       include AresMUSH::Plugin
-
       
       def on_char_connected(args)
         count = Global.client_monitor.logged_in_clients.count

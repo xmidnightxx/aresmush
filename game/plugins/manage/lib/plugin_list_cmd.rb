@@ -3,9 +3,10 @@ module AresMUSH
     class PluginListCmd
       include AresMUSH::Plugin
 
-      # Validators
-      must_be_logged_in
-      no_args
+      def setup_error_checkers
+        self.class.must_be_logged_in
+        self.class.no_args
+      end
       
       def want_command?(client, cmd)
         cmd.root_is?("plugins")

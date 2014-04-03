@@ -5,14 +5,16 @@ module AresMUSH
     class WhereCmd
       include AresMUSH::Plugin
 
-      # Validators
-      no_args
-      no_switches
-      
       def initialize
         @renderer =  WhoRenderer.new("where.erb")
+        super
       end
 
+      def setup_error_checkers
+        self.class.no_args
+        self.class.no_switches
+      end
+      
       def want_command?(client, cmd)
         cmd.root_is?("where")
       end

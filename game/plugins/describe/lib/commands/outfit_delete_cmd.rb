@@ -5,8 +5,10 @@ module AresMUSH
            
       attr_accessor :name
       
-      # Validators
-      must_be_logged_in
+      def setup_error_checkers
+        self.class.must_be_logged_in
+        self.class.argument_must_be_present "name", "outfit"
+      end
       
       def want_command?(client, cmd)
         cmd.root_is?("outfit") && cmd.switch_is?("delete")

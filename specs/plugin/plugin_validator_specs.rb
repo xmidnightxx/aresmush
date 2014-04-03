@@ -17,7 +17,9 @@ module AresMUSH
         @cmd = double
         class PluginValidateLoginTest
           include Plugin
-          must_be_logged_in        
+          def setup_error_checkers
+            self.class.must_be_logged_in
+          end
         end
         @plugin = PluginValidateLoginTest.new 
         @plugin.client = @client
@@ -45,7 +47,9 @@ module AresMUSH
         @cmd = double
         class PluginValidateRootOnlyTest
           include Plugin
-          no_args
+          def setup_error_checkers
+            self.class.no_args
+          end
         end
         @plugin = PluginValidateRootOnlyTest.new 
         @plugin.client = @client
@@ -81,7 +85,10 @@ module AresMUSH
         @cmd = double
         class PluginValidateNoSwitchTest
           include Plugin
-          no_switches
+          
+          def setup_error_checkers
+            self.class.no_switches
+          end
         end
         @plugin = PluginValidateNoSwitchTest.new 
         @plugin.client = @client
@@ -110,7 +117,9 @@ module AresMUSH
         class PluginValidateArgumentPresentTest
           include Plugin
           attr_accessor :foo
-          argument_must_be_present "foo", "test"
+          def setup_error_checkers
+            self.class.argument_must_be_present "foo", "test"
+          end
         end
         @plugin = PluginValidateArgumentPresentTest.new 
         @plugin.client = @client
@@ -144,7 +153,9 @@ module AresMUSH
         @cmd = double
         class PluginValidateRoleTest
           include Plugin
-          must_have_role "foo"        
+          def setup_error_checkers
+            self.class.must_have_role "foo"        
+          end
         end
         @plugin = PluginValidateRoleTest.new 
         @plugin.client = @mock_client[:client]

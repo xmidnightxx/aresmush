@@ -3,9 +3,10 @@ module AresMUSH
     class PoseCatcher
       include AresMUSH::Plugin
 
-      # Validators
-      must_be_logged_in
-      no_switches
+      def setup_error_checkers
+        self.class.must_be_logged_in
+        self.class.no_switches
+      end
       
       def want_command?(client, cmd)
         cmd.raw.start_with?("\"") ||

@@ -5,9 +5,10 @@ module AresMUSH
       
       attr_accessor :message
       
-      # Validators
-      no_switches
-      argument_must_be_present "message", "echo"
+      def setup_error_checkers
+        self.class.no_switches
+        self.class.argument_must_be_present "message", "echo"
+      end
       
       def want_command?(client, cmd)
         cmd.root_is?("echo")

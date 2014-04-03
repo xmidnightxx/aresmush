@@ -3,8 +3,9 @@ module AresMUSH
     class LoadConfigCmd
       include AresMUSH::Plugin
 
-      # Validators
-      must_be_logged_in
+      def setup_error_checkers
+        self.class.must_be_logged_in
+      end
       
       def want_command?(client, cmd)
         cmd.root_is?("load") && cmd.args == "config"

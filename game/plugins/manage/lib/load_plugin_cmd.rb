@@ -3,12 +3,13 @@ module AresMUSH
     class LoadPluginCmd
       include AresMUSH::Plugin
 
-      # Validators
-      must_be_logged_in
-      argument_must_be_present "load_target", "load"
-      
       attr_accessor :load_target
-      
+
+      def setup_error_checkers
+        self.class.must_be_logged_in
+        self.class.argument_must_be_present "load_target", "load"
+      end
+            
       def crack!
         self.load_target = cmd.args
       end

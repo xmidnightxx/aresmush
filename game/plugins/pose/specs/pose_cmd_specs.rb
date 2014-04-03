@@ -50,7 +50,7 @@ module AresMUSH
         end
       end
       
-      describe :message do
+      describe :crack! do
         before do
           client.stub(:name) { "Bob" }          
         end
@@ -59,6 +59,7 @@ module AresMUSH
           cmd.stub(:args) { "test" }
           set_root({ :pose => false, :say => false, :emit => true, :ooc => false }) 
           PoseFormatter.should_receive(:format).with("Bob", "\\test") { "formatted msg" }
+          handler.crack!
           handler.message.should eq "formatted msg"
         end
 
@@ -66,6 +67,7 @@ module AresMUSH
           cmd.stub(:args) { "test" }
           set_root({ :pose => false, :say => true, :emit => false, :ooc => false }) 
           PoseFormatter.should_receive(:format).with("Bob", "\"test") { "formatted msg" }
+          handler.crack!
           handler.message.should eq "formatted msg"
         end
 
@@ -73,6 +75,7 @@ module AresMUSH
           cmd.stub(:args) { "test" }
           set_root({ :pose => true, :say => false, :emit => false, :ooc => false }) 
           PoseFormatter.should_receive(:format).with("Bob", ":test") { "formatted msg" }
+          handler.crack!
           handler.message.should eq "formatted msg"
         end
 
@@ -80,6 +83,7 @@ module AresMUSH
           cmd.stub(:args) { "test" }
           set_root({ :pose => false, :say => false, :emit => false, :ooc => true }) 
           PoseFormatter.should_receive(:format).with("Bob", "test") { "formatted msg" }
+          handler.crack!
           handler.message.should eq "%xc<OOC>%xn formatted msg"
         end
       end

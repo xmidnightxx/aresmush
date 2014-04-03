@@ -3,9 +3,12 @@ module AresMUSH
     class PoseCmd
       include AresMUSH::Plugin
 
-      # Validators
-      must_be_logged_in
-      no_switches
+      attr_accessor :message
+      
+      def setup_error_checkers
+        self.class.must_be_logged_in
+        self.class.no_switches
+      end
       
       def want_command?(client, cmd)
         cmd.root_is?("emit") ||
@@ -14,25 +17,26 @@ module AresMUSH
         cmd.root_is?("ooc")
       end
       
+      def crack!
+        if (cmd.root_is?("emit"))
+          self.message = PoseFormatter.format(client.name, "\\#{cmd.args}")
+        elsif (cmd.root_is?("pose"))
+          self.message = PoseFormatter.format(client.name, ":#{cmd.args}")
+        elsif (cmd.root_is?("ooc"))
+          msg = PoseFormatter.format(client.name, "#{cmd.args}")
+          self.message = "%xc<OOC>%xn #{msg}"
+        else
+          self.message = PoseFormatter.format(client.name, "\"#{cmd.args}")
+        end
+      end
+      
       def handle
         room = client.room
-        room.emit message
+        room.emit self.message
       end
       
       def log_command
         # Don't log poses
-      end
-      
-      def message
-        if (cmd.root_is?("emit"))
-          return PoseFormatter.format(client.name, "\\#{cmd.args}")
-        elsif (cmd.root_is?("pose"))
-          return PoseFormatter.format(client.name, ":#{cmd.args}")
-        elsif (cmd.root_is?("ooc"))
-          msg = PoseFormatter.format(client.name, "#{cmd.args}")
-          return "%xc<OOC>%xn #{msg}"
-        end
-        return PoseFormatter.format(client.name, "\"#{cmd.args}")
       end
     end
   end

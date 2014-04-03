@@ -1,12 +1,14 @@
 module AresMUSH
   module Help
-    
     class HelpListCmd
       include AresMUSH::Plugin
+      
       attr_accessor :category
       
-      no_switches
-      argument_must_be_present "category", "help"
+      def setup_error_checkers
+        self.class.no_switches
+        self.class.argument_must_be_present "category", "help"
+      end
       
       def want_command?(client, cmd)
         Help.valid_commands.include?(cmd.root) && cmd.args.nil?

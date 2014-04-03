@@ -13,3 +13,5 @@ en:
        outfit: "Outfit %{name}"
        your_outfits: "Your Outfits"
        outfits_worn: "You wear the outfits."
+       
+       not_allowed: "You are not allowed to change that description."

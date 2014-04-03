@@ -8,7 +8,6 @@ module AresMUSH
         Rooms.emit_here_desc(client)
         client.room.emit_ooc t('rooms.char_has_arrived', :name => client.name)
       end
-      
     end
   end
 end

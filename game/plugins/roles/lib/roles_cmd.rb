@@ -5,9 +5,10 @@ module AresMUSH
       
       attr_accessor :name
       
-      # Validators
-      must_be_logged_in
-
+      def setup_error_checkers
+        self.class.must_be_logged_in
+      end
+      
       def want_command?(client, cmd)
         cmd.root_is?("roles")
       end

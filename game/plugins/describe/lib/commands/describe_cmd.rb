@@ -6,11 +6,12 @@ module AresMUSH
       
       attr_accessor :target, :desc
 
-      # Validators
-      must_be_logged_in
-      no_switches
-      argument_must_be_present "target", "desc"
-      argument_must_be_present "desc", "desc"
+      def setup_error_checkers
+        self.class.must_be_logged_in
+        self.class.no_switches
+        self.class.argument_must_be_present "target", "desc"
+        self.class.argument_must_be_present "desc", "desc"
+      end
       
       # TODO - Permissions
       
@@ -26,6 +27,11 @@ module AresMUSH
       
       def handle
         VisibleTargetFinder.with_something_visible(target, client) do |model|
+          
+          if (!Describe.can_describe(client, model))
+            client.emit_failure(t('describe.not_allowed'))
+          end
+          
           if (cmd.root_is?("shortdesc"))
             model.shortdesc = desc
           else

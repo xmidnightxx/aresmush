@@ -6,10 +6,11 @@ module AresMUSH
       attr_accessor :name
       attr_accessor :new_password
 
-      # Validators
-      must_be_logged_in
-      argument_must_be_present "name", "password"
-      argument_must_be_present "new_password", "password"
+      def setup_error_checkers
+        self.class.must_be_logged_in
+        self.class.argument_must_be_present "name", "password"
+        self.class.argument_must_be_present "new_password", "password"
+      end
       
       # TODO - check permission
 

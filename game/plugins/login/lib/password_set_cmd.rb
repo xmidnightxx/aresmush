@@ -6,9 +6,10 @@ module AresMUSH
       attr_accessor :old_password
       attr_accessor :new_password
 
-      # Validators
-      must_be_logged_in
-      argument_must_be_present "old_password", "password"
+      def setup_error_checkers
+        self.class.must_be_logged_in
+        self.class.argument_must_be_present "old_password", "password"
+      end
 
       def want_command?(client, cmd)
         cmd.root_is?("password") && cmd.switch_is?("set")

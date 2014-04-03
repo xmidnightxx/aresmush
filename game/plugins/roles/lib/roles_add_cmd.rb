@@ -6,11 +6,12 @@ module AresMUSH
       attr_accessor :name
       attr_accessor :role
       
-      # Validators
-      must_be_logged_in
-      argument_must_be_present "name", "role"
-      argument_must_be_present "role", "role"
-      must_have_role Roles.can_assign_roles
+      def initialize
+        self.class.must_be_logged_in
+        self.class.argument_must_be_present "name", "role"
+        self.class.argument_must_be_present "role", "role"
+        self.class.must_have_role Roles.can_assign_roles
+      end
 
       def want_command?(client, cmd)
         cmd.root_is?("role") && cmd.switch_is?("add")

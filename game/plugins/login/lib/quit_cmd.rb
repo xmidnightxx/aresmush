@@ -3,8 +3,9 @@ module AresMUSH
     class QuitCmd
       include AresMUSH::Plugin
 
-      # Validators
-      no_switches
+      def setup_error_checkers
+        self.class.no_switches
+      end
 
       def want_command?(client, cmd)
         cmd.root_is?("quit")

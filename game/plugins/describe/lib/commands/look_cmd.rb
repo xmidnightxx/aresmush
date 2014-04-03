@@ -4,13 +4,15 @@ module AresMUSH
       include AresMUSH::Plugin
       
       attr_accessor :target
-      
-      # Validators
-      must_be_logged_in
-      no_switches
             
       def initialize
         RendererFactory.build_renderers
+        super
+      end
+      
+      def setup_error_checkers
+        self.class.must_be_logged_in
+        self.class.no_switches
       end
       
       def want_command?(client, cmd)

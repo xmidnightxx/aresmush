@@ -2,7 +2,13 @@ module AresMUSH
   module Plugin
     
     attr_accessor :client, :cmd
-        
+    
+    # If you have a custom initializer, make sure to call 'super' at the end 
+    # of it, otherwise the common plugin initialization won't happen    
+    def initialize
+      setup_error_checkers
+    end
+    
     # Override this with the processing needed to tell if you want a particular command
     # *from a char who is logged in*.
     #
@@ -49,6 +55,25 @@ module AresMUSH
     def crack!
     end
 
+    # There are a bunch of common error checkers available.  You can set up which
+    # ones you want to use by overriding this method.  For example:
+    #    def setup_error_checkers
+    #       self.class.must_be_logged_in
+    #       self.class.no_switches
+    #    end
+    #  (This will check that they're logged in and that no command switch was specified)
+    #
+    # Available error checkers include:
+    #   - must_be_logged_in
+    #   - no_switches
+    #   - no_args
+    #   - argument_must_be_present "<argument variable name>", "<help file name>"
+    #   - must_have_role <role name>
+    # 
+    # You can also set up your own custom error checkers.  See the 'error-check' method.
+    def setup_error_checkers
+    end
+    
     # This defines basic error checking for commands.  You can 
     # override this method entirely if you want more advanced processing. By default,
     # it will call any methods you define whose names start with 'check_'.
@@ -60,15 +85,6 @@ module AresMUSH
     #     return t(your_plugin.some_error_message) if something_is_wrong
     #     return nil
     #   end
-    # 
-    # Several common error checking methods are defined, and you can include them
-    # in your plugin just by putting their name near the top of your plugin file.
-    #
-    #   - must_be_logged_in
-    #   - no_switches
-    #   - no_args
-    #   - argument_must_be_present "<argument variable name>", "<help file name>"
-    #   - must_have_role <role name>
     def error_check
       self.methods.grep(/^check_/).each do |m|
         error = send m

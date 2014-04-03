@@ -3,8 +3,9 @@ module AresMUSH
     class OutfitListCmd
       include AresMUSH::Plugin
            
-      # Validators
-      must_be_logged_in
+      def setup_error_checkers
+        self.class.must_be_logged_in
+      end
       
       def want_command?(client, cmd)
         (cmd.root_is?("outfit") || cmd.root_is?("outfits")) && cmd.switch.nil? && cmd.args.nil?

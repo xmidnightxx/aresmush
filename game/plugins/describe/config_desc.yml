@@ -1,4 +1,11 @@
 help:
+    roles:
+        can_desc_exit: 
+            - builder
+        can_desc_rooms: 
+            - builder
+        can_desc_anything:
+            - admin
     categories:
         main:
             topics:

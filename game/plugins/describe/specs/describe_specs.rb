@@ -54,6 +54,7 @@ module AresMUSH
             @model = double
             @model.stub(:name) { "Bob" }
             find_result = FindResult.new(@model, nil)
+            Describe.stub(:can_describe).with(client, @model) { true }
             VisibleTargetFinder.should_receive(:find).with("name", client) { find_result }
           end
           
@@ -66,6 +67,27 @@ module AresMUSH
           it "should emit success" do
             Describe.stub(:set_desc)
             client.should_receive(:emit_success).with("bob desc set")
+            handler.handle
+          end
+        end
+        
+        context "not allowed" do
+          before do
+            @model = double
+            @model.stub(:name) { "Bob" }
+            find_result = FindResult.new(@model, nil)
+            Describe.stub(:can_describe).with(client, @model) { false }
+            VisibleTargetFinder.should_receive(:find).with("name", client) { find_result }
+          end
+          
+          it "should emit failure" do
+            client.should_receive(:emit_failure).with("describe.not_allowed")
+            handler.handle
+          end
+          
+          it "should not set the desc" do
+            client.stub(:emit_failure)
+            Describe.should_not_receive(:set_desc)
             handler.handle
           end
         end
