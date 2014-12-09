@@ -1,0 +1,34 @@
+help:
+    categories:
+        main:
+            topics:
+                handles: 
+                    toc_topic: 'Community'
+                    dir: 'game/plugins/handles/help/'
+                    file: 'handles.txt'
+                    summary: 'Player Identity.'
+                handle creation:
+                    dir: 'game/plugins/handles/help/'
+                    file: 'handle_creation.txt'
+                handle link:
+                    dir: 'game/plugins/handles/help/'
+                    file: 'handle_link.txt'
+                handle privacy:
+                    dir: 'game/plugins/handles/help/'
+                    file: 'handle_privacy.txt'
+                handle profile:
+                    dir: 'game/plugins/handles/help/'
+                    file: 'handle_profile.txt'
+                    aliases: [ "profile", "finger" ]
+                alts:
+                    toc_topic: 'Community'
+                    dir: 'game/plugins/alts/help/'
+                    file: 'alts.txt'
+                    summary: 'Finding alternate characters.'
+        admin:
+            topics:
+                alts:
+                    toc_topic: 'Community'
+                    dir: 'game/plugins/alts/help/'
+                    file: 'alts.txt'
+                    summary: 'Finding alternate characters.'

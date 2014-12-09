@@ -31,12 +31,12 @@ module AresMUSH
         Global.logger.debug "Updating last login for #{char_name}."
         char = Character.find_by_name(char_name)
         if (char.nil?)
-          return cmd.create_error_response t('api.invalid_handle')
+          return cmd.create_error_response t('api.sync_to_invalid_handle')
         end
         
         linked_char = char.linked_characters[args.char_id]
         if (!linked_char)
-          return cmd.create_error_response t('api.character_not_linked')
+          return cmd.create_error_response t('api.sync_from_unlinked_character')
         end
 
         linked_char["last_login"] = Time.now
@@ -46,7 +46,8 @@ module AresMUSH
         
         friends = char.friends.map { |f| "@#{f.name}" }
 
-        return cmd.create_response(ApiResponse.ok_status, friends.join(" "))
+        args = ApiSyncResponseArgs.new(friends.join(" "), char.autospace, char.timezone)
+        return cmd.create_response(ApiResponse.ok_status, args.to_s)
       end
     end
   end

@@ -1,4 +1,5 @@
 server:
+
     # The host name where your game is running (typically localhost)
     hostname: mush.aresmush.com
 
@@ -10,7 +11,10 @@ server:
 
     # Please select the appropriate category to describe your game:
     # "Historical", "Sci-Fi", "Fantasy", "Modern", "Supernatural", "Social", "Other"
-    category: "Social"
+    category: Social
     
-    # Describe your game.  You may use ansi and other MUSH formatting codes.
-    description: "Social hub for all things AresMUSH."
+    # Describe your game.  You may use ansi and other MUSH formatting codes (%r, etc.).
+    description: Social hub for all things AresMUSH related.
+    
+    # Your game's website
+    website: www.aresmush.com
