@@ -17,7 +17,7 @@ server:
     description: Social hub for all things AresMUSH related.
     
     # Your game's website
-    website: ""
+    website: "http://www.aresmush.com"
     
     # yes if your game is open for business, no if it is in development or down
     game_open: yes
