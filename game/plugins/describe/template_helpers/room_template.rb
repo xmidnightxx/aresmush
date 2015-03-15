@@ -16,7 +16,11 @@ module AresMUSH
       #    <%= exit_name(e) %> <%= exit_destination(e) %>
       #    <% end %>
       def exits
-        @room.exits.sort_by { |e| e.name }
+        if (@room.is_foyer)
+          non_foyer_exits
+        else
+          @room.exits.sort_by { |e| e.name }
+        end
       end
       
       # List of online characters, sorted by name.      
@@ -66,6 +70,36 @@ module AresMUSH
         OOCTime.local_long_timestr(@client, Time.now)
       end
       
+      def foyer_exits
+        @room.exits.select { |e| e.name.is_integer? }.sort_by { |e| e.name }
+      end
+      
+      def non_foyer_exits
+        @room.exits.select { |e| !e.name.is_integer? }.sort_by { |e| e.name }
+      end
+      
+      # Special text displayed for the exits in a foyer.
+      def foyer
+        return if !@room.is_foyer
+        
+        text = "%R%l2%R"
+        text << center(t('describe.foyer_room_status'),78)
+        foyer_exits.each_with_index do |e, i|
+          if (!e.lock_keys.empty?)
+            status = t('describe.foyer_room_locked')
+          elsif (e.dest.characters.count == 0)
+            status = t('describe.foyer_room_free')
+          else
+            status = t('describe.foyer_room_occupied')
+          end
+          text << "%r[space(10)]" if i % 2 == 0
+          room_name = "#{e.dest.name} (#{status})"
+          text << "%xh[#{e.name}]%xn #{left(room_name,29)}"
+        end
+        
+        text
+      end
+      
       # Character name.
       # Requires a character reference.  See 'online_chars' for more info.
       def char_name(char)
@@ -111,7 +145,8 @@ module AresMUSH
       # Requires an exit reference.  See 'exits' for more info.
       def exit_destination(e)
         locked = e.allow_passage?(@client.char) ? "" : "%xr*#{t('describe.locked')}*%xn "
-        str = "#{locked}#{e.dest.name}"
+        name = e.dest ? e.dest.name : t('describe.nowhere')
+        str = "#{locked}#{name}"
         left(str, 30)
       end
     end
