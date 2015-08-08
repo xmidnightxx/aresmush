@@ -1,0 +1,30 @@
+             --------------                            ---------\         
+          ---              ------------------         /  ENGINE  X        
+        --                                   ---------/------+---         
+     ---                                                     |            
+   +-   FORWARD               MID                   AFT      |            
+   |    SECTION               SECTION               SECTION  |            
+   +--                                                       |            
+      ---                                    ----------------+            
+         ----           +-------------------- \\                          
+             ----------//                       \\                        
+                     //     FLIGHT POD            \\                      
+                    --------------------------------\\                    
+                                                                          
+DECKS 1-14 = Main Decks                                                   
+DECKS 15-20 = Flight Pod Decks                                            
+                                                                          
+Key Locations:                                                            
+Barracks/Quarters: See +news housing                                      
+Brig: Deck 11, Mid                                                        
+CIC: Deck 3, Forward                                                      
+CO's Office: Deck 5, Forward                                              
+Engineering: Deck 5, Aft                                                  
+Galley: Deck 8, Mid                                                       
+Gym/Rec Room: Deck 8, Mid                                                 
+Hangar Bay: Deck 16, Flight Pod                                           
+Observation Deck: Deck 14, Forward                                        
+Ready Room: Deck 14, Mid                                                  
+Security Station: Deck 11, Mid                                            
+Sickbay: Deck 12, Mid                                                     
+Situation Room: Deck 14, Mid
