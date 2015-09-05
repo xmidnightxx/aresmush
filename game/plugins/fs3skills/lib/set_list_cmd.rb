@@ -1,7 +1,7 @@
 module AresMUSH
 
   module FS3Skills
-    class SetItemCmd
+    class SetListCmd
       include Plugin
       include PluginRequiresLogin
       include PluginRequiresArgs
@@ -32,12 +32,6 @@ module AresMUSH
         ability_type = FS3Skills.get_ability_type(client.char, self.name)
         invalid_types = [:action, :advantage, :aptitude]
         return t('fs3skills.cant_overlap_with_name') if invalid_types.include?(ability_type)
-        return nil
-      end
-      
-      def check_advantages_enabled
-        ability_type = FS3Skills.get_ability_type(client.char, self.name)
-        return t('fs3skills.advantages_not_enabled') if (ability_type == :advantage && !FS3Skills.advantages_enabled?)
         return nil
       end
       

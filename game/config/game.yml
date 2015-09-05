@@ -1,0 +1,17 @@
+game:
+    # Name of your game.
+    name: AresCentral
+
+    # Please select the appropriate category to describe your game:
+    # "Historical", "Sci-Fi", "Fantasy", "Modern", "Supernatural", "Social", "Other"
+    category: Social
+    
+    # Describe your game.  You may use ansi and other MUSH formatting codes (%r, etc.).
+    description: Social hub for all things AresMUSH related.
+    
+    # Your game's website
+    website: "http://www.aresmush.com"
+    
+    # yes if your game is open for business, no if it is in development, down, or 
+    # otherwise not open to the public
+    game_open: "yes"

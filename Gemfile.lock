@@ -59,6 +59,3 @@ DEPENDENCIES
   rake (~> 10.4.2)
   rspec (~> 2.14.1)
   timezone (~> 0.3.2)
-
-BUNDLED WITH
-   1.10.5
