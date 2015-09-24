@@ -3,6 +3,7 @@ module AresMUSH
     class CombatActionCmd
       include Plugin
       include PluginRequiresLogin
+      include NotAllowedWhileTurnInProgress
       
       attr_accessor :name, :action_args, :action_klass
       
@@ -32,6 +33,12 @@ module AresMUSH
           PassAction
         elsif (cmd.switch_is?("aim"))
           AimAction
+        elsif (cmd.switch_is?("reload"))
+          ReloadAction
+        elsif (cmd.switch_is?("fullauto"))
+          FullautoAction
+        elsif (cmd.switch_is?("treat"))
+          TreatAction
         else
           nil
         end

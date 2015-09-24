@@ -4,6 +4,7 @@ module AresMUSH
       
     field :is_real, :type => Boolean
     field :num, :type => Integer
+    field :turn_in_progress, :type => Boolean
     
     belongs_to :organizer, :class_name => "AresMUSH::Character", :inverse_of => "nil"  
     has_many :combatants, :inverse_of => 'combat', :dependent => :destroy
@@ -13,7 +14,7 @@ module AresMUSH
     end
     
     def non_combatants
-      combatants.select { |c| c.c.is_noncombatant? }.sort_by{ |c| c.name }
+      combatants.select { |c| c.is_noncombatant? }.sort_by{ |c| c.name }
     end
     
     def self.next_num
@@ -37,12 +38,21 @@ module AresMUSH
       combatant = Combatant.create(:name => name, :combatant_type => combatant_type, :character => char)
       self.combatants << combatant
       emit t('fs3combat.has_joined', :name => name, :type => combatant_type)
+      return combatant
     end
-    
+
+    def set_vehicle(combatant, combatant_type, vehicle)
+      # TODO - Incomplete
+      # If vehicle already in list, add to crew
+      # Check for double pilots
+      # If 
+      emit t('fs3combat.joined_vehicle', :name => name, :type => combatant_type, :vehicle => vehicle_name)
+    end
+        
     def leave(name)
-      # TODO - Leave should wipe out mock damage
       emit t('fs3combat.has_left', :name => name)
       combatant = find_combatant(name)
+      combatant.clear_mock_damage          
       self.combatants.delete combatant
       combatant.destroy
     end
