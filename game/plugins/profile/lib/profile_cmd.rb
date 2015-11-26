@@ -21,6 +21,12 @@ module AresMUSH
       end
       
       def handle
+        if (Global.api_router.is_master?)
+          if (name.start_with?("@"))
+            name = name.after("@")
+          end
+        end
+        
         if (Handles.handle_name_valid?(name))
           Handles.get_profile(client, name)
         else
