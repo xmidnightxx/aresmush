@@ -1,3 +1,4 @@
+---
 game:
     # Name of your game.
     name: AresCentral
@@ -12,6 +13,6 @@ game:
     # Your game's website
     website: "http://www.aresmush.com"
     
-    # yes if your game is open for business, no if it is in development, down, or 
+    # true if your game is open for business, false if it is in development, down, or 
     # otherwise not open to the public
-    game_open: "yes"
+    game_open: true
