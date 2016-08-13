@@ -4,25 +4,12 @@ module AresMUSH
     attr_reader :command_line
     
     def initialize
-      config_reader = ConfigReader.new
       ares_logger = AresLogger.new
       locale = Locale.new
-      plugin_factory = PluginFactory.new
-      plugin_manager = PluginManager.new(plugin_factory)
-      dispatcher = Dispatcher.new
-      client_factory = ClientFactory.new
-      client_monitor = ClientMonitor.new(client_factory)
-      server = Server.new
       db = Database.new
       
-      
-            
       # Set up global access to the system objects - primarily so that the plugins can 
       # tell them to do things.
-      Global.config_reader = config_reader
-      Global.client_monitor = client_monitor
-      Global.plugin_manager = plugin_manager
-      Global.dispatcher = dispatcher
       Global.locale = locale
                   
       # Configure a trap for exiting.
@@ -31,30 +18,22 @@ module AresMUSH
       end
       
       # Order here is important!
-      config_reader.read
       ares_logger.start
 
       db.load_config
       locale.setup
-      plugin_manager.load_all
-      
-      load File.join(AresMUSH.game_path, "web", "web_server.rb")
             
       begin
         game = Game.master
       rescue Exception => e
         raise "Error connecting to database. Check your database configuration: #{e}"
       end
-      
-      api_router = ApiRouter.new(game.nil? ? false : game.api_game_id == ServerInfo.arescentral_game_id)
-      Global.api_router = api_router
-      api_router.find_handlers
-    
-      Global.logger.debug Global.config_reader.config
-
-      @command_line = AresMUSH::CommandLine.new(server)
     end
     
+    def start
+      app = Rack::Builder.new { AresWeb.run! }.to_app
+    end      
+      
     def handle_exit(exception)
       if (exception.kind_of?(SystemExit))
         Global.logger.info "Normal shutdown."

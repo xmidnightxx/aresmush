@@ -1,9 +1,11 @@
+require 'yaml'
+
 module AresMUSH
   class AresLogger
     def start
-      config = Global.read_config("logger")
+      config = YAML.load_file File.join(AresMUSH.game_path, 'config', 'logger.yml')
       configurator = Log4r::YamlConfigurator
-      configurator.decode_yaml config
+      configurator.decode_yaml config['logger']
     end
     
     def self.logger
