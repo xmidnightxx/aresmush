@@ -12,7 +12,7 @@ module AresMUSH
     end
     
     get '/foobar' do
-      "FOOBAR3"
+      "FOOBAR4"
     end
     
   end

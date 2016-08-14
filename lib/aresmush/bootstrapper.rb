@@ -1,9 +1,7 @@
 module AresMUSH  
   class Bootstrapper 
-
-    attr_reader :command_line
     
-    def initialize
+    def boot
       ares_logger = AresLogger.new
       locale = Locale.new
       db = Database.new
@@ -28,11 +26,13 @@ module AresMUSH
       rescue Exception => e
         raise "Error connecting to database. Check your database configuration: #{e}"
       end
+      
+      server = Server.new#("localhost", 7206)
+      server.start
+      
+      #Rack::Builder.new { AresWeb.run! }.to_app
+
     end
-    
-    def start
-      app = Rack::Builder.new { AresWeb.run! }.to_app
-    end      
       
     def handle_exit(exception)
       if (exception.kind_of?(SystemExit))

@@ -63,7 +63,7 @@ module AresMUSH
         puts "Got post #{params[:plugin]}"
         begin
         
-          load File.join(AresMUSH.game_path, "web", "#{params[:plugin]}.rb")
+          load File.join(AresMUSH.game_path, 'plugins', params[:plugin], "#{params[:plugin]}.rb")
         rescue Exception => e
           puts "Die #{e}"
         end
@@ -78,7 +78,7 @@ module AresMUSH
       end
     
       get '/ping' do
-        pong
+        "Pong"
       end
   
       post '/api/tokenauth' do
