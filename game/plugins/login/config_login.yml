@@ -2,7 +2,12 @@ login:
     
     suspect_sites:
         - "delete me and put a real site here"
+
+    banned_sites:
+        - "delete me and put a real site here"
         
+    allow_web_registration: true
+    
     suspect_category: "MISC"
 
     guest_role: "guest"
