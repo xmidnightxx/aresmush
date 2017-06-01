@@ -4,9 +4,13 @@ roles:
 
     restricted_roles:
         - admin
+        - staff
     
     admin_list_roles:
         - admin
+        - staff
+        - gm
+        - builder
 
     shortcuts:
         "roles" : "role"

@@ -120,6 +120,3 @@ DEPENDENCIES
   sinatra-reloader (~> 1.0)
   thin (~> 1.7.0)
   timezone (~> 0.3.2)
-
-BUNDLED WITH
-   1.14.6

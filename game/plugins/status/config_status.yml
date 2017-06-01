@@ -2,10 +2,13 @@ status:
     colors:
         IC: "%xr"
         OOC: "%xh"
-        NPC: "%xh"
+        NPC: "%xc"
         AFK: "%xy"
         NEW: "%xg"
-        ADM: "%xb"
+        ADM: "%xm"
+        STA: "%xm"
+        GM: "%xm"
+        BLD: "%xb"
         
     minutes_before_idle: 120
     minutes_before_idle_disconnect: 720

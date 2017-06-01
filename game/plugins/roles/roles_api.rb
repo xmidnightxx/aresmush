@@ -15,6 +15,19 @@ module AresMUSH
     def is_admin?
       self.has_any_role?("admin")
     end  
+
+    def is_staff?
+      self.has_any_role?("staff")
+    end  
+
+    def is_gm?
+      self.has_any_role?("gm")
+    end  
+
+    def is_bld?
+      self.has_any_role?("builder")
+    end  
+
         
     def is_master_admin?
       self == Game.master.master_admin

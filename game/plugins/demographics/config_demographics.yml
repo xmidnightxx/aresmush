@@ -29,36 +29,22 @@ demographics:
         - fullname
         - gender
         - birthdate
-        - callsign
+        - avatar
 
     groups:
         Faction:
-            desc: "Military faction."
+            desc: "Your in Game faction."
             values:
-                Navy: "Join the fleet, see the worlds."
-                Marines: "Semper fi."
-        Department:
-            desc: "The ship is divided into several departments.  See the wiki for details."
+                Red: "The Red faction. Symbole isa black wolf ona field of red."
+                Blue: "The Blue faction. Symbol is a white falcon on a field of blue."
+                Green: "The Green faction. Symbol is a yellow serpent on a field of green."
+        Team:
+            desc: "Within each faction are teams. These are like Guilds on some MMO's. They define your individual alliance."
             values:
                 Air Wing: "Viper and Raptor crews and deckhands. (Officers and Enlisted)"
                 Medical: "Patching up the holes. (Officers and Enlisted)"
                 Marines: "Boots on the ground. (Enlisted only)"
                 Operations: "Support personnel - CIC, engineering, weapons, etc. (Officers and Enlisted)"
-        Colony:
-            desc: "Your character's home world."
-            values:
-                Aerilon: "Bread basket of the colonies."
-                Aquaria: "Cold, harsh world popular with tourists."
-                Canceron: "Crowded and hot, a developing nation."
-                Caprica: "Rich center of colonial culture and industry."
-                Gemenon: "Fundamentalist religion and isolationist people."
-                Leonis: "Old imperialist empire in decline, still known for culture and fashion."
-                Libran: "Neutral colony renowned for fostering inter-colonial cooperation."
-                Picon: "Water world famous for its beaches and strong navy."
-                Sagittaron: "Poor colony, oft-exploited, now carved into several protectorates."
-                Scorpia: "Lush jungles and bitter clan warfare. Home to shipyards constructing the Battlestars."
-                Tauron: "An up-and-coming socialist republic with a strong agricultural base and developing industries."
-                Virgon: "A monarchy in decline, clinging to old traditions."
         Position:
             desc: "Job."
             values:

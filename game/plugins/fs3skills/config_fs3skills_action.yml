@@ -1,57 +1,52 @@
+---
 fs3skills:
-    action_skills:
-        -
-            name: Alertness
-            desc: "Noticing things and being aware of your surroundings."
-            linked_attr: Perception
-        -
-            name: Athletics
-            desc: "General running, jumping, climbing, etc."
-            linked_attr: Brawn
-        -
-            name: Composure
-            desc: "Coolness under pressure."
-            linked_attr: Grit
-        -
-            name: Demolitions
-            desc: "Blowing stuff up."
-            linked_attr: Wits
-        -   
-            name: Firearms
-            desc: "Shooting guns."
-            linked_attr: Reflexes
-        -
-            name: Gunnery
-            desc: "Vehicle and heavy weapons."
-            linked_attr: Reflexes
-        -
-            name: Medicine
-            desc: "Tending to the ill and injured. Requires Specialty: Doctor, Surgeon, Nurse, Medic, Other"
-            linked_attr: Wits
-            specialties:
-                - Doctor
-                - Surgeon
-                - Nurse
-                - Medic
-                - Other
-        - 
-            name: Melee
-            desc: "Fighting with fists, knives, and hand-to-hand weapons."
-            linked_attr: Brawn
-        -
-            name: Piloting
-            desc: "Flying air and spacecraft. Requires Specialty: Viper, Raptor, Shuttle"
-            linked_attr: Reflexes
-            specialties:
-                - Viper
-                - Raptor
-                - Freighter
-                - Other
-        - 
-            name: Stealth
-            desc: "Being sneaky."
-            linked_attr: Reflexes
-        -
-            name: Technician
-            desc: "General mechanics/electronics and fixing things."
-            linked_attr: Wits
+  action_skills:
+  - name: Alertness
+    linked_attr: Perception
+    desc: Noticing things and being aware of your surroundings.
+  - name: Athletics
+    linked_attr: Brawn
+    desc: General running, jumping, climbing, etc.
+  - name: Composure
+    linked_attr: Grit
+    desc: Coolness under pressure.
+  - name: Demolitions
+    linked_attr: Wits
+    desc: Blowing stuff up.
+  - name: Firearms
+    linked_attr: Reflexes
+    desc: Shooting guns.
+  - name: Gunnery
+    linked_attr: Reflexes
+    desc: Vehicle and heavy weapons.
+  - name: Medicine
+    linked_attr: Wits
+    desc: 'Tending to the ill and injured. Requires Specialty: Doctor, Surgeon, Nurse,
+      Medic, Other'
+    specialties:
+    - Doctor
+    - Surgeon
+    - Nurse
+    - Medic
+    - Other
+  - name: Melee
+    linked_attr: Brawn
+    desc: Fighting with fists, knives, and hand-to-hand weapons.
+  - name: Piloting
+    linked_attr: Reflexes
+    desc: 'Flying air and spacecraft. Requires Specialty: Fighter, Shuttle, Transport'
+    specialties:
+    - Fighter
+    - Shuttle
+    - Transport
+    - Other
+  - name: Stealth
+    linked_attr: Reflexes
+    desc: Being sneaky.
+  - name: Technician
+    linked_attr: Wits
+    desc: General mechanics/electronics and fixing things.
+  - name: Psy
+    linked_attr: Perception
+    desc: Activated psychic abilities from interaction with aliens. Allows for use
+      of Psy Weapons. Requires Psy Activation Hook.

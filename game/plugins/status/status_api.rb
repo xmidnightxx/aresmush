@@ -25,6 +25,12 @@ module AresMUSH
       return "AFK" if self.is_afk?
       # Admins can be on duty or OOC
       return "ADM" if self.is_admin? && self.is_on_duty?
+      # Staff can be on duty or OOC
+      return "STA" if self.is_staff? && self.is_on_duty?
+      # Builders can by on duty or OOC
+      return "BLD" if self.is_bld? && self.is_on_duty?
+      # GM's can be on duty or OOC
+      return "GM" if self.is_gm? && self.is_on_duty?
       return "OOC" if Status.can_be_on_duty?(self)
       # Playerbits are always OOC
       return "OOC" if self.is_playerbit

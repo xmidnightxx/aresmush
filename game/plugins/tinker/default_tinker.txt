@@ -12,6 +12,7 @@ module AresMUSH
       end
       
       def handle
+        Game.master.update(login_activity: {})
         client.emit_success "Done!"
       end
 

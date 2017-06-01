@@ -1,10 +1,17 @@
 game:
-    name: "Local Test"
+    # Name of your game.
+    name: "The Game"
 
-    category: Social
+    # Please select the appropriate category to describe your game:
+    # "Historical", "Sci-Fi", "Fantasy", "Modern", "Supernatural", "Social", "Other"
+    category: Sci-Fi
     
-    description: "AresMUSH test site."
+    # Describe your game.  You may use ansi and other MUSH formatting codes (%r, etc.).
+    description: "In a futuristic Earth, an apparently Utopian society has automated so much of their lives that almost everyone in the world spends their time playing The Game. A vast, multiverse MMORPG, where you can live out whatever fantasy you choose to in any setting you want. Test yourself against players and AI enemies alike. Better yet? The more experience and standing you earn in the Game, the more you earn in the real world. %r%rBeneath the surface though, danger lurks. The downworlders, or RL-ers, are not so blessed as the rest of the world. They work and toil to provide the Game everyone else so loves. These RL-ers must rise up and declare themselves. Find their seats in the virtual symphony and play. "
     
-    website: "http://aresmush.com"
+    # Your game's website
+    website: ""
         
+    # true if your game is open for business, false if it is in development, down, or 
+    # otherwise not open to the public
     public_game: false

@@ -1,1 +1,1 @@
-var config = {"port":4202,"mu_name":"Local Test","host":"localhost"};
+var config = {"port":8005,"mu_name":"The Game","host":"scrozzle.noderunner.net"};
