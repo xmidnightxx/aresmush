@@ -1,0 +1,13 @@
+/home/users/avyboy/.rvm/rubies/ruby-2.0.0-p598/bin/ruby -r ./siteconf20170517-6024-laosn4.rb extconf.rb 
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling rubymain.cpp
+compiling mapper.cpp
+linking shared-object fastfilereaderext.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 fastfilereaderext.so ./.gem.20170517-6024-tl3js9
+installing default fastfilereaderext libraries

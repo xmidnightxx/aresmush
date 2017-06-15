@@ -29,7 +29,7 @@ demographics:
         - fullname
         - gender
         - birthdate
-        - avatar
+        - county
 
     groups:
         Faction:
@@ -38,7 +38,7 @@ demographics:
                 Red: "The Red faction. Symbole isa black wolf ona field of red."
                 Blue: "The Blue faction. Symbol is a white falcon on a field of blue."
                 Green: "The Green faction. Symbol is a yellow serpent on a field of green."
-        Team:
+        House:
             desc: "Within each faction are teams. These are like Guilds on some MMO's. They define your individual alliance."
             values:
                 Air Wing: "Viper and Raptor crews and deckhands. (Officers and Enlisted)"
@@ -67,12 +67,12 @@ demographics:
         "groups": "group"
         "faction": "group/set faction="
         "position": "group/set position="
-        "department": "group/set department="
-        "colony": "group/set colony="
+        "house": "group/set house="
+        "county": "group/set county="
         "factions": "group faction"
         "positions": "group position"
-        "departments": "group department"
-        "colonies": "group colony"
+        "houses": "group house"
+        "counties": "group county"
         "demographics": "demographic"
         "hair": "demographic/set hair="
         "eyes": "demographic/set eyes="

@@ -2,19 +2,14 @@
 fs3skills:
   languages:
   - name: English
-    desc: Primary language of the USC and IDF.
-  - name: Chinese
-    desc: Commonly spoken on Earth, Mars, USC and IDF.
+    desc: Primary language of Camelot.
+  - name: Saxon
+    desc: Spoken by Saxons.
+  - name: Celtic
+    desc: Spoken by Picts.
   - name: French
-    desc: 'Commonly spoken on Earth and Mars. '
-  - name: Russian
-    desc: Commonly spoken on Earth, in the USC and IDF.
-  - name: Japanese
-    desc: Commonly spoken on Earth, and by USC members.
-  - name: Spanish
-    desc: Commonly spoken on Earth.
-  - name: Miner's Creole
-    desc: A miner mingling of French, English and Chinese. Spoken primarily by Martian
-      Miners.
+    desc: Spoken across the Channel in France.
+  - name: Latin
+    desc: The language of educated and refined persons.
   starting_languages:
   - English

@@ -1,13 +1,13 @@
 game:
     # Name of your game.
-    name: "The Game"
+    name: "After Camelot: An Arthurian Legend"
 
     # Please select the appropriate category to describe your game:
     # "Historical", "Sci-Fi", "Fantasy", "Modern", "Supernatural", "Social", "Other"
-    category: Sci-Fi
+    category: Fantasy
     
     # Describe your game.  You may use ansi and other MUSH formatting codes (%r, etc.).
-    description: "In a futuristic Earth, an apparently Utopian society has automated so much of their lives that almost everyone in the world spends their time playing The Game. A vast, multiverse MMORPG, where you can live out whatever fantasy you choose to in any setting you want. Test yourself against players and AI enemies alike. Better yet? The more experience and standing you earn in the Game, the more you earn in the real world. %r%rBeneath the surface though, danger lurks. The downworlders, or RL-ers, are not so blessed as the rest of the world. They work and toil to provide the Game everyone else so loves. These RL-ers must rise up and declare themselves. Find their seats in the virtual symphony and play. "
+    description: "Mordred led his armies against Camelot and Caerleon, killing Arthur and the majority of his Knights. The survivors are displaced to London and beyond. Sensing an opportunity, the nobles of England have attempted to seize power, skirmishing over lands and castles that are now up for grabs. Yet despite this infighting, none have forgotten that Mordred and his armies lay in wait to the west, rebuilding to take over the rest of Arthur's kingdom."
     
     # Your game's website
     website: ""

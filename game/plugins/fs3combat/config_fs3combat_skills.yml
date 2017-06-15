@@ -1,12 +1,8 @@
+---
 fs3combat:
-    treat_skill: "Medicine"
-    
-    healing_skill: "Medicine"
-    
-    recovery_skill: "Athletics"
-    
-    initiative_skill: Alertness
-    
-    composure_skill: Composure
-    
-    default_defense_skill: Reflexes
+  treat_skill: Healing
+  healing_skill: Healing
+  recovery_skill: Athletics
+  initiative_skill: Alertness
+  composure_skill: Composure
+  default_defense_skill: Reflexes

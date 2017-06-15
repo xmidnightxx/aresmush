@@ -10,43 +10,43 @@ fs3skills:
   - name: Composure
     linked_attr: Grit
     desc: Coolness under pressure.
-  - name: Demolitions
-    linked_attr: Wits
-    desc: Blowing stuff up.
-  - name: Firearms
+  - name: Blades
     linked_attr: Reflexes
-    desc: Shooting guns.
-  - name: Gunnery
-    linked_attr: Reflexes
-    desc: Vehicle and heavy weapons.
-  - name: Medicine
-    linked_attr: Wits
-    desc: 'Tending to the ill and injured. Requires Specialty: Doctor, Surgeon, Nurse,
-      Medic, Other'
-    specialties:
-    - Doctor
-    - Surgeon
-    - Nurse
-    - Medic
-    - Other
-  - name: Melee
+    desc: Fighting with knives, swords, and other bladed weapons.
+  - name: Bludgeons
     linked_attr: Brawn
-    desc: Fighting with fists, knives, and hand-to-hand weapons.
-  - name: Piloting
+    desc: Fighting with axes, hammers, maces, and other weighted weapons.
+  - name: Spears
     linked_attr: Reflexes
-    desc: 'Flying air and spacecraft. Requires Specialty: Fighter, Shuttle, Transport'
+    desc: Fighting with spears, lances, and other long, pointy weapons.
+  - name: Healing
+    linked_attr: Wits
+    desc: 'Tending to the ill and injured. Requires Specialty: Herbalism or First
+      Aid'
     specialties:
-    - Fighter
-    - Shuttle
-    - Transport
-    - Other
+    - Herbalism
+    - First Aid
+  - name: Brawling
+    linked_attr: Brawn
+    desc: Fighting unarmed or with improvised weapons.
+  - name: Riding
+    linked_attr: Reflexes
+    desc: Riding and taking care of horses and other mounts.
   - name: Stealth
     linked_attr: Reflexes
     desc: Being sneaky.
-  - name: Technician
+  - name: Persuasion
+    linked_attr: Presence
+    desc: Convincing people of the truth.
+  - name: Deception
     linked_attr: Wits
-    desc: General mechanics/electronics and fixing things.
-  - name: Psy
-    linked_attr: Perception
-    desc: Activated psychic abilities from interaction with aliens. Allows for use
-      of Psy Weapons. Requires Psy Activation Hook.
+    desc: Convincing people of falsehoods.
+  - name: Thrown
+    linked_attr: Reflexes
+    desc: Throwing knives, spears, rocks, or anything else.
+  - name: Bows
+    linked_attr: Reflexes
+    desc: Using bows and crossbows.
+  - name: Magic
+    linked_attr: Presence
+    desc: Sorcery, enchanting, and other pagan magics.

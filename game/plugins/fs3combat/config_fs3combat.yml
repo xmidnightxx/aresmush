@@ -51,6 +51,14 @@ fs3combat:
             vehicle: Raider
             hitloc: Humanoid
             defense_skill: Piloting
+        Heavy:
+            vehicle: "Heavy Raider"
+            hitloc: Humanoid
+            defense_skill: Piloting
+        Target:
+           hitloc: Target
+           weapon: Unarmed
+           defense_skill: None
                      
     shortcuts:
         "weapons": "weapon"
