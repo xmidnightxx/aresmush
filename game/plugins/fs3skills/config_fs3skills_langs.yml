@@ -2,14 +2,14 @@
 fs3skills:
   languages:
   - name: English
-    desc: Primary language of Camelot.
-  - name: Saxon
-    desc: Spoken by Saxons.
-  - name: Celtic
-    desc: Spoken by Picts.
+    desc: Primary language spoken on the British Isles.
+  - name: Spanish
+    desc: Spoken by Spaniards.
+  - name: Dutch
+    desc: Spoken in the Netherlands and Dutch colonies.
   - name: French
-    desc: Spoken across the Channel in France.
-  - name: Latin
-    desc: The language of educated and refined persons.
+    desc: Spoken in French colonies.
+  - name: Carib
+    desc: The most common of the native languages.
   starting_languages:
   - English

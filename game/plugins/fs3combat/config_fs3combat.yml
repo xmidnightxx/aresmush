@@ -22,43 +22,42 @@ fs3combat:
         # ----------------------------------------
 
         Soldier:
-            weapon: Rifle
-            weapon_specials: 
-                - Ap
-            armor: Tactical
+            weapon: Spear
+            armor: Chainmaille
+            hitloc: Humanoid
+            defense_skill: Reflexes
+        Archer:
+            weapon: Bow
+            armor: Leather
+            hitloc: Humanoid
+            defense_skill: Reflexes
+        Magic:
+            weapon: Bolt
             hitloc: Humanoid
             defense_skill: Reflexes
         Unarmed:
             weapon: Unarmed
             hitloc: Humanoid
             defense_skill: Reflexes
-        Centurion:
-            weapon: LMG
-            weapon_specials: 
-                - Tripod
-            armor: Centurion
+        Knight:
+            weapon: Sword
+            armor: Plate
             hitloc: Humanoid
             defense_skill: Reflexes
-        Viper:
-            vehicle: Viper
-            hitloc: Humanoid
-            defense_skill: Piloting
-        Raptor:
-            vehicle: Raptor
-            hitloc: Humanoid
-            defense_skill: Piloting            
-        Raider:
-            vehicle: Raider
-            hitloc: Humanoid
-            defense_skill: Piloting
-        Heavy:
-            vehicle: "Heavy Raider"
-            hitloc: Humanoid
-            defense_skill: Piloting
+        Charger:
+            weapon: Brawling
+            armor: Cloth Barding
+            hitloc: Quadruped
+            defense_skill: Reflexes
+        Hound:
+            weapon: Knife
+            armor: Leather
+            hitloc: Quadruped
+            defense_skill: Reflexes            
         Target:
-           hitloc: Target
-           weapon: Unarmed
-           defense_skill: None
+            hitloc: Target
+            weapon: Unarmed
+            defense_skill: None
                      
     shortcuts:
         "weapons": "weapon"

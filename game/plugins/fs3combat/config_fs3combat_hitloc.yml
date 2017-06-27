@@ -24,57 +24,61 @@ fs3combat:
                 - Head
                 - Neck
                 - Groin
-        Fighter:
+        Quadruped: 
             areas:
-                Body: [ 'Controls', 'Tail', 'Weapon', 'Wing', 'Wing', 'Cockpit', 'Nose', 'Body', 'Body', 'Body' ]
-                Engine: [ 'Controls', 'Wing', 'Weapon', 'Body', 'Body', 'Tail', 'Tail', 'Engine', 'Engine', 'Engine' ]
-                Tail: [ 'Controls', 'Wing', 'Weapon', 'Body', 'Body', 'Engine', 'Engine', 'Tail', 'Tail', 'Tail' ]
-                Wing: [ 'Controls', 'Cockpit', 'Weapon', 'Body', 'Body', 'Tail', 'Tail', 'Wing', 'Wing', 'Wing' ]
-                Weapon: [ 'Controls', 'Controls', 'Body', 'Body', 'Wing', 'Wing', 'Wing', 'Weapon', 'Weapon', 'Weapon' ]
-                Nose: [ 'Controls', 'Weapon', 'Wing', 'Wing', 'Cockpit', 'Body', 'Body', 'Nose', 'Nose', 'Nose' ]
-                Cockpit: [ 'Controls', 'Weapon', 'Wing', 'Body', 'Body', 'Nose', 'Nose', 'Cockpit', 'Cockpit', 'Cockpit' ]
-                Controls: [ 'Cockpit', 'Weapon', 'Wing', 'Body', 'Body', 'Nose', 'Nose', 'Controls', 'Controls', 'Controls' ]
+                Body: [ 'Left Rear Leg', 'Right Rear Leg', 'Left Foreleg', 'Right Foreleg', 'Abdomen',  'Neck', 'Chest', 'Body', 'Body', 'Body' ]
+                Chest: [ 'Left Rear Leg', 'Right Rear Leg',  'Left Foreleg', 'Right Foreleg', 'Head', 'Abdomen', 'Body', 'Chest', 'Chest', 'Chest' ]
+                Left Rear Leg: [ 'Left Foreleg', 'Chest', 'Right Rear Leg', 'Right Rear Leg', 'Abdomen', 'Body', 'Body', 'Left Rear Leg', 'Left Rear Leg', 'Left Rear Leg' ]
+                Right Rear Leg: [ 'Right Foreleg', 'Chest', 'Left Rear Leg', 'Left Rear Leg', 'Abdomen',  'Body', 'Body', 'Right Rear Leg', 'Right Rear Leg', 'Right Rear Leg' ]
+                Left Foreleg:  [ 'Left Rear Leg', 'Abdomen', 'Right Foreleg', 'Right Foreleg', 'Chest', 'Body', 'Body', 'Left Foreleg', 'Left Foreleg', 'Left Foreleg' ]
+                Right Foreleg:  [ 'Right Rear Leg', 'Abdomen', 'Left Foreleg', 'Left Foreleg', 'Chest', 'Body', 'Body', 'Right Foreleg', 'Right Foreleg', 'Right Foreleg' ]
+                Abdomen: [ 'Body', 'Body', 'Chest', 'Right Foreleg', 'Left Foreleg', 'Left Rear Leg', 'Right Rear Leg', 'Abdomen', 'Abdomen', 'Abdomen' ]
+                Head: [ 'Left Foreleg', 'Right Foreleg', 'Body', 'Chest', 'Chest', 'Neck', 'Neck', 'Head', 'Head', 'Head' ]
+                Neck: [ 'Left Foreleg', 'Right Foreleg', 'Body', 'Chest', 'Chest', 'Head', 'Head', 'Neck', 'Neck', 'Neck' ]
             vital_areas:
-                - Body
-                - Engine
+                - Chest
+                - Abdomen
             critical_areas:
-                - Cockpit
-                - Controls
+                - Head
+                - Neck
+        Brig:
+            areas:
+                Hull: [ 'Rigging', 'Foremast', 'Mainmast', 'Waterline', 'Gundeck', 'Gundeck', 'Hull', 'Hull', 'Hull', 'Hull' ]
+                Gundeck: [ 'Waterline', 'Rigging', 'Foremast', 'Mainmast', 'Hull', 'Hull', 'Hull', 'Gundeck', 'Gundeck', 'Gundeck' ]
+                Bow: [ 'Mainmast', 'Waterline', 'Rigging', 'Gundeck', 'Hull', 'Hull', 'Foremast', 'Bow', 'Bow', 'Bow' ]
+                Stern: [ 'Foremast', 'Waterline', 'Rigging', 'Gundeck', 'Hull', 'Hull', 'Mainmast', 'Stern', 'Stern', 'Stern' ]
+                Waterline: [ 'Gundeck', 'Gundeck', 'Hull', 'Hull', 'Hull', 'Hull', 'Hull', 'Waterline', 'Waterline', 'Waterline' ]
+                Mainmast: [ 'Hull', 'Hull', 'Gundeck', 'Rigging', 'Rigging', 'Rigging', 'Rigging', 'Mainmast', 'Mainmast', 'Mainmast' ]
+                Foremast: [ 'Hull', 'Gundeck', 'Gundeck', 'Rigging', 'Rigging', 'Rigging', 'Rigging', 'Foremast', 'Foremast', 'Foremast' ]
+                Rigging: [ 'Hull', 'Gundeck', 'Gundeck', 'Foremast', 'Foremast', 'Mainmast', 'Mainmast', 'Rigging', 'Rigging', 'Rigging' ]
+            vital_areas:
+                - Bow
+                - Stern
+            critical_areas:
+                - Waterline
+                - Mainmast
             crew_areas:
-                - Cockpit
-        Transport:
+                - Gundeck
+                - Bow
+                - Stern
+        Cutter:
             areas:
-                Body: [ 'Controls', 'Tail', 'Weapon', 'Wing', 'Wing', 'Cockpit', 'Nose', 'Body', 'Body', 'Body' ]
-                Engine: [ 'Controls', 'Wing', 'Weapon', 'Body', 'Body', 'Tail', 'Tail', 'Engine', 'Engine', 'Engine' ]
-                Tail: [ 'Controls', 'Wing', 'Weapon', 'Body', 'Body', 'Engine', 'Engine', 'Tail', 'Tail', 'Tail' ]
-                Wing: [ 'Controls', 'Cockpit', 'Weapon', 'Body', 'Body', 'Tail', 'Tail', 'Wing', 'Wing', 'Wing' ]
-                Weapon: [ 'Controls', 'Controls', 'Body', 'Body', 'Wing', 'Wing', 'Wing', 'Weapon', 'Weapon', 'Weapon' ]
-                Nose: [ 'Controls', 'Weapon', 'Wing', 'Wing', 'Cockpit', 'Body', 'Body', 'Nose', 'Nose', 'Nose' ]
-                Cockpit: [ 'Controls', 'Weapon', 'Wing', 'Body', 'Body', 'Nose', 'Nose', 'Cockpit', 'Cockpit', 'Cockpit' ]
-                Controls: [ 'Cockpit', 'Weapon', 'Wing', 'Body', 'Body', 'Nose', 'Nose', 'Controls', 'Controls', 'Controls' ]
-                Cabin: [ 'Controls', 'Tail', 'Weapon', 'Wing', 'Wing', 'Cockpit', 'Nose', 'Cabin', 'Cabin', 'Cabin' ]
+                Hull: [ 'Rigging', 'Mainmast', 'Mainmast', 'Waterline', 'Waterline', 'Hull', 'Hull', 'Hull', 'Hull', 'Hull' ]
+                Bow: [ 'Waterline', 'Waterline', 'Rigging', 'Hull', 'Hull', 'Hull', 'Mainmast', 'Bow', 'Bow', 'Bow' ]
+                Stern: [ 'Waterline', 'Waterline', 'Rigging', 'Hull', 'Hull', 'Hull', 'Mainmast', 'Stern', 'Stern', 'Stern' ]
+                Waterline: [ 'Mainmast', 'Hull', 'Hull', 'Hull', 'Hull', 'Hull', 'Hull', 'Waterline', 'Waterline', 'Waterline' ]
+                Mainmast: [ 'Hull', 'Hull', 'Hull', 'Rigging', 'Rigging', 'Rigging', 'Rigging', 'Mainmast', 'Mainmast', 'Mainmast' ]
+                Rigging: [ 'Hull', 'Hull', 'Hull', 'Hull', 'Mainmast', 'Mainmast', 'Mainmast', 'Rigging', 'Rigging', 'Rigging' ]
             vital_areas:
-                - Body
-                - Engine
+                - Bow
+                - Stern
             critical_areas:
-                - Cockpit
-                - Controls
+                - Waterline
+                - Mainmast
             crew_areas:
-                - Cockpit
-                - Cabin
-        AA Battery:
-            areas:
-                Weapon: [ 'Crew', 'Body', 'Body', 'Body', 'Controls', 'Controls', 'Controls', 'Weapon', 'Weapon', 'Weapon' ]
-                Controls: [ 'Crew', 'Weapon', 'Weapon', 'Weapon', 'Body', 'Body', 'Body', 'Controls', 'Controls', 'Controls' ]
-                Body: [ 'Controls', 'Controls', 'Controls', 'Crew', 'Weapon', 'Weapon', 'Weapon', 'Body', 'Body', 'Body' ]
-                Crew: [ 'Weapon', 'Weapon', 'Body', 'Body', 'Controls', 'Controls', 'Controls', 'Crew', 'Crew', 'Crew' ]
-            vital_areas:
-                - Body
-            critical_areas:
-                - Controls
-                - Weapon
-            crew_areas: 
-                - Crew
+                - Hull
+                - Bow
+                - Stern
         Target:
             areas:
                 Bullseye: [ 'Ring 3', 'Ring 3', 'Ring 3', 'Ring 3', 'Ring 2', 'Ring 2', 'Ring 2', 'Ring 1', 'Ring 1', 'Bullsye']

@@ -7,46 +7,42 @@ fs3skills:
   - name: Athletics
     linked_attr: Brawn
     desc: General running, jumping, climbing, etc.
-  - name: Composure
-    linked_attr: Grit
-    desc: Coolness under pressure.
   - name: Blades
     linked_attr: Reflexes
     desc: Fighting with knives, swords, and other bladed weapons.
   - name: Bludgeons
     linked_attr: Brawn
-    desc: Fighting with axes, hammers, maces, and other weighted weapons.
-  - name: Spears
-    linked_attr: Reflexes
-    desc: Fighting with spears, lances, and other long, pointy weapons.
-  - name: Healing
-    linked_attr: Wits
-    desc: 'Tending to the ill and injured. Requires Specialty: Herbalism or First
-      Aid'
-    specialties:
-    - Herbalism
-    - First Aid
+    desc: Fighting with axes, mauls, and other weighted weapons.
   - name: Brawling
     linked_attr: Brawn
     desc: Fighting unarmed or with improvised weapons.
-  - name: Riding
+  - name: Composure
+    linked_attr: Grit
+    desc: Coolness under pressure.
+  - name: Firearms
     linked_attr: Reflexes
-    desc: Riding and taking care of horses and other mounts.
+    desc: Using pistols or rifles.
+  - name: Gunnery
+    linked_attr: Wits
+    desc: Using cannon and other mounted firearms.
+  - name: Healing
+    linked_attr: Wits
+    desc: 'Tending to the ill and injured. Requires Specialty: Herbalism or Surgery.'
+    specialties:
+    - Herbalism
+    - Surgery
+  - name: Leadership
+    linked_attr: Presence
+    desc: Tactics, rallying speeches, and guiding groups of people.
+  - name: Sailing
+    linked_attr: Wits
+    desc: Seamanship, navigation, knot-tying, and other nautical pursuits.
   - name: Stealth
     linked_attr: Reflexes
-    desc: Being sneaky.
-  - name: Persuasion
-    linked_attr: Presence
-    desc: Convincing people of the truth.
-  - name: Deception
-    linked_attr: Wits
-    desc: Convincing people of falsehoods.
+    desc: Being sneaky, legerdemain, hiding.
   - name: Thrown
     linked_attr: Reflexes
-    desc: Throwing knives, spears, rocks, or anything else.
-  - name: Bows
-    linked_attr: Reflexes
-    desc: Using bows and crossbows.
-  - name: Magic
-    linked_attr: Presence
-    desc: Sorcery, enchanting, and other pagan magics.
+    desc: Throwing knives, harpoons, rocks, and other weapons.
+  - name: Voudoun
+    linked_attr: Grit
+    desc: Calling upon the loa and casting wanga (spells).

@@ -106,7 +106,8 @@ module AresMUSH
       
     def self.roll_initiative(combatant, ability)
       luck_mod = combatant.luck == "Initiative" ? 3 : 0
-      combatant.roll_ability(ability, luck_mod + combatant.total_damage_mod)
+      weapon_init_mod = FS3Combat.weapon_stat(combatant.weapon, "initiative")
+      combatant.roll_ability(ability, luck_mod + weapon_init_mod + combatant.total_damage_mod)
     end
     
     def self.check_ammo(combatant, bullets)

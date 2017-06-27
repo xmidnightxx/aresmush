@@ -5,104 +5,94 @@ fs3combat:
             protection:
                 Nowhere: 0
                 
-        Tactical:
-            description: "Military-Grade Kevlar Vest and Helmet"
+        Fencing Jacket:
+            description: "A thick, padded jacket meant for practicing fencing."
             protection: 
-                Head: 3
-                Neck: 3
-                Chest: 4
-                Abdomen: 4
-
-        Police:
-            description: "Police-Grade Kevlar Vest"
-            protection: 
-                Chest: 3
-                Abdomen: 3
-
-        Centurion:
-            description: "Cylon Centurion Armor"
-            protection:
-                Head: 3
-                Neck: 3
-                Chest: 5
-                Abdomen: 5
-                Left Arm: 4
-                Right Arm: 4
-                Left Hand: 3
-                Right Hand: 3
-                Left Leg: 5
-                Right Leg: 5
-                Left Foot: 4
-                Right Foot: 4
-
-        Cylon:
-            description: "Cylon (Non-Centurion) Skeleton"
-            protection:
-                Head: 2
-                Neck: 2
-                Chest: 3
-                Abdomen: 3
+                Chest: 2
+                Abdomen: 2
                 Left Arm: 2
                 Right Arm: 2
-                Left Leg: 3
-                Left Hand: 1
-                Right Hand: 1
+
+        Buff Coat:
+            description: "Thick leather coat with gloves and a leather skullcap."
+            protection: 
+                Chest: 3
+                Abdomen: 3
+                Head: 3
+                Left Arm: 3
+                Right Arm: 3
+                Left Hand: 2
+                Right Hand: 2
+
+        Breastplate:
+            description: "A solid steel cuirass with leather coat and pants. You cannot swim in this."
+            protection:
+                Neck: 4
+                Chest: 4
+                Abdomen: 4
+                Left Arm: 2
+                Right Arm: 2
                 Left Leg: 2
                 Right Leg: 2
                 Left Foot: 2
                 Right Foot: 2
+
+        Pitch Coat:
+            description: "A jacket and pants hardened with pitch."
+            protection:
+                Chest: 3
+                Abdomen: 3
+                Left Arm: 3
+                Right Arm: 3
+                Left Leg: 3
+                Left Leg: 3
+                Right Leg: 3
+                Left Foot: 3
+                Right Foot: 3
+                Groin: 3
+ 
+        Brig of War:
+            description: "The heavy timbers of a medium warship."
+            protection:
+                Hull: 9
+                Waterline: 9
+                Gundeck: 9
+                Bow: 8
+                Stern: 8
+                Mainmast: 9
+                Foremast: 8
+                Rigging: 5
+
+        Brig:
+            description: "The timbers of a medium merchant ship."
+            protection:
+                Hull: 7
+                Waterline: 7
+                Gundeck: 7
+                Bow: 6
+                Stern: 6
+                Mainmast: 7
+                Foremast: 6
+                Rigging: 4
                 
-        Viper:
-            description: "Viper Vehicle Armor"
+        Cutter:
+            description: "The timbers of a small naval ship."
             protection:
-                Body: 4
-                Engine: 4
-                Tail: 3
-                Wing: 3
-                Weapon: 2
-                Nose: 3
-                Cockpit: 2
-                Controls: 4
-
-        Raider:
-            description: "Cylon Raider Vehicle Armor"
+                Hull: 7
+                Waterline: 7
+                Gundeck: 7
+                Bow: 6
+                Stern: 6
+                Mainmast: 7
+                Rigging: 5
+                
+        Sloop:
+            description: "The timbers of a small merchant ship."
             protection:
-                Body: 3
-                Engine: 3
-                Tail: 3
-                Wing: 3
-                Weapon: 2
-                Nose: 3
-                Cockpit: 2
-                Controls: 3
-
-        Raptor:
-            description: "Raptor Vehicle Armor"
-            protection:
-                Body: 5
-                Engine: 5
-                Tail: 5
-                Wing: 4
-                Weapon: 4
-                Nose: 5
-                Cockpit: 3
-                Controls: 4
-
-        Heavy Raider:
-            description: "Cylon Heavy Raider Vehicle Armor"
-            protection:
-                Body: 5
-                Engine: 5
-                Tail: 5
-                Wing: 4
-                Weapon: 4
-                Nose: 5
-                Cockpit: 3
-                Controls: 4
-
-        AA Battery:
-            description: "Anti-Aircraft Battery"
-            protection:
-                Body: 2
-                Controls: 2
-                Weapon: 2
+                Hull: 6
+                Waterline: 6
+                Gundeck: 6
+                Bow: 5
+                Stern: 5
+                Mainmast: 6
+                Rigging: 4

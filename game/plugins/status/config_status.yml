@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 status:
     colors:
         IC: "%xr"
@@ -10,30 +9,6 @@ status:
         STA: "%xm"
         GM: "%xm"
         BLD: "%xb"
-        
-    minutes_before_idle: 120
-    minutes_before_idle_disconnect: 720
-    
-    afk_cron:
-        #date: 1
-        #day_of_week: Sat
-        #hour: 21
-        minute: 20
-
-    shortcuts:
-        "ic" : "onstage"
-        "afk on": "afk"
-        "afk/on": "afk"
-        "afk/off": "afk off"
-=======
-status:
-    colors:
-        IC: "%xr"
-        OOC: "%xh"
-        NPC: "%xh"
-        AFK: "%xy"
-        NEW: "%xg"
-        ADM: "%xb"
         
     minutes_before_idle: 120
     minutes_before_idle_disconnect: 300
@@ -49,4 +24,3 @@ status:
         "afk on": "afk"
         "afk/on": "afk"
         "afk/off": "afk off"
->>>>>>> upstream/master
