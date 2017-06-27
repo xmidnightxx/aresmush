@@ -1,1 +1,1 @@
-var config = {"port":8005,"mu_name":"After Camelot: An Arthurian Legend","host":"scrozzle.noderunner.net"};
+var config = {"port":8005,"mu_name":"The 8th Sea","host":"scrozzle.noderunner.net"};

@@ -1,13 +1,13 @@
 game:
     # Name of your game.
-    name: "After Camelot: An Arthurian Legend"
+    name: "The 8th Sea"
 
     # Please select the appropriate category to describe your game:
     # "Historical", "Sci-Fi", "Fantasy", "Modern", "Supernatural", "Social", "Other"
     category: Fantasy
     
     # Describe your game.  You may use ansi and other MUSH formatting codes (%r, etc.).
-    description: "Mordred led his armies against Camelot and Caerleon, killing Arthur and the majority of his Knights. The survivors are displaced to London and beyond. Sensing an opportunity, the nobles of England have attempted to seize power, skirmishing over lands and castles that are now up for grabs. Yet despite this infighting, none have forgotten that Mordred and his armies lay in wait to the west, rebuilding to take over the rest of Arthur's kingdom."
+    description: "A High Seas Adventure game set in a world of pirates, monsters and voodoo."
     
     # Your game's website
     website: ""
