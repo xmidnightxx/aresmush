@@ -10,6 +10,14 @@
     <% end %>
 </ul>
 
+<h1>Game Help</h1>
+
+<ul>
+    <% @game_help.sort.each do |f| %>
+    <li><a href="/admin/config/edit?path=<%= f %>"><%= File.basename(f) %></a></li>
+    <% end %>
+</ul>
+
 <h1>Plugin Config</h1>
     <blockquote>
         Quick Links:
@@ -23,7 +31,7 @@
         <a name="<%= p %>"></a>
         <h3><%= p %></h3>
 
-            <p><a href="http://aresmush.com/plugins/<%= p %>" target="_blank">Info & Tutorials</a></p>
+            <p><a href="/help/<%= p %>/index" target="_blank">Configuration Help</a></p>
             
             <% ["config", "help", "locale", "templates"].each do |section| %>
             <b><%= section %></b>

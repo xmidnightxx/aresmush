@@ -2,7 +2,6 @@
 toc: ~admin~ Managing Game
 summary: Dealing with troublesome players.
 aliases:
-- boot
 - findsite
 - ban
 - siteban
@@ -16,9 +15,7 @@ Unfortunately, you will sometimes have to deal with troublesome players.  These 
 
 ## Booting Characters
 
-If someone is causing a ruckus or gets stuck online or something, you can disconnect them.
-
- `boot <name>` - Forcibly disconnects someone from the game.
+If someone is causing a ruckus or gets stuck online or something, you can disconnect them.  See [Boot](/help/login/boot) for more info.
 
 ## Findsite
 
@@ -29,6 +26,6 @@ The findsite command will help you find characters with similar IP address, whic
 `findsite` - Shows a site summary identifying possible alts.
 `findsite <name, host or IP>` - Shows someone's IP address and any similar ones.
 
-## Suspect Sites
+## Suspects and Bans
 
-Ares does not support a 'siteban' feature because too many people these days share IP address blocks.  Your odds of banning innocent people is high.  Instead there is the ability to configure (server-side) a list of suspect hosts or IP addresses.  This is done in the [Login plugin](/help/login/config) configuration.
+You can mark certain IP addresses and/or hostnames as suspect sites, or ban them completely.  This is done in the [Login plugin](/help/login/config) configuration.
