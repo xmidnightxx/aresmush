@@ -12,27 +12,24 @@ module AresMUSH
       def required_args
         {
           args: [ self.scene_num ],
-          help: 'scenes'
+          help: 'scenes creating'
         }
       end
       
       def handle
-        scene = Scene[self.scene_num]
-        if (!scene)
-          client.emit_failure t('scenes.scene_not_found')    
-          return
-        end
+        Scenes.with_a_scene(self.scene_num, client) do |scene|
+          can_join = Scenes.can_manage_scene(enactor, scene) || !scene.private_scene        
+          if (!can_join)
+            client.emit_failure t('scenes.scene_is_private')
+            return
+          end
+          client.emit_ooc t('scenes.scene_about_to_join')
         
-        can_join = Scenes.can_manage_scene(enactor, scene) || !scene.private_scene        
-        if (!can_join)
-          client.emit_failure t('scenes.scene_is_private')
-          return
-        end
+          scene.room.emit_ooc t('scenes.scene_pending_join', :name => enactor_name)
         
-        scene.room.emit_ooc t('scenes.scene_pending_join', :name => enactor_name)
-        
-        Global.dispatcher.queue_timer(3, "Join scene", client) do
-          Rooms.move_to(client, enactor, scene.room)
+          Global.dispatcher.queue_timer(3, "Join scene", client) do
+            Rooms.move_to(client, enactor, scene.room)
+          end
         end
       end
     end

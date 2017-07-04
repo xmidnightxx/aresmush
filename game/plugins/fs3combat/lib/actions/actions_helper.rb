@@ -31,6 +31,10 @@ module AresMUSH
       end
     end
     
+    def self.damage_table
+      Global.read_config("fs3combat", "damage_table")
+    end
+    
     def self.reset_for_new_turn(combatant)
       # Reset aim if they've done anything other than aiming. 
       if (combatant.is_aiming? && combatant.action_klass != "AresMUSH::FS3Combat::AimAction")
@@ -41,7 +45,7 @@ module AresMUSH
       if (!combatant.is_subdued?)
         combatant.update(subdued_by: nil)
       end
-      
+            
       combatant.update(posed: false)
       combatant.update(recoil: 0)
       FS3Combat.reset_stress(combatant)
@@ -51,6 +55,9 @@ module AresMUSH
       
       if (combatant.is_ko && combatant.is_npc?)
         FS3Combat.leave_combat(combatant.combat, combatant)
+      else
+        # Be sure to do this AFTER checking for KO up above.
+        combatant.update(damaged_by: [])
       end
     end
     
@@ -83,7 +90,8 @@ module AresMUSH
         combatant.update(is_ko: true)
         combatant.update(action_klass: nil)
         combatant.update(action_args: nil)
-        combatant.combat.emit t('fs3combat.is_koed', :name => combatant.name)
+        damaged_by = combatant.damaged_by.join(", ")
+        combatant.combat.emit t('fs3combat.is_koed', :name => combatant.name, :damaged_by => damaged_by), nil, true
       end
     end
       
@@ -93,7 +101,7 @@ module AresMUSH
       
       if (roll > 0)
         combatant.update(is_ko: false)
-        combatant.combat.emit t('fs3combat.is_no_longer_koed', :name => combatant.name)
+        combatant.combat.emit t('fs3combat.is_no_longer_koed', :name => combatant.name), nil, true
       end
     end
     
@@ -165,7 +173,7 @@ module AresMUSH
       combatant.update(action_args: args)
       combat.emit "#{action.print_action}", FS3Combat.npcmaster_text(combatant.name, enactor)
     end
-    
+
     def self.determine_damage(combatant, hitloc, weapon, mod = 0, crew_hit = false)
       random = rand(100)
       
@@ -177,7 +185,7 @@ module AresMUSH
       when "Vital"
         severity = 0
       else
-        severity = -10
+        severity = -30
       end
       
       npc = combatant.is_npc? ? Global.read_config("fs3combat", "npc_lethality_mod") : 0
@@ -185,11 +193,11 @@ module AresMUSH
       
       total = random + severity + lethality + mod + npc_mod
       
-      if (total < 20)
+      if (total < FS3Combat.damage_table["GRAZE"])
         damage = "GRAZE"
-      elsif (total < 60)
+      elsif (total < FS3Combat.damage_table["FLESH"])
         damage = "FLESH"
-      elsif (total <100)
+      elsif (total < FS3Combat.damage_table["IMPAIR"])
         damage = "IMPAIR"
       else
         damage = "INCAP"
@@ -217,20 +225,23 @@ module AresMUSH
             
       # Armor doesn't cover this hit location
       return 0 if !protect
-      
-      
-      # minimum 10% 
-      pen_chance = [ (pen + attacker_net_successes - protect) * 10, 10 ].max
-      pen_roll = rand(100) 
-      
-      if (pen_roll <= pen_chance)
+      random_die = rand(8)
+      result = random_die + attacker_net_successes + pen - protect
+            
+      if (result >= 8) # 8-9
         armor_reduction = 0
-      else
-        armor_reduction = rand(protect * 5) 
+      elsif (result >= 6) # 6-7
+        armor_reduction = rand(25)
+      elsif (result >= 4) # 4-5
+        armor_reduction = rand(25) + 25
+      elsif (result >= 2) # 2-3
+        armor_reduction = rand(50) + 50
+      else # 0-1
+        armor_reduction = 100
       end
       
-      combatant.log "Determined armor: loc=#{hitloc} weapon=#{weapon} net=#{attacker_net_successes}" +
-      " pen=#{pen} protect=#{protect} pen_chance=#{pen_chance} pen_roll=#{pen_roll} result=#{armor_reduction}"
+     combatant.log "Determined armor: loc=#{hitloc} weapon=#{weapon} net=#{attacker_net_successes}" +
+      " pen=#{pen} protect=#{protect} random=#{random_die} result=#{result} reduction=#{armor_reduction}"
       
       armor_reduction
     end
@@ -332,8 +343,13 @@ module AresMUSH
 
       target.inflict_damage(damage, desc, is_stun, crew_hit)
 
+
       if (damage != "GRAZE")
         target.update(freshly_damaged: true)
+        
+        damaged_by = target.damaged_by
+        damaged_by << attack_name
+        target.update(damaged_by: damaged_by.uniq)
       end
             
       target.add_stress(1)

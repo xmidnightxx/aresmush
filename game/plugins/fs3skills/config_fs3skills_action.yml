@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 fs3skills:
   action_skills:
@@ -46,3 +47,62 @@ fs3skills:
   - name: Voodoo
     linked_attr: Grit
     desc: Calling upon the loa and casting favors (spells).
+=======
+fs3skills:
+    action_skills:
+        -
+            name: Alertness
+            desc: "Noticing things and being aware of your surroundings."
+            linked_attr: Perception
+        -
+            name: Athletics
+            desc: "General running, jumping, climbing, etc."
+            linked_attr: Brawn
+        -
+            name: Composure
+            desc: "Coolness under pressure."
+            linked_attr: Grit
+        -
+            name: Demolitions
+            desc: "Blowing stuff up."
+            linked_attr: Wits
+        -   
+            name: Firearms
+            desc: "Shooting guns."
+            linked_attr: Reflexes
+        -
+            name: Gunnery
+            desc: "Vehicle/special weapons (cannons, rockets/missiles, ECM packages)."
+            linked_attr: Reflexes
+        -
+            name: Medicine
+            desc: "Tending to the ill and injured. Requires Specialty: Doctor, Surgeon, Nurse, Medic, Other"
+            linked_attr: Wits
+            specialties:
+                - Doctor
+                - Surgeon
+                - Nurse
+                - Medic
+                - Other
+        - 
+            name: Melee
+            desc: "Fighting with fists, knives, and hand-to-hand weapons."
+            linked_attr: Brawn
+        -
+            name: Piloting
+            desc: "Flying air and spacecraft. Requires Specialty: Viper, Raptor, Shuttle"
+            linked_attr: Reflexes
+            specialties:
+                - Viper
+                - Raptor
+                - Freighter
+                - Other
+        - 
+            name: Stealth
+            desc: "Being sneaky."
+            linked_attr: Reflexes
+        -
+            name: Technician
+            desc: "General mechanics/electronics and fixing things."
+            linked_attr: Wits
+>>>>>>> upstream/master

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 en:
     profile:
         last_on: "Last On:"
@@ -47,4 +48,57 @@ en:
         
         description: "Description"
         
+=======
+en:
+    profile:
+        last_on: "Last On:"
+        location: "Location:" 
+        currently_connected: "Connected!"
+        played_by: "Played By:"
+        timezone: "Timezone:"
+        status: "Status:"
+        alts: "Alts: "
+        
+        profile_title: "Profile"
+        profile_char_list_title: "Alts"
+        must_have_handle_to_view_profile: "You must have a handle to view handle profiles."
+        ooc_profile_title: "OOC Profile"
+        no_profile_set: "None set"
+        profile_set: "You set your profile."
+        handle: "Handle:"
+        handle_profile: "Profile:"
+        
+        
+        custom_profile_set: "Custom profile field %{field} set."
+        custom_profile_cleared: "Custom profile field %{field} cleared."
+        
+        see_also_info: "Use 'info' for IC info."
+        
+        
+        info_title: "Info"        
+        
+        fullname_title: "Fullname:"
+        actor_title: "Played By:"
+        gender_title: "Gender:"
+        height_title: "Height:"
+        physique_title: "Physique:"
+        hair_title: "Hair:" 
+        skin_title: "Skin:"
+        eyes_title: "Eyes:"
+        age_title: "Age:"
+        birthdate_title: "Birthdate:"
+        colony_title: "Colony:"
+        rank_title: "Rank:"
+        position_title: "Position:"
+        department_title: "Department:"
+        faction_title: "Faction:"
+        callsign_title: "Callsign:"
+        unread_mail: "Unread Mail:"
+        unread_message_count: "%{num} Messages"
+        wiki_title: "Wiki:"
+        icon_title: "Icon:"
+        
+        description: "Description"
+        
+>>>>>>> upstream/master
         none: "None"

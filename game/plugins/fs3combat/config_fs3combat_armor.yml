@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 fs3combat:
     armor:
         None:
@@ -105,3 +106,139 @@ fs3combat:
                 Mast: 8
                 Rigging: 7
                 
+=======
+fs3combat:
+    armor:
+        None:
+            description: "In case you need to take off armor"
+            protection:
+                Nowhere: 0
+                
+        Tactical:
+            description: "Military-Grade Kevlar Vest and Helmet"
+            protection: 
+                Head: 6
+                Neck: 4
+                Chest: 7
+                Abdomen: 6
+
+        Police:
+            description: "Police-Grade Kevlar Vest"
+            protection: 
+                Chest: 6
+                Abdomen: 5
+
+        Centurion:
+            description: "Cylon Centurion Armor"
+            protection:
+                Head: 7
+                Neck: 7
+                Chest: 8
+                Abdomen: 8
+                Left Arm: 6
+                Right Arm: 6
+                Left Hand: 5
+                Right Hand: 5
+                Left Leg: 7
+                Right Leg: 7
+                Left Foot: 5
+                Right Foot: 5
+
+        Cylon:
+            description: "Cylon (Non-Centurion) Skeleton"
+            protection:
+                Head: 5
+                Neck: 6
+                Chest: 6
+                Abdomen: 6
+                Left Arm: 4
+                Right Arm: 4
+                Left Hand: 5
+                Right Hand: 4
+                Left Leg: 5
+                Right Leg: 5
+                Left Foot: 4
+                Right Foot: 4
+                
+        Viper:
+            description: "Viper Vehicle Armor"
+            protection:
+                Body: 7
+                Engine: 7
+                Tail: 7
+                Wing: 7
+                Weapon: 6
+                Nose: 7
+                Cockpit: 5
+                Controls: 6
+
+        Raider:
+            description: "Cylon Raider Vehicle Armor"
+            protection:
+                Body: 7
+                Engine: 7
+                Tail: 7
+                Wing: 7
+                Weapon: 6
+                Nose: 7
+                Cockpit: 5
+                Controls: 6
+
+        Raptor:
+            description: "Raptor Vehicle Armor"
+            protection:
+                Body: 10
+                Engine: 10
+                Tail: 8
+                Wing: 8
+                Weapon: 6
+                Nose: 8
+                Cockpit: 5
+                Controls: 8
+
+        Heavy Raider:
+            description: "Cylon Heavy Raider Vehicle Armor"
+            protection:
+                Body: 10
+                Engine: 10
+                Tail: 8
+                Wing: 8
+                Weapon: 6
+                Nose: 8
+                Cockpit: 5
+                Controls: 8
+
+        Tank:
+            description: "Tank Armor"
+            protection:
+                Body: 22
+                Engine: 22
+                Weapon: 10
+                Track: 15
+                Side: 15
+                Cabin: 22
+
+        Apc:
+            description: "Light Armored Vehicle Armor"
+            protection:
+                Body: 12
+                Engine: 12
+                Weapon: 6
+                Track: 8
+                Side: 10
+                Cabin: 12
+
+        Truck:
+            description: "Cylon Heavy Raider Vehicle Armor"
+            protection:
+                Body: 7
+                Cab: 6
+                Engine: 8
+            
+        AA Battery:
+            description: "Anti-Aircraft Battery"
+            protection:
+                Body: 7
+                Controls: 7
+                Weapon: 6
+>>>>>>> upstream/master

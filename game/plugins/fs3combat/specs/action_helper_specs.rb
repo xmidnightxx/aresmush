@@ -126,6 +126,7 @@ module AresMUSH
           @combatant.stub(:total_damage_mod) { -2.0 }
           @combatant.stub(:is_npc?) { false }
           @combatant.stub(:name) { "Bob" }
+          @combatant.stub(:damaged_by) { [ "Bob" ] }
         end
         
         it "should do nothing if already KOd" do
@@ -150,7 +151,7 @@ module AresMUSH
           @combatant.should_receive(:update).with(action_args: nil)
           @combatant.should_receive(:update).with(is_ko: true)
           @combatant.stub(:combat) { combat }
-          combat.should_receive(:emit).with("fs3combat.is_koed")
+          combat.should_receive(:emit).with("fs3combat.is_koed", nil, true)
           FS3Combat.check_for_ko(@combatant)
         end
         
@@ -163,7 +164,7 @@ module AresMUSH
           @combatant.should_receive(:update).with(action_args: nil)
           @combatant.should_receive(:update).with(is_ko: true)
           @combatant.stub(:combat) { combat }
-          combat.should_receive(:emit).with("fs3combat.is_koed")
+          combat.should_receive(:emit).with("fs3combat.is_koed", nil, true)
           FS3Combat.check_for_ko(@combatant)
         end
         
@@ -204,7 +205,7 @@ module AresMUSH
           @combatant.should_receive(:update).with(is_ko: false)
           FS3Combat.should_receive(:make_ko_roll).with(@combatant) { 1 }
           @combatant.stub(:combat) { combat }
-          combat.should_receive(:emit).with("fs3combat.is_no_longer_koed")
+          combat.should_receive(:emit).with("fs3combat.is_no_longer_koed", nil, true)
           FS3Combat.check_for_unko(@combatant)
         end
       end
@@ -399,6 +400,8 @@ module AresMUSH
           FS3Combat.stub(:hitloc_severity).with(@combatant, "Chest", false) { "Vital" }
           FS3Combat.stub(:weapon_stat).with("Knife", "lethality") { 0 }
           FS3Combat.stub(:rand) { 0 }
+          Global.stub(:read_config).with("fs3combat", "damage_table") { { "GRAZE" => 20, "FLESH" => 60, "IMPAIR" => 100 } }
+          
         end
   
         describe "random damage" do
@@ -460,8 +463,6 @@ module AresMUSH
           @combatant.stub(:armor) { "Tactical" }
           FS3Skills::Api.stub(:one_shot_die_roll) { { successes: 0 } }
           FS3Combat.stub(:weapon_stat) { 5 }
-          FS3Combat.stub(:weapon_stat).with("Rifle", "penetration") { 3 }
-          FS3Combat.stub(:armor_stat).with("Tactical", "protection") { { "Head" => 2 } }
         end
 
         it "should return no protection if no armor" do
@@ -488,29 +489,50 @@ module AresMUSH
           FS3Combat.determine_armor(@combatant, "Head", "Rifle", 0).should eq 0
         end
         
-        it "should bypass armor if pen wins by enough" do
-          # 3 - 2 = 10% chance of penetration
-          FS3Combat.stub(:rand) { 10 }
+        it "should bypass armor if weapon wins by enough" do
+          FS3Combat.stub(:rand).with(10) { 6 }
+          FS3Combat.stub(:weapon_stat).with("Rifle", "penetration") { 5 }
+          FS3Combat.stub(:armor_stat).with("Tactical", "protection") { { "Head" => 3 } }
           FS3Combat.determine_armor(@combatant, "Head", "Rifle", 0).should eq 0
         end
         
-        it "should reduce by random protection roll if not bypassed" do
-          FS3Combat.stub(:rand).with(100) { 51 }
-          FS3Combat.stub(:rand).with(10) { 5 }
-          FS3Combat.determine_armor(@combatant, "Head", "Rifle", 0).should eq 5
+        it "should provide minimum armor xxx" do
+          FS3Combat.stub(:rand).with(10) { 4 }
+          FS3Combat.stub(:rand).with(25) { 24 }
+          FS3Combat.stub(:weapon_stat).with("Rifle", "penetration") { 5 }
+          FS3Combat.stub(:armor_stat).with("Tactical", "protection") { { "Head" => 3 } }
+          FS3Combat.determine_armor(@combatant, "Head", "Rifle", 0).should eq 24
         end
 
-        it "should add in attacker successes for successful pen" do
-          # 3 + 2 - 2 = 30% chance of penetration
-          FS3Combat.stub(:rand) { 30 }
+        it "should provide some armor" do
+          FS3Combat.stub(:rand).with(10) { 2 }
+          FS3Combat.stub(:weapon_stat).with("Rifle", "penetration") { 5 }
+          FS3Combat.stub(:armor_stat).with("Tactical", "protection") { { "Head" => 3 } }
+          FS3Combat.stub(:rand).with(25) { 19 }
+          FS3Combat.determine_armor(@combatant, "Head", "Rifle", 0).should eq 44
+        end
+
+        it "should provide extra armor" do
+          FS3Combat.stub(:rand).with(10) { 0 }
+          FS3Combat.stub(:weapon_stat).with("Rifle", "penetration") { 5 }
+          FS3Combat.stub(:armor_stat).with("Tactical", "protection") { { "Head" => 3 } }
+          FS3Combat.stub(:rand).with(50) { 15 }
+          FS3Combat.determine_armor(@combatant, "Head", "Rifle", 0).should eq 65
+        end
+
+        it "should stop attack if armor wins by enough" do
+          FS3Combat.stub(:rand).with(10) { 1 }
+          FS3Combat.stub(:weapon_stat).with("Rifle", "penetration") { 5 }
+          FS3Combat.stub(:armor_stat).with("Tactical", "protection") { { "Head" => 6 } }
+          FS3Combat.determine_armor(@combatant, "Head", "Rifle", 0).should eq 100
+        end
+
+        it "should add in attacker successes for to pen roll" do
+          FS3Combat.stub(:rand).with(10) { 8 }
+          FS3Combat.stub(:weapon_stat).with("Rifle", "penetration") { 3 }
+          FS3Combat.stub(:armor_stat).with("Tactical", "protection") { { "Head" => 5 } }
           FS3Combat.determine_armor(@combatant, "Head", "Rifle", 2).should eq 0
-        end
-        
-        it "should add in attacker successes for unsuccessful pen" do
-          FS3Combat.stub(:rand).with(100) { 31 }
-          FS3Combat.stub(:rand).with(10) { 5 }
-          FS3Combat.determine_armor(@combatant, "Head", "Rifle", 2).should eq 5
-        end
+        end        
       end
       
       describe :determine_attack_margin do
@@ -664,6 +686,8 @@ module AresMUSH
           @target.stub(:name) { "D" }
           @target.stub(:add_stress)
           @target.stub(:update).with(freshly_damaged: true)
+          @target.stub(:damaged_by) { [] }
+          @target.stub(:update).with(damaged_by: [ "A" ]) {}
           @combatant.stub(:luck) { "" }
         end
             
@@ -686,6 +710,13 @@ module AresMUSH
         it "should reduce damage if armor slowed the attack" do
           FS3Combat.stub(:determine_armor) { 22 }
           FS3Combat.should_receive(:determine_damage).with(@target, "Chest", "Knife", -22, false) { "INCAP" }
+          FS3Combat.resolve_attack(@combatant, "A", @target, "Knife")
+        end
+        
+        it "should update damaged by" do 
+          @target.stub(:damaged_by) { [ "X" ] }
+          @target.should_receive(:update).with(damaged_by: [ "X", "A" ])
+          FS3Combat.should_receive(:determine_damage).with(@target, "Chest", "Knife", 0, false) { "INCAP" }
           FS3Combat.resolve_attack(@combatant, "A", @target, "Knife")
         end
         
