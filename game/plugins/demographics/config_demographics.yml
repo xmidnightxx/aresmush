@@ -17,7 +17,7 @@ demographics:
         - fullname
         - hair
         - physique
-        - fullname
+        - nickname
 
     demographics:
         - actor
@@ -29,25 +29,26 @@ demographics:
         - fullname
         - gender
         - birthdate
-        - county
+        - nickname
 
     groups:
         Nationality:
             desc: "Where your character was born (colonies are included in their colonial power)."
             values:
-                British: "The British have a strong naval and mercantile history, but few colonies (yet)."
+                English: "The English have a strong naval and mercantile history, but few colonies (yet)."
                 French: "The French have several colonies in the Antilles, but mostly focus on Europe."
                 Spanish: "The Spanish control South and Central America and are rich and powerful."
                 Dutch: "The Dutch are traders more than fighters, and have several small colonies."
                 Carib: "The Carib are the overall name for those who were here before the Europeans."
                 African: "Those brought over to work as slaves, since freed or escaped."
+
         Crew:
             desc: "The ship your character serves on, if any."
             values:
-                Impudent: "A Royal Navy brig-of-war."
+                Impudent: "An English brig-of-war."
                 Santiago: "A Spanish merchant brig."
                 Reaver: "A pirate cutter that still sails despite being wrecked."
-                Shore: "Not currently part of any crew."
+
         Position:
             desc: "Your character's background and training."
             values:

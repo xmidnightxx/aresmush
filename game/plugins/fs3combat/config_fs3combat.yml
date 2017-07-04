@@ -22,32 +22,21 @@ fs3combat:
         # ----------------------------------------
 
         Soldier:
-            weapon: Spear
-            armor: Chainmaille
+            weapon: Sword
             hitloc: Humanoid
             defense_skill: Reflexes
-        Archer:
-            weapon: Bow
-            armor: Leather
+        Marine:
+            weapon: Musket
+            armor: Buff Coat
             hitloc: Humanoid
             defense_skill: Reflexes
-        Magic:
+        Voodoo:
             weapon: Bolt
             hitloc: Humanoid
             defense_skill: Reflexes
         Unarmed:
             weapon: Unarmed
             hitloc: Humanoid
-            defense_skill: Reflexes
-        Knight:
-            weapon: Sword
-            armor: Plate
-            hitloc: Humanoid
-            defense_skill: Reflexes
-        Charger:
-            weapon: Brawling
-            armor: Cloth Barding
-            hitloc: Quadruped
             defense_skill: Reflexes
         Hound:
             weapon: Knife

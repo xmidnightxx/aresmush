@@ -8,8 +8,8 @@ fs3combat:
 
 
         Blast:
-            description: "A wanga which affects multiple targets."
-            skill: Voudoun
+            description: "A favor which affects multiple targets."
+            skill: Voodoo
             lethality: 0
             penetration: 3
             weapon_type: Explosive
@@ -157,8 +157,8 @@ fs3combat:
             has_shrapnel: false
 
         Bolt:
-            description: "A wanga which affects a single target."
-            skill: Voudoun
+            description: "A favor which affects a single target."
+            skill: Voodoo
             lethality: 0
             penetration: 4
             weapon_type: Ranged
@@ -287,9 +287,25 @@ fs3combat:
             allowed_specials: 
                 - 'Sparring'
 
+        Bayonet:
+            description: "A musket or rifle with a plug bayonet affixed."
+            skill: Blades
+            lethality: 0
+            penetration: 4
+            weapon_type: Melee
+            is_automatic: false
+            # ammo: 0
+            recoil: 0
+            damage_type: Physical
+            accuracy: 0
+            initiative: 2
+            has_shrapnel: false
+            allowed_specials: 
+                - 'Sparring'
+                
         Warding:
-            description: "A wanga intended to defend against melee assaults and attack lightly back."
-            skill: Voudoun
+            description: "A favor intended to defend against melee assaults and attack lightly back."
+            skill: Voodoo
             lethality: 0
             penetration: 3
             weapon_type: Melee
@@ -312,14 +328,15 @@ fs3combat:
             penetration: 8
             weapon_type: Ranged
             is_automatic: false
-            ammo: 1
+            ## ammo: 1
             recoil: 0
             damage_type: Physical
             accuracy: -5
             initiative: -2
             has_shrapnel: false
-            ## allowed_specials: 
-            ##     - 'Sparring'
+            allowed_specials: 
+                - 'Grapeshot'
+                - 'Chainshot'
 
     # Special things that can be added to weapons, like special ammunition or
     # accessories.  These can modify any or all of the following weapon stats:
@@ -330,3 +347,13 @@ fs3combat:
         Sparring:
             description: "Rebated (blunted or padded) weapons."
             lethality: -50
+        Grapeshot:
+            description: "Musket balls in a canister instead of a cannonball."
+            lethality: -20
+            accuracy: 6
+            penetration: -4
+        Chainshot:
+            description: "Two half-cannonballs separated by a length of chain."
+            lethality: -10
+            accuracy: 2
+            penetration: -2

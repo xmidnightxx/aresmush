@@ -54,45 +54,54 @@ fs3combat:
         Brig of War:
             description: "The heavy timbers of a medium warship."
             protection:
+                Hull: 12
+                Waterline: 12
+                Gundeck: 12
+                Bow: 11
+                Stern: 11
+                Mainmast: 12
+                Foremast: 11
+                Rigging: 8
+
+        Brig:
+            description: "The timbers of a medium merchant ship."
+            protection:
+                Hull: 10
+                Waterline: 10
+                Gundeck: 10
+                Bow: 9
+                Stern: 9
+                Mainmast: 10
+                Foremast: 9
+                Rigging: 7
+                
+        Cutter:
+            description: "The timbers of a small naval ship."
+            protection:
+                Hull: 10
+                Waterline: 10
+                Gundeck: 10
+                Bow: 9
+                Stern: 9
+                Mainmast: 10
+                Rigging: 8
+                
+        Sloop:
+            description: "The timbers of a small merchant ship."
+            protection:
                 Hull: 9
                 Waterline: 9
                 Gundeck: 9
                 Bow: 8
                 Stern: 8
                 Mainmast: 9
-                Foremast: 8
-                Rigging: 5
+                Rigging: 7
 
-        Brig:
-            description: "The timbers of a medium merchant ship."
+        Boat:
+            description: "The timbers of a small boat."
             protection:
-                Hull: 7
-                Waterline: 7
-                Gundeck: 7
-                Bow: 6
-                Stern: 6
-                Mainmast: 7
-                Foremast: 6
-                Rigging: 4
+                Hull: 8
+                Waterline: 8
+                Mast: 8
+                Rigging: 7
                 
-        Cutter:
-            description: "The timbers of a small naval ship."
-            protection:
-                Hull: 7
-                Waterline: 7
-                Gundeck: 7
-                Bow: 6
-                Stern: 6
-                Mainmast: 7
-                Rigging: 5
-                
-        Sloop:
-            description: "The timbers of a small merchant ship."
-            protection:
-                Hull: 6
-                Waterline: 6
-                Gundeck: 6
-                Bow: 5
-                Stern: 5
-                Mainmast: 6
-                Rigging: 4

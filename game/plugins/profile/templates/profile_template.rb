@@ -18,8 +18,8 @@ module AresMUSH
         @char.demographic(:fullname)
       end
 
-      def callsign
-        @char.demographic(:callsign)
+      def nickname
+        @char.demographic(:nickname)
       end
 
       def gender
@@ -56,24 +56,21 @@ module AresMUSH
         !dob ? "" : ICTime::Api.ic_datestr(dob)
       end
 
-      def faction
-        @char.group("Faction")
+      def crew
+        @char.group("Crew")
       end
 
       def position
         @char.group("Position")
       end
 
-      def colony
-        @char.group("Colony")
-      end
-
-      def department
-        @char.group("Department")
+      def nationality
+        @char.group("Nationality")
       end
 
       def rank
-        @char.rank
+        rank = @char.rank
+        rank == "" ? "N/A" : rank
       end
       
       def desc

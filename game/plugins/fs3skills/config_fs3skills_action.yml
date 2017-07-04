@@ -27,9 +27,9 @@ fs3skills:
     desc: Using cannon and other mounted firearms.
   - name: Healing
     linked_attr: Wits
-    desc: 'Tending to the ill and injured. Requires Specialty: Herbalism or Surgery.'
+    desc: 'Tending to the ill and injured. Requires Specialty: Traditional or Surgery.'
     specialties:
-    - Herbalism
+    - Traditional
     - Surgery
   - name: Leadership
     linked_attr: Presence
@@ -43,6 +43,6 @@ fs3skills:
   - name: Thrown
     linked_attr: Reflexes
     desc: Throwing knives, harpoons, rocks, and other weapons.
-  - name: Voudoun
+  - name: Voodoo
     linked_attr: Grit
-    desc: Calling upon the loa and casting wanga (spells).
+    desc: Calling upon the loa and casting favors (spells).

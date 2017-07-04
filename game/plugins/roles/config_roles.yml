@@ -15,4 +15,4 @@ roles:
     shortcuts:
         "roles" : "role"
         "staff" : "admin"
-        "role/add" : "role/assign"
+        "role/set" : "role/assign"

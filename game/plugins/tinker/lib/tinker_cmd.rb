@@ -11,10 +11,6 @@ module AresMUSH
         return nil
       end
       
-      def handle
-        client.emit_success "Done!"
-      end
-
     end
   end
 end

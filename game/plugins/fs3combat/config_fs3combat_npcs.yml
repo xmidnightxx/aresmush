@@ -7,7 +7,7 @@ fs3combat:
             Brawling: 6
             Firearms: 6
             Thrown: 6
-            Voudoun: 6
+            Voodoo: 6
             Gunnery: 6
             Sailing: 4
             Composure: 6
@@ -22,7 +22,7 @@ fs3combat:
             Brawling: 9
             Firearms: 9
             Thrown: 9
-            Voudoun: 9
+            Voodoo: 9
             Gunnery: 9
             Sailing: 6
             Leadership: 6
@@ -38,7 +38,7 @@ fs3combat:
             Brawling: 11
             Firearms: 11
             Thrown: 11
-            Voudoun: 11
+            Voodoo: 11
             Gunnery: 11
             Sailing: 8
             Leadership: 8
