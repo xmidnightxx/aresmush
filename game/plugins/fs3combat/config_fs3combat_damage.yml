@@ -1,7 +1,7 @@
 fs3combat:
     healing_cron:
-        #date: 1
-        #day_of_week: Sat
+        date: 1
+        day_of_week: Sat
         hour: 00
         minute: 47
     

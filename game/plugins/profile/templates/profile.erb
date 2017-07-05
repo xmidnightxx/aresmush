@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <%= header %>
 <%= char.name %><%= center( approval_status, 23 ) %><%= right( t('profile.profile_title'), 28 ) %>
 <%= divider %>
@@ -35,44 +34,5 @@
 <%= value %>
 <% end %>
 <% end %>
-=======
-<%= header %>
-<%= char.name %><%= center( approval_status, 23 ) %><%= right( t('profile.profile_title'), 28 ) %>
-<%= divider %>
-%xh<%= left( t('profile.fullname_title'), 12 ) %>%xn <%= fullname %>
-%xh<%= left( t('profile.actor_title'), 12 ) %>%xn <%= played_by %>
-%xh<%= left( t('profile.gender_title'), 12 ) %>%xn <%= left( gender, 25 ) -%>
-%xh<%= left( t('profile.skin_title'), 12 ) %>%xn <%= left( skin, 25 ) %>
-%xh<%= left( t('profile.height_title'), 12 ) %>%xn <%= left( height, 25 ) -%>
-%xh<%= left( t('profile.physique_title'), 12 ) %>%xn <%= left( physique, 25 ) %>
-%xh<%= left( t('profile.hair_title'), 12 ) %>%xn <%= left( hair, 25 ) -%>
-%xh<%= left( t('profile.eyes_title'), 12 ) %>%xn <%= left( eyes, 25 ) %>
-%xh<%= left( t('profile.age_title'), 12 ) %>%xn <%= left( age, 25 ) -%>
-%xh<%= left( t('profile.birthdate_title'), 12 ) %>%xn <%= left( birthdate, 25 ) %>
-%xh<%= left( t('profile.wiki_title'), 12) %>%xn <%= wiki %>
-%xh<%= left( t('profile.icon_title'), 12) %>%xn <%= char.icon %>
-<%= divider %>
-%xh<%= left( t('profile.colony_title'), 12 ) %>%xn <%= left( colony, 25 ) -%>
-%xh<%= left( t('profile.position_title'), 12 ) %>%xn <%= left( position, 25 ) %>
-%xh<%= left( t('profile.faction_title'), 12 ) %>%xn <%= left( faction, 25 ) -%>
-%xh<%= left( t('profile.department_title'), 12 ) %>%xn <%= left( department, 25 ) %>
-%xh<%= left( t('profile.rank_title'), 12 ) %>%xn <%= left( rank, 25 ) -%>
-%xh<%= left( t('profile.callsign_title'), 12 ) %>%xn <%= left( callsign, 25 ) %>
-<%= divider %>
-%xh<%= left( t('profile.timezone'), 12 ) %>%xn <%= left( timezone, 25 ) -%>
-%xh<%= left( t('profile.unread_mail'), 12 ) %>%xn <%= unread_mail %>
-%xh<%= left( t('profile.last_on'), 12 ) %>%xn <%= last_on %>
-%xh<%= left( t('profile.alts'), 12 ) %>%xn <%= alts %>
-<% if char.handle %>
-<%= divider %>
-%xh<%= left( t('profile.handle'), 12 ) %>%xn @<%= handle_name %> - <%= handle_profile %>
-<% end %>
-<% if custom_profile %>
-<% char.profile.each do |name, value| %>
 
-<%= line_with_text name %>
-<%= value %>
-<% end %>
-<% end %>
->>>>>>> upstream/master
 <%= footer %>
