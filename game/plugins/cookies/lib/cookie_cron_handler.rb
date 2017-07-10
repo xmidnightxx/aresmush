@@ -30,6 +30,8 @@ module AresMUSH
             luck = count.to_f / cookies_per_luck
             char.award_luck(luck)
           end
+          
+          char.update(total_cookies: char.total_cookies + count)
 
         end
         

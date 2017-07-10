@@ -32,3 +32,5 @@ game/db/data
 game/db/*.log
 game/db/*.pid
 game/plugins/profile/templates/profile_template.rb
+game/config/database.yml
+game/config/game.yml

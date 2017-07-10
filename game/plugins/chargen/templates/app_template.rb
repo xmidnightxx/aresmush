@@ -16,11 +16,11 @@ module AresMUSH
       end
       
       def abilities
-        FS3Skills::Api.app_review(@char)
+        FS3Skills.app_review(@char)
       end
       
       def demographics
-        Demographics::Api.app_review(@char)
+        Demographics.app_review(@char)
       end
        
       def bg
@@ -28,15 +28,15 @@ module AresMUSH
       end
        
       def desc
-        Describe::Api.app_review(@char)
+        Describe.app_review(@char)
       end
      
       def ranks
-        Ranks::Api.app_review(@char)
+        Ranks.app_review(@char)
       end
      
       def job_info
-        job = Chargen.approval_job(@char)
+        job = @char.approval_job
         if (job)
           number =job.number
           if (@enactor == @char)
