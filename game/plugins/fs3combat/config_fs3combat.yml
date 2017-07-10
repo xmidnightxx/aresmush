@@ -1,9 +1,31 @@
 fs3combat:
     default_type: Soldier
+  
     
-    pc_knockout_bonus: 3
-    npc_lethality_mod: 20
-    
+    stances:
+        Aggressive:
+            attack_mod: 2
+            defense_mod: -2
+        Reckless:
+            attack_mod: 4
+            defense_mod: -4
+        Normal:
+            attack_mod: 0
+            defense_mod: 0
+        Defensive:
+            attack_mod: -2
+            defense_mod: 2
+        Evasive:
+            attack_mod: -4
+            defense_mod: 4
+        Cover:
+            attack_mod: 0
+            defense_mod: 0
+        Hidden:
+            attack_mod: 0
+            defense_mod: 0
+
+
     combatant_types:
 
         # ----------------------------------------
@@ -46,7 +68,31 @@ fs3combat:
             hitloc: Target
             weapon: Unarmed
             defense_skill: None
-                     
+        Brig:
+            hitloc: Humanoid
+            vehicle: Brig of War
+            defense_skill: Reflexes
+        Brigantine:
+            hitloc: Humanoid
+            vehicle: Brigantine
+            defense_skill: Reflexes
+        Cutter:
+            hitloc: Humanoid
+            vehicle: Cutter
+            defense_skill: Reflexes
+        Sloop:
+            hitloc: Humanoid
+            vehicle: Sloop
+            defense_skill: Reflexes
+        Pinnace:
+            hitloc: Humanoid
+            vehicle: Pinnace
+            defense_skill: Reflexes
+        Lugger:
+            hitloc: Humanoid
+            vehicle: Lugger
+            defense_skill: Reflexes
+            
     shortcuts:
         "weapons": "weapon"
         "combat/skill": "combat/summary"

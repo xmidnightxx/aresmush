@@ -11,10 +11,10 @@ ranks:
         Impudent:
             Officer:
                 Surgeon: true
-                Warrant Officer: false
+                Warrant Officer: true
                 Boatswain: false
                 Sailing Master: false
-                Lieutenant: false
+                Lieutenant: true
                 Captain: false
                 
             Enlisted:
@@ -27,10 +27,10 @@ ranks:
         Santiago:
             Officer:
                 Surgeon: true
-                Warrant Officer: false
+                Warrant Officer: true
                 Boatswain: false
                 Sailing Master: false
-                Lieutenant: false
+                Lieutenant: true
                 Captain: false
                 
             Enlisted:
@@ -42,7 +42,7 @@ ranks:
         Reaver:
             Officer:
                 Surgeon: true
-                Warrant Officer: false
+                Warrant Officer: true
                 Boatswain: false
                 Sailing Master: false
                 Quartermaster: false

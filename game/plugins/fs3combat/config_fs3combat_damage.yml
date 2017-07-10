@@ -19,10 +19,10 @@ fs3combat:
         IMPAIR: 10
         INCAP: 10
     
-    pc_knockout_bonus: 1
+    pc_knockout_bonus: 3
     npc_lethality_mod: 30
     
     damage_table:
-        GRAZE: 20
+        GRAZE: 30
         FLESH: 70
         IMPAIR: 95

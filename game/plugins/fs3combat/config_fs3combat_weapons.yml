@@ -81,8 +81,6 @@ fs3combat:
             accuracy: 0
             initiative: 1
             has_shrapnel: false
-            ## allowed_specials: 
-            ##     - 'Bodkin'
             
         Musket:
             description: "A flintlock musket."
@@ -97,23 +95,7 @@ fs3combat:
             accuracy: 0
             initiative: 1
             has_shrapnel: false
-            ## allowed_specials: 
-            ##     - 'Bodkin'
-
-        Rifle:
-            description: "A flintlock with a rifled barrel."
-            skill: Firearms
-            lethality: 0
-            penetration: 7
-            weapon_type: Ranged
-            is_automatic: false
-            ammo: 1
-            recoil: 0
-            damage_type: Physical
-            accuracy: 0
-            initiative: 0
-            has_shrapnel: false
-                
+ 
         Harpoon:
             description: "A thrown spear, often with a rope tied to it for whaling."
             skill: Thrown
@@ -331,7 +313,7 @@ fs3combat:
             ## ammo: 1
             recoil: 0
             damage_type: Physical
-            accuracy: -5
+            accuracy: -3
             initiative: -2
             has_shrapnel: false
             allowed_specials: 

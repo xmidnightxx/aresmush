@@ -22,21 +22,21 @@ Demographics commands are used to set your basic character info.  Some items may
 
 ## Quick Reference - Common Commands
 
-`fullname <name>`
-`gender <male/female/other>`
-`height <height>`
-`physique <build/body type - athletic, wiry, slim, pudgy, etc.>`
-`hair <hair color>`
-`eyes <eye color>`
-`skin <complexion>`
-`birthdate <mm/dd/yyyy>` or `age <years>`
-`callsign <name>` - Callsign for pilots.  Non-pilots may leave blank or enter a nickname.
-`actor/set <name>` - Set your actor.  Leave blank to clear it.
+`fullname `
+`gender `
+`height `
+`physique `
+`hair `
+`eyes `
+`skin `
+`birthdate ` or `age `
+`nickname ` - A nickname, common amongst pirates.
+`actor/set ` - Set your actor.  Leave blank to clear it.
 
 `actors` - Show taken actors.
-`actors/search <name>` - Search the actors list.
+`actors/search ` - Search the actors list.
 
-`icon <url>` - URL to your log icon (after it's been created).
+`icon ` - URL to your log icon (after it's been created).
 
 ## Topics
 

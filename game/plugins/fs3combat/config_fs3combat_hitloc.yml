@@ -79,8 +79,7 @@ fs3combat:
                 - Hull
                 - Bow
                 - Stern
-            crew_areas: 
-                - Crew
+
         Target:
             areas:
                 Bullseye: [ 'Ring 3', 'Ring 3', 'Ring 3', 'Ring 3', 'Ring 2', 'Ring 2', 'Ring 2', 'Ring 1', 'Ring 1', 'Bullsye']

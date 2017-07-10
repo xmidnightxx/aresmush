@@ -16,7 +16,7 @@ fs3combat:
             armor: Brig of War
             weapons:
                 - Culverin
-            dodge: -3
+            dodge: -4
             
         Brigantine:
             description: "A merchant-built brig with two masts. 65 crew, 8 guns per broadside."
@@ -26,7 +26,7 @@ fs3combat:
             armor: Brig
             weapons:
                 - Culverin
-            dodge: -4
+            dodge: -5
 
         Cutter:
             description: "A small warship with a single mast. 50 crew, 8 guns per broadside."
@@ -36,7 +36,7 @@ fs3combat:
             armor: Cutter
             weapons:
                 - Culverin
-            dodge: -2
+            dodge: -3
             
         Sloop:
             description: "A merchant-built sloop with a single mast. 40 crew, 4 guns per broadside."
@@ -46,7 +46,7 @@ fs3combat:
             armor: Sloop
             weapons:
                 - Culverin
-            dodge: -2
+            dodge: -3
             
         Lugger:
             description: "A fishing vessel with two small masts. 12 crew, 2 guns total if any."
@@ -56,7 +56,7 @@ fs3combat:
             armor: Boat
             Weapons:
                 - Culverin
-            dodge: -1
+            dodge: -2
         
         Pinnace:
             description: "A ship's boat attached to a military ship. 20 crew, 1 gun total if any."
@@ -66,5 +66,5 @@ fs3combat:
             armor: Boat
             Weapons:
                 - Culverin
-            Dodge: 1
+            Dodge: 0
             
