@@ -1,5 +1,9 @@
 page:
+<<<<<<< HEAD
     page_color: "%xy"
+=======
+    page_color: "%xg"
+>>>>>>> upstream/master
 
     shortcuts:
         "p": "page"

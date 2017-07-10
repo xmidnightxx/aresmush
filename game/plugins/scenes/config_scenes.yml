@@ -1,13 +1,13 @@
 scenes:
     cron:
-     #date: 1
-     #day_of_week: Sat
-     #hour: 21
-     minute: 00
+     minute: 
+         - 15
+         - 45
     
     scene_types:
         - Social
         - Event
+        - Vignette
                      
     shortcuts:
         "scenes": "scene"
@@ -23,6 +23,7 @@ scenes:
         "log/on": "scene/startlog"
         "log/off": "scene/stoplog"
         "log/clear": "scene/clearlog"
+        "log/undo" : "scene/undo"
         
         # Some cross-over with the old repose system.
         "repose/nudge" : "pose/nudge"
