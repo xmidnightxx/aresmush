@@ -106,10 +106,6 @@ module AresMUSH
       
     def self.roll_initiative(combatant, ability)
       luck_mod = combatant.luck == "Initiative" ? 3 : 0
-<<<<<<< HEAD
-      weapon_init_mod = FS3Combat.weapon_stat(combatant.weapon, "initiative")
-      combatant.roll_ability(ability, luck_mod + weapon_init_mod + combatant.total_damage_mod)
-=======
       action_mod = 0
       if (combatant.action_klass == "AresMUSH::FS3Combat::SuppressAction" ||
           combatant.action_klass == "AresMUSH::FS3Combat::DistractAction")
@@ -121,7 +117,6 @@ module AresMUSH
       combatant.log "Initiative roll for #{combatant.name} ability=#{ability} action=#{action_mod} weapon=#{weapon_mod} luck=#{luck_mod} roll=#{roll}"
  
       roll
->>>>>>> upstream/master
     end
     
     def self.check_ammo(combatant, bullets)

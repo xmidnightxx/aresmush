@@ -364,5 +364,7 @@ en:
         reload_action_msg_long: "%{name} will reload this turn."
         reload_action_msg_short: "Reload"
         reload_resolution_msg: "%{name} reloads."
-        cant_reload: "That weapon can't be reloaded."      
-        
+        cant_reload: "That weapon can't be reloaded."
+        reload_action_inprog: "%{name} is still reloading, round %{round} of %{max_round}."
+        reload_action_complete: "%{name} finishes reloading, round %{round} of %{max_round}."
+        resetting_action_reload: "Resetting %{name}'s action because it is no longer valid: Reload complete."      

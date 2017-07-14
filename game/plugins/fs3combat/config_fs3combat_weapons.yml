@@ -56,36 +56,6 @@ fs3combat:
             description: "A flintlock pistol."
             skill: Firearms
             lethality: 0
-            penetration: 5
-            weapon_type: Ranged
-            is_automatic: false
-            ammo: 1
-            recoil: 0
-            damage_type: Physical
-            accuracy: 0
-            initiative: 1
-            has_shrapnel: false
-            ## allowed_specials: 
-            ##     - 'Bodkin'
-    
-        Brace of Pistols:
-            description: "A pair of flintlock pistols."
-            skill: Firearms
-            lethality: 0
-            penetration: 5
-            weapon_type: Ranged
-            is_automatic: false
-            ammo: 2
-            recoil: 0
-            damage_type: Physical
-            accuracy: 0
-            initiative: 1
-            has_shrapnel: false
-            
-        Musket:
-            description: "A flintlock musket."
-            skill: Firearms
-            lethality: 0
             penetration: 6
             weapon_type: Ranged
             is_automatic: false
@@ -95,6 +65,39 @@ fs3combat:
             accuracy: 0
             initiative: 1
             has_shrapnel: false
+            reload_turns: 2
+            ## allowed_specials: 
+            ##     - 'Bodkin'
+    
+        Brace of Pistols:
+            description: "A pair of flintlock pistols."
+            skill: Firearms
+            lethality: 0
+            penetration: 6
+            weapon_type: Ranged
+            is_automatic: false
+            ammo: 2
+            recoil: 0
+            damage_type: Physical
+            accuracy: 0
+            initiative: 1
+            reload_turns: 4
+            has_shrapnel: false
+            
+        Musket:
+            description: "A flintlock musket."
+            skill: Firearms
+            lethality: 0
+            penetration: 7
+            weapon_type: Ranged
+            is_automatic: false
+            ammo: 1
+            recoil: 0
+            damage_type: Physical
+            accuracy: 0
+            initiative: 1
+            has_shrapnel: false
+            reload_turns: 3
  
         Harpoon:
             description: "A thrown spear, often with a rope tied to it for whaling."
@@ -142,7 +145,7 @@ fs3combat:
             description: "A favor which affects a single target."
             skill: Voodoo
             lethality: 0
-            penetration: 4
+            penetration: 5
             weapon_type: Ranged
             is_automatic: false
             ammo: 8
@@ -161,14 +164,14 @@ fs3combat:
             description: "An axe designed climb up the side of a ship and fight onboard."
             skill: Bludgeons
             lethality: 10
-            penetration: 5
+            penetration: 6
             weapon_type: Melee
             is_automatic: false
             # ammo: 0
             recoil: 0
             damage_type: Physical
             accuracy: -1
-            initiative: -1
+            initiative: -2
             has_shrapnel: false
             allowed_specials: 
                 - 'Sparring'
@@ -176,7 +179,7 @@ fs3combat:
         Hatchet:
             description: "A small axe that is as much a tool as a weapon."
             skill: Bludgeons
-            lethality: 5
+            lethality: 0
             penetration: 4
             weapon_type: Melee
             is_automatic: false
@@ -209,7 +212,7 @@ fs3combat:
             description: "A noble smallsword, cavalry saber, or more common cutlass."
             skill: Blades
             lethality: 5
-            penetration: 5
+            penetration: 4
             weapon_type: Melee
             is_automatic: false
             # ammo: 0
@@ -222,10 +225,10 @@ fs3combat:
                 - 'Sparring'
         
         Rapier:
-            description: "A thin thrusting blade intended for dueling. Nearly useless on a ship."
+            description: "A thin thrusting blade intended for dueling."
             skill: Blades
             lethality: 0
-            penetration: 5
+            penetration: 4
             weapon_type: Melee
             is_automatic: false
             # ammo: 0
@@ -240,7 +243,7 @@ fs3combat:
         Club:
             description: "A belaying pin, club, or mace."
             skill: Bludgeons
-            lethality: 0
+            lethality: -5
             penetration: 5
             weapon_type: Melee
             is_automatic: false
@@ -269,11 +272,11 @@ fs3combat:
             allowed_specials: 
                 - 'Sparring'
 
-        Bayonet:
-            description: "A musket or rifle with a plug bayonet affixed."
+        Spear:
+            description: "A long stick with a sharp point, including a musket with plug bayonet."
             skill: Blades
             lethality: 0
-            penetration: 4
+            penetration: 3
             weapon_type: Melee
             is_automatic: false
             # ammo: 0
@@ -288,15 +291,15 @@ fs3combat:
         Warding:
             description: "A favor intended to defend against melee assaults and attack lightly back."
             skill: Voodoo
-            lethality: 0
-            penetration: 3
+            lethality: -5
+            penetration: 2
             weapon_type: Melee
             is_automatic: false
             # ammo: 0
             recoil: 0
             damage_type: Physical
-            accuracy: 2
-            initiative: -1
+            accuracy: 0
+            initiative: -2
             has_shrapnel: false
         
         ## ----------------------------------------------------------------------

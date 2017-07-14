@@ -8,48 +8,48 @@ fs3combat:
         Fencing Jacket:
             description: "A thick, padded jacket meant for practicing fencing."
             protection: 
-                Chest: 2
-                Abdomen: 2
-                Left Arm: 2
-                Right Arm: 2
+                Chest: 4
+                Abdomen: 4
+                Left Arm: 4
+                Right Arm: 4
 
         Buff Coat:
             description: "Thick leather coat with gloves and a leather skullcap."
             protection: 
-                Chest: 3
-                Abdomen: 3
-                Head: 3
-                Left Arm: 3
-                Right Arm: 3
-                Left Hand: 2
-                Right Hand: 2
+                Chest: 5
+                Abdomen: 5
+                Head: 5
+                Left Arm: 5
+                Right Arm: 5
+                Left Hand: 4
+                Right Hand: 4
 
         Breastplate:
             description: "A solid steel cuirass with leather coat and pants. You cannot swim in this."
             protection:
-                Neck: 4
-                Chest: 4
-                Abdomen: 4
-                Left Arm: 2
-                Right Arm: 2
-                Left Leg: 2
-                Right Leg: 2
-                Left Foot: 2
-                Right Foot: 2
+                Neck: 6
+                Chest: 6
+                Abdomen: 6
+                Left Arm: 4
+                Right Arm: 4
+                Left Leg: 4
+                Right Leg: 4
+                Left Foot: 4
+                Right Foot: 4
 
         Pitch Coat:
             description: "A jacket and pants hardened with pitch."
             protection:
-                Chest: 3
-                Abdomen: 3
-                Left Arm: 3
-                Right Arm: 3
-                Left Leg: 3
-                Left Leg: 3
-                Right Leg: 3
-                Left Foot: 3
-                Right Foot: 3
-                Groin: 3
+                Chest: 5
+                Abdomen: 5
+                Left Arm: 5
+                Right Arm: 5
+                Left Leg: 5
+                Left Leg: 5
+                Right Leg: 5
+                Left Foot: 5
+                Right Foot: 5
+                Groin: 5
  
         Brig of War:
             description: "The heavy timbers of a medium warship."

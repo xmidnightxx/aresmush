@@ -16,8 +16,24 @@ module AresMUSH
       end
             
       def resolve
-        self.combatant.update(ammo: self.combatant.max_ammo)
-        [t('fs3combat.reload_resolution_msg', :name => self.name)]
+        # New code added here to handle multi-round reloads. 
+        messages = []
+
+        r = self.combatant.reload_counter + 1
+        t = FS3Combat.weapon_stat(self.combatant.weapon, "reload_turns")
+        if (r == t)
+           messages << t('fs3combat.reload_action_complete', :name => self.name, :round => r, :max_round => t)
+           self.combatant.update(ammo: self.combatant.max_ammo)
+           self.combatant.update(reload_counter: 0)
+           self.combatant.update(action_klass: nil)
+           self.combatant.update(action_args: nil)
+           messages << t('fs3combat.resetting_action_reload', :name => self.name)
+        else
+           self.combatant.update(reload_counter: r)
+           messages << t('fs3combat.reload_action_inprog', :name => self.name, :round => r, :max_round => t)
+        end
+
+        messages
       end
     end
   end

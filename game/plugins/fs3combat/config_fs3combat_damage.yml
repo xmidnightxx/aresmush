@@ -1,61 +1,3 @@
-<<<<<<< HEAD
-fs3combat:
-    healing_cron:
-        date: 1
-        day_of_week: Sat
-        hour: 00
-        minute: 47
-    
-    damage_mods:
-        HEAL: 0.0
-        GRAZE: 0.0
-        FLESH: 0.25
-        IMPAIR: 1.0
-        INCAP: 4.0
-    
-    healing_points:
-        HEAL: 0
-        GRAZE: 3
-        FLESH: 7
-        IMPAIR: 10
-        INCAP: 10
-    
-    pc_knockout_bonus: 3
-    npc_lethality_mod: 30
-    
-    damage_table:
-        GRAZE: 30
-        FLESH: 70
-=======
-<<<<<<< HEAD
-fs3combat:
-    healing_cron:
-        date: 1
-        day_of_week: Sat
-        hour: 00
-        minute: 47
-    
-    damage_mods:
-        HEAL: 0.0
-        GRAZE: 0.0
-        FLESH: 0.25
-        IMPAIR: 1.0
-        INCAP: 4.0
-    
-    healing_points:
-        HEAL: 0
-        GRAZE: 3
-        FLESH: 7
-        IMPAIR: 10
-        INCAP: 10
-    
-    pc_knockout_bonus: 1
-    npc_lethality_mod: 30
-    
-    damage_table:
-        GRAZE: 20
-        FLESH: 70
-=======
 fs3combat:
     healing_cron:
         hour: 
@@ -77,12 +19,10 @@ fs3combat:
         IMPAIR: 10
         INCAP: 10
     
-    pc_knockout_bonus: 1
+    pc_knockout_bonus: 3
     npc_lethality_mod: 30
     
     damage_table:
-        GRAZE: 20
+        GRAZE: 30
         FLESH: 70
->>>>>>> upstream/master
->>>>>>> 0d2ad28443040189d0bd9e26e394599b4bb58118
         IMPAIR: 95

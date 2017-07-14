@@ -15,6 +15,8 @@ module AresMUSH
     attribute :distraction, :type => DataType::Integer, :default => 0
     attribute :ammo, :type => DataType::Integer
     attribute :max_ammo, :type => DataType::Integer, :default => 0
+    # Add in new code for multi round reloads. Reload_counter counts up until weapon config reload_rounds value is met.
+    attribute :reload_counter, :type => DataType::Integer, :default => 0
     attribute :posed, :type => DataType::Boolean
     attribute :recoil, :type => DataType::Integer, :default => 0
     attribute :team, :type => DataType::Integer, :default => 1

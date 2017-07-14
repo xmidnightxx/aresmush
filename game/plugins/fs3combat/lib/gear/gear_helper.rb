@@ -109,6 +109,8 @@ module AresMUSH
       combatant.update(max_ammo: max_ammo)
       combatant.update(action_klass: nil)
       combatant.update(action_args: nil)
+      # New code to reset reload counter
+      combatant.update(reload_counter: 0)
 
       message = t('fs3combat.weapon_changed', :name => combatant.name, 
         :weapon => combatant.weapon)
