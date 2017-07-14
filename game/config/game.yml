@@ -12,6 +12,10 @@ game:
     # Your game's website
     website: ""
         
+<<<<<<< HEAD
     # true if your game is open for business, false if it is in development, down, or 
     # otherwise not open to the public
     public_game: false
+=======
+    public_game: false
+>>>>>>> upstream/master
