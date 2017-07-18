@@ -14,7 +14,7 @@ module AresMUSH
       end
       
       def organizer(scene)
-        scene.owner.name
+        scene.owner_name
       end
       
       def privacy(scene)
