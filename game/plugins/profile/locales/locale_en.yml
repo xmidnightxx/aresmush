@@ -46,5 +46,15 @@ en:
         wiki_title: "Wiki:"
         
         description: "Description"
+<<<<<<< HEAD
 
+=======
+        
+        relationship_set: "Relationship with %{name} set."
+        relationship_deleted: "Relationship with %{name} deleted."
+        relationship_not_found: "Relationship with %{name} not found."
+        relationships_order: "Relationship category order set: %{categories}"
+        relationships_use_commas: "You need to use commas between the relationship categories."
+        
+>>>>>>> upstream/master
         none: "None"

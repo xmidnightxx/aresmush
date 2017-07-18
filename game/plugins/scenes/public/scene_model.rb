@@ -27,9 +27,13 @@ module AresMUSH
     attribute :summary
     attribute :shared
     attribute :logging_enabled, :type => DataType::Boolean, :default => true
+    attribute :deletion_warned, :type => DataType::Boolean, :default => true
     attribute :icdate
+    attribute :log
     
     collection :scene_poses, "AresMUSH::ScenePose"
+    reference :scene_log, "AresMUSH::SceneLog"
+    
     set :participants, "AresMUSH::Character"
     
     before_delete :delete_poses
@@ -45,22 +49,56 @@ module AresMUSH
     def poses_in_order
       scene_poses.to_a.sort_by { |p| p.sort_order }
     end
-    
-    def auto_participants
-      scene_poses.select { |s| !s.is_system_pose? && !s.is_gm_pose? }
-          .map { |s| s.character }
-          .uniq { |c| c.id }
+        
+    def all_participant_names
+      scene_poses.select { |s| !s.is_system_pose? }
+          .map { |s| s.character.name }
+          .uniq
     end
     
     def delete_poses
       scene_poses.each { |p| p.delete }
+      if (self.scene_log)
+        self.scene_log.delete
+      end
     end
     
     def all_info_set?
       self.title && self.location && self.scene_type && self.summary
     end
+    
+    def date_title
+      "#{self.icdate} - #{self.title}"
+    end
+    
+    def owner_name
+      self.owner ? self.owner.name : t('scenes.organizer_deleted')
+    end
+    
+    def related_scenes
+      links1 = SceneLink.find(log1_id: self.id)
+      links2 = SceneLink.find(log2_id: self.id)
+      list1 = links1.map { |l| l.log2 }
+      list2 = links2.map { |l| l.log1 }
+      list1.concat(list2).uniq
+    end
+    
+    def find_link(other_scene)
+      link = SceneLink.find(log1_id: self.id).combine(log2_id: other_scene.id).first
+      if (!link)
+        link = SceneLink.find(log1_id: other_scene.id).combine(log2_id: self.id).first
+      end
+      link
+    end
   end
   
+  class SceneLog < Ohm::Model
+    include ObjectModel
+    
+    attribute :log
+    reference :scene, "AresMUSH::Scene"
+  end
+    
   class ScenePose < Ohm::Model
     include ObjectModel
 
@@ -87,9 +125,17 @@ module AresMUSH
     end
     
     def can_edit?(actor)
-      return true if Scenes.can_manage_scene(actor, self.scene)
+      return true if Scenes.can_access_scene?(actor, self.scene)
       return true if actor == self.character
       return false
     end
+  end
+  
+  class SceneLink < Ohm::Model
+    reference :log1, "AresMUSH::Scene"
+    reference :log2, "AresMUSH::Scene"
+    
+    index :log1
+    index :log2
   end
 end

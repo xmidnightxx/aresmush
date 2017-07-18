@@ -36,3 +36,4 @@ game/config/database.yml
 game/config/game.yml
 game/config/database.yml
 game/config/database.yml
+game/plugins/website/web/public/files
