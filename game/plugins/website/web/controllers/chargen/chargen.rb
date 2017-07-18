@@ -13,17 +13,16 @@ module AresMUSH
         redirect "/char/#{@user.id}"
       end
       
-      @factions = Demographics.get_group("Faction")
+      @crews = Demographics.get_group("Crew")
       @positions = Demographics.get_group("Position")
-      @departments = Demographics.get_group("Department")
-      @colonies = Demographics.get_group("Colony")
+      @nationalities = Demographics.get_group("Nationality")
       
       @ranks = []
-      @factions['values'].each do |k, v|
+      @crews['values'].each do |k, v|
         @ranks.concat Ranks.allowed_ranks_for_group(k)
       end
       
-      @allowed_ranks = Ranks.allowed_ranks_for_group(@user.group("Faction"))
+      @allowed_ranks = Ranks.allowed_ranks_for_group(@user.group("Crew"))
       
       
       @fs3_attrs = FS3Skills.attrs
