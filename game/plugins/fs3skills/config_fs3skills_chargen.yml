@@ -19,11 +19,8 @@ fs3skills:
     max_attributes: 16
     
     unusual_skills:
-        - Celtan
-        - Scorpian
-        - Sagittaran
-        - Gemenese
-        - Demolitions
+        - Voodoo
+        - Carib
 
     starting_skills:
         Everyone:
