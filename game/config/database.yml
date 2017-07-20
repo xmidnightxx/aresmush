@@ -1,9 +1,5 @@
 database:
-<<<<<<< HEAD
     url: "127.0.0.1:6380"
 
     # The database password is kept in the game/config/secrets.yml file for security reasons.
-=======
-    url: "127.0.0.1:6379"
     path: "/var/lib/redis/6379/dump.rdb"
->>>>>>> upstream/master
