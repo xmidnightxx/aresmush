@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 events:
     calendar_timezone: "PST"
     
@@ -8,3 +9,20 @@ events:
     cron:
         minute: 
             - 22
+=======
+events:
+    calendar_timezone: "EST"
+    
+    # NOTE: The calendar ID and API key are configured in the game/config/secrets.yml file
+    shortcuts:
+        "events" : "event"
+        "event/add" : "event/create"
+        "event/remove" : "event/delete"
+        
+    cron:
+        minute: 
+            - 0
+            - 15
+            - 30
+            - 45
+>>>>>>> 22c9d79387fec5c16bbfa8e97457f1dcd576fa71

@@ -28,7 +28,9 @@ module AresMUSH
       @npcs = Character.all.select { |c| c.is_npc? && !c.idled_out?}.group_by { |c| c.group("Faction") || "" }
       group = Global.read_config("website", "character_gallery_group") || "Faction"
       @groups = Chargen.approved_chars.group_by { |c| c.group(group) || "" }.sort
-      erb :"chars/index"
+      @page_title = "Characters"
+      
+      erb :"chars/chars_index"
     end
     
     get '/char/:id' do |id|
@@ -43,8 +45,22 @@ module AresMUSH
           redirect '/chars'
         end
       end
-      
+      @page_title = @char.name
+            
       erb :"chars/char"
+    end
+    
+    get '/char/:id/source' do |id|
+      @char = Character[id]
+      
+      if (!@char)
+        flash[:error] = "Character not found."
+        redirect '/chars'
+      end
+      
+      @page_title = @char.name
+      
+      erb :"chars/source"
     end
   end
 end

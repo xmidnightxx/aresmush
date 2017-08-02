@@ -1,4 +1,5 @@
 tinkerfoo.rb
+.sass-cache
 *.log
 secrets.yml
 errors.txt
@@ -40,3 +41,4 @@ game/config/database.yml
 =======
 >>>>>>> 0ca0a701ec61610907d6715d59a896081dc4a229
 game/plugins/website/web/public/files
+game/plugins/website/config_website.yml
