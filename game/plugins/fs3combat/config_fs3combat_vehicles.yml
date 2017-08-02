@@ -9,7 +9,7 @@ fs3combat:
 
     vehicles:
         Brig of War:
-            description: "A brig-rigged ship designed for combat. 120 Crew, 12 guns per broadside."
+            description: "A brig-rigged ship designed for combat. 160 Crew, 12 guns per broadside."
             pilot_skill: Leadership
             toughness: 3
             hitloc_chart: Brig
@@ -19,7 +19,7 @@ fs3combat:
             dodge: -4
             
         Brigantine:
-            description: "A merchant-built brig with two masts. 65 crew, 8 guns per broadside."
+            description: "A merchant-built brig with two masts. 40-100 crew, 8 guns per broadside."
             pilot_skill: Leadership
             toughness: 1
             hitloc_chart: Brig
@@ -29,7 +29,7 @@ fs3combat:
             dodge: -5
 
         Cutter:
-            description: "A small warship with a single mast. 50 crew, 8 guns per broadside."
+            description: "A small warship with a single mast. 50-100 crew, 8 guns per broadside."
             pilot_skill: Sailing
             toughness: 2
             hitloc_chart: Cutter
@@ -39,7 +39,7 @@ fs3combat:
             dodge: -3
             
         Sloop:
-            description: "A merchant-built sloop with a single mast. 40 crew, 4 guns per broadside."
+            description: "A merchant-built sloop with a single mast. 20-75 crew, 4 guns per broadside."
             pilot_skill: Sailing
             toughness: 1
             hitloc_chart: Cutter

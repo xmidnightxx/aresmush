@@ -52,7 +52,7 @@ fs3skills:
                     Blades: 2
                     Bludgeons: 2
                     Firearms: 2
-            Marine:
+            Soldier:
                 skills:
                     Firearms: 3
                     Blades: 3

@@ -52,11 +52,10 @@ fs3combat:
                 Foremast: [ 'Hull', 'Gundeck', 'Gundeck', 'Rigging', 'Rigging', 'Rigging', 'Rigging', 'Foremast', 'Foremast', 'Foremast' ]
                 Rigging: [ 'Hull', 'Gundeck', 'Gundeck', 'Foremast', 'Foremast', 'Mainmast', 'Mainmast', 'Rigging', 'Rigging', 'Rigging' ]
             vital_areas:
+                - Waterline
+            critical_areas:
                 - Bow
                 - Stern
-            critical_areas:
-                - Waterline
-                - Mainmast
             crew_areas:
                 - Gundeck
                 - Bow
@@ -70,11 +69,10 @@ fs3combat:
                 Mainmast: [ 'Hull', 'Hull', 'Hull', 'Rigging', 'Rigging', 'Rigging', 'Rigging', 'Mainmast', 'Mainmast', 'Mainmast' ]
                 Rigging: [ 'Hull', 'Hull', 'Hull', 'Hull', 'Mainmast', 'Mainmast', 'Mainmast', 'Rigging', 'Rigging', 'Rigging' ]
             vital_areas:
+                - Waterline
+            critical_areas:
                 - Bow
                 - Stern
-            critical_areas:
-                - Waterline
-                - Mainmast
             crew_areas:
                 - Hull
                 - Bow

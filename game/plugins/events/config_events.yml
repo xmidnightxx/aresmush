@@ -1,5 +1,5 @@
 events:
-    calendar_timezone: "EST"
+    calendar_timezone: "PST"
     
     # NOTE: The calendar ID and API key are configured in the game/config/secrets.yml file
     shortcuts:

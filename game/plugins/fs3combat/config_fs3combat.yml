@@ -59,6 +59,10 @@ fs3combat:
             weapon: Unarmed
             hitloc: Humanoid
             defense_skill: Reflexes
+        Gunner:
+            weapon: Culverin
+            hitloc: Humanoid
+            defense_skill: Reflexes
         Hound:
             weapon: Knife
             armor: Leather

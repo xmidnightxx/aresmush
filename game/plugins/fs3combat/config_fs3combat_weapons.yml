@@ -309,7 +309,7 @@ fs3combat:
         Culverin:
             description: "A relatively small 18-pounder cannon."
             skill: Gunnery
-            lethality: 30
+            lethality: 25
             penetration: 8
             weapon_type: Ranged
             is_automatic: false

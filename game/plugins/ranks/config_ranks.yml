@@ -15,13 +15,12 @@ ranks:
                 Boatswain: false
                 Sailing Master: false
                 Lieutenant: true
-                Captain: false
+                Commander: false
                 
             Enlisted:
                 Idler: true
                 Seaman: true
                 Able Seaman: true
-                Marine: true
                 Mate: true
                 
         Santiago:
