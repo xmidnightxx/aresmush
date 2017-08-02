@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%= game_name %></title>
+    <title><%= @page_title || game_name %></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
@@ -33,10 +33,10 @@
   
   
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src="/config.js"></script>
-  <script src="/notify.js"></script>
-  <script src="/ansi.js"></script>
-  <script src="/ansi_up.js"></script>
+  <script src="/scripts/config.js"></script>
+  <script src="/scripts/notify.js"></script>
+  <script src="/scripts/ansi.js"></script>
+  <script src="/scripts/ansi_up.js"></script>
 
   <script>
   $( function() {
@@ -44,8 +44,9 @@
   } );
   </script>
   
-    <link rel="stylesheet" type="text/css" href="/style.css">
-    <link rel="stylesheet" type="text/css" href="/custom_style.css">
+    <link rel="stylesheet" type="text/css" href="/styles/ansi.css">
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="/styles/custom_style.css">
 
 </head>
 
@@ -68,7 +69,9 @@
                 
                 <span class="label label-pill label-primary" id="mailBadge"><%= unread_mail %></span>
             
-            </a> | <a href="/logout">Logout</a> </p>
+            </a> 
+            | <a href="/char/<%= @user.id %>">Profile</a>
+            | <a href="/logout">Logout</a> </p>
             <% else %>
             <p><a href="/login">Login</a> 
                 <% if enable_registration %>
@@ -110,8 +113,19 @@
           
           
               <li><a href="/help">Help</a></li> 
-              <% if is_admin? %>
-              <li><a href="/admin">Admin</a></li>
+              
+              <% if is_admin? %>              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dirnav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Admin <span class="caret">
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="/jobs">Jobs</a></li> 
+                  <li><a href="/admin">Setup</a></li>
+                  <li><a href="/admin/logs">Logs</a></li>
+                  <li><a href="/admin/tinker">Tinker</a></li>
+                </ul>
+              </li>
               <% end %>
               <li><a href="<%= game_website %>">Wiki</a></li> 
             </ul>
@@ -147,6 +161,9 @@
                 </div>
                    
                    <div class="col-md-3">    
+                       
+                           <%= erb :"search" %>
+                       
                        <div class="sidebar-box">
                            <div class="sidebar-heading">
                                <h2>Play on the Web <i class="fa fa-globe" aria-hidden="true"></i></h2>
@@ -186,10 +203,11 @@
                                
                            </div>
                            <% @events.each do |e| %>
-                           <p><b><%= e.title %></b><br/><%= e.start_datetime_standard %></p>
+                           <p><b><a href="/event/<%= e.id %>"><%= e.title %></a></b><br/><%= e.start_datetime_standard %></p>
                            <% end %>
-            
-                           <a href="<%= @calendar %>">Full Calendar</a>
+                           
+                           <a href="/events">All Events</a>
+                           
                        </div>
                        
                        
