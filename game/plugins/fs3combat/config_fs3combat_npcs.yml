@@ -7,7 +7,7 @@ fs3combat:
             Brawling: 6
             Firearms: 6
             Thrown: 6
-            Voodoo: 6
+            Faith: 6
             Gunnery: 6
             Sailing: 4
             Composure: 6
@@ -22,7 +22,7 @@ fs3combat:
             Brawling: 9
             Firearms: 9
             Thrown: 9
-            Voodoo: 9
+            Faith: 9
             Gunnery: 9
             Sailing: 6
             Leadership: 6
@@ -38,7 +38,7 @@ fs3combat:
             Brawling: 11
             Firearms: 11
             Thrown: 11
-            Voodoo: 11
+            Faith: 11
             Gunnery: 11
             Sailing: 8
             Leadership: 8
@@ -47,3 +47,19 @@ fs3combat:
             Athletics: 8
             Healing: 8
             Reflexes: 7
+        Giant:
+            Default: 6
+            Blades: 9
+            Bludgeons: 11
+            Brawling: 11
+            Firearms: 9
+            Thrown: 11
+            Faith: 9
+            Gunnery: 9
+            Sailing: 6
+            Leadership: 6
+            Composure: 12
+            Alertness: 6
+            Athletics: 8
+            Healing: 6
+            Reflexes: 5

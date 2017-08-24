@@ -18,6 +18,9 @@ fs3skills:
   - name: Composure
     linked_attr: Grit
     desc: Coolness under pressure.
+  - name: Faith
+    linked_attr: Grit
+    desc: Calling on the gods or god to grant a boon. Only for people of extraordinary Faith.
   - name: Firearms
     linked_attr: Reflexes
     desc: Using pistols or rifles.
@@ -42,6 +45,3 @@ fs3skills:
   - name: Thrown
     linked_attr: Reflexes
     desc: Throwing knives, harpoons, rocks, and other weapons.
-  - name: Voodoo
-    linked_attr: Grit
-    desc: Calling upon the loa and casting favors (spells).

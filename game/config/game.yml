@@ -1,17 +1,10 @@
 game:
-    # Name of your game.
     name: "The Eighth Sea"
 
-    # Please select the appropriate category to describe your game:
-    # "Historical", "Sci-Fi", "Fantasy", "Modern", "Supernatural", "Social", "Other"
     category: Fantasy
     
-    # Describe your game.  You may use ansi and other MUSH formatting codes (%r, etc.).
-    description: "A High Seas Adventure game set in a world of pirates, monsters and voodoo."
+    description: "format_input_for_html(@config['description']) %>"
     
-    # Your game's website
-    website: ""
+    website: "http://the8thsea.wikidot.com"
         
-    # true if your game is open for business, false if it is in development, down, or 
-    # otherwise not open to the public
     public_game: false
