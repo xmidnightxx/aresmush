@@ -23,7 +23,7 @@ fs3skills:
     max_attributes: 16
     
     unusual_skills:
-        - Voodoo
+        - Faith
         - Carib
 
     starting_skills:
@@ -32,7 +32,7 @@ fs3skills:
                 Alertness: 2
                 Composure: 2
                 Athletics: 2
-                Voodoo: 0
+                Faith: 0
         Position:
             Pirate:
                 skills: 
@@ -70,10 +70,13 @@ fs3skills:
                     Gunnery: 3
             Hougan:
                 skills:
-                    Voodoo: 3
+                    Faith: 3
             Mambo:
                 skills:
-                    Voodoo: 3
+                    Faith: 3
+            Priest:
+                skills:
+                    Faith: 3
             Other:
 
         Nationality:

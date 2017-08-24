@@ -95,15 +95,20 @@ module AresMUSH
       end
 
       reply = BbsReply.create(author: author, bbs_post: post, message: reply)
-        
+      replymessage = t('bbs.new_reply', :subject => post.subject, 
+       :board => board.name, 
+       :reference => post.reference_str,
+       :author => author.name)  
+      
       post.mark_unread
       Bbs.mark_read_for_player(author, post)
         
-      Global.client_monitor.emit_all_ooc t('bbs.new_reply', :subject => post.subject, 
-      :board => board.name, 
-      :reference => post.reference_str,
-      :author => author.name)
-      
+      Global.client_monitor.logged_in.each do |other_client, other_char|
+        if (Bbs.can_read_board?(other_char, board))
+          other_client.emit_ooc replymessage
+        end
+      end
+
       Global.client_monitor.notify_web_clients :new_bbs_post, t('bbs.web_new_reply', :subject => post.subject, :author => author.name) do |char|
           Bbs.can_read_board?(char, board)
         end

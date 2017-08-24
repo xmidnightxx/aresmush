@@ -4,10 +4,6 @@ module AresMUSH
     # a particular character's info
     module WhoCharacterFields
      
-      def position(char)
-        char.group("Position")
-      end
-    
       def status_color(char)
         Status.status_color(status(char))
       end
@@ -24,8 +20,12 @@ module AresMUSH
         char.group("Position")
       end
 
-      def department(char)
-        char.group("Department")
+      def crew(char)
+        char.group("Crew")
+      end
+
+      def rank(char)
+        char.rank
       end
       
       def idle(char)

@@ -1,5 +1,5 @@
 fs3combat:
-    default_type: Soldier
+    default_type: Sailor
   
     
     stances:
@@ -42,11 +42,11 @@ fs3combat:
         # CUSTOM TYPES
         # ----------------------------------------
 
-        Soldier:
+        Sailor:
             weapon: Sword
             hitloc: Humanoid
             defense_skill: Reflexes
-        Marine:
+        Soldier:
             weapon: Musket
             armor: Buff Coat
             hitloc: Humanoid
@@ -63,11 +63,30 @@ fs3combat:
             weapon: Culverin
             hitloc: Humanoid
             defense_skill: Reflexes
-        Hound:
-            weapon: Knife
-            armor: Leather
+        Quadruped:
+            weapon: Natural Weapons
             hitloc: Quadruped
-            defense_skill: Reflexes            
+            defense_skill: Reflexes
+        Fish:
+            weapon: Natural Weapons
+            hitloc: Fish
+            defense_skill: Reflexes
+        Flier:
+            weapon: Natural Weapons
+            hitloc: Flier
+            defense_skill: Reflexes
+        Dinosaur:
+            weapon: Natural Weapons
+            hitloc: Dinosaur
+            defense_skill: Reflexes
+        Octopod:
+            weapon: Natural Weapons
+            hitloc: Octopod
+            defense_skill: Reflexes
+        Snake:
+            weapon: Natural Weapons
+            hitloc: Snake
+            defense_skill: Reflexes
         Target:
             hitloc: Target
             weapon: Unarmed

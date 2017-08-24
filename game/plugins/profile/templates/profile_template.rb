@@ -14,6 +14,14 @@ module AresMUSH
         Chargen.approval_status(@char)
       end
       
+      def name_alias
+        if @char.alias == nil
+          name_alias = @char.name
+        else
+          name_alias = @char.name + " ( " + @char.alias + " )"
+        end
+      end
+
       def fullname
         @char.demographic(:fullname)
       end
@@ -117,7 +125,7 @@ module AresMUSH
       
       def wiki
         game_site = Global.read_config("game", "website")
-        "#{game_site}/char:#{@char.name}"
+        "#{game_site}/character:#{@char.name}"
       end
       
       def handle_profile

@@ -8,8 +8,8 @@ fs3combat:
 
 
         Blast:
-            description: "A favor which affects multiple targets."
-            skill: Voodoo
+            description: "A voodoo blessing which affects multiple targets."
+            skill: Faith
             lethality: 0
             penetration: 3
             weapon_type: Explosive
@@ -142,8 +142,8 @@ fs3combat:
             has_shrapnel: false
 
         Bolt:
-            description: "A favor which affects a single target."
-            skill: Voodoo
+            description: "A voodoo blessing which affects a single target."
+            skill: Faith
             lethality: 0
             penetration: 5
             weapon_type: Ranged
@@ -289,8 +289,8 @@ fs3combat:
                 - 'Sparring'
                 
         Warding:
-            description: "A favor intended to defend against melee assaults and attack lightly back."
-            skill: Voodoo
+            description: "A voodoo blessing intended to defend against melee assaults and attack lightly back."
+            skill: Faith
             lethality: -5
             penetration: 2
             weapon_type: Melee
@@ -301,7 +301,49 @@ fs3combat:
             accuracy: 0
             initiative: -2
             has_shrapnel: false
-        
+
+        Natural Weapons:
+            description: "Claws, teeth, and other animal weapons."
+            skill: Brawling
+            lethality: 0
+            penetration: 3
+            weapon_type: Melee
+            is_automatic: false
+            # ammo: 0
+            recoil: 0
+            damage_type: Physical
+            accuracy: 0
+            initiative: 0
+            has_shrapnel: false
+
+        Large Natural Weapons:
+            description: "Claws, teeth, and other natural weapons of large animals."
+            skill: Brawling
+            lethality: 5
+            penetration: 5
+            weapon_type: Melee
+            is_automatic: false
+            # ammo: 0
+            recoil: 0
+            damage_type: Physical
+            accuracy: 0
+            initiative: 0
+            has_shrapnel: false
+ 
+        Giant Natural Weapons:
+            description: "Claws, teeth, and other natural weapons of huge animals."
+            skill: Brawling
+            lethality: 15
+            penetration: 7
+            weapon_type: Melee
+            is_automatic: false
+            # ammo: 0
+            recoil: 0
+            damage_type: Physical
+            accuracy: 0
+            initiative: 0
+            has_shrapnel: false
+            
         ## ----------------------------------------------------------------------
         ## VEHICLE WEAPONS
         ## ----------------------------------------------------------------------

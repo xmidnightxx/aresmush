@@ -13,9 +13,8 @@ fs3combat:
                 Right Hand: [ 'Chest', 'Chest', 'Abdomen', 'Abdomen', 'Right Arm', 'Right Arm', 'Right Arm', 'Left Hand', 'Left Hand', 'Left Hand' ]
                 Left Arm:  [ 'Head', 'Chest', 'Chest', 'Abdomen', 'Abdomen', 'Left Hand', 'Left Hand', 'Left Arm', 'Left Arm', 'Left Hand' ]
                 Right Arm:  [ 'Head', 'Chest', 'Chest', 'Abdomen', 'Abdomen', 'Right Hand', 'Right Hand', 'Right Arm', 'Right Arm', 'Right Hand' ]
-                Abdomen: [ 'Head', 'Chest', 'Chest', 'Left Leg', 'Left Leg', 'Right Leg', 'Right Leg', 'Abdomen', 'Abdomen', 'Abdomen' ]
                 Head: [ 'Right Arm', 'Right Arm', 'Left Arm', 'Chest', 'Chest', 'Neck', 'Neck', 'Head', 'Head', 'Head' ]
-                neck: [ 'Right Arm', 'Right Arm', 'Left Arm', 'Chest', 'Chest', 'Head', 'Head', 'Neck', 'Neck', 'Neck' ]
+                Neck: [ 'Right Arm', 'Right Arm', 'Left Arm', 'Chest', 'Chest', 'Head', 'Head', 'Neck', 'Neck', 'Neck' ]
                 Abdomen: [ 'Left Leg', 'Right Leg',  'Left Leg', 'Right Leg', 'Chest', 'Chest', 'Chest', 'Abdomen', 'Abdomen', 'Abdomen' ]
             vital_areas:
                 - Chest
@@ -26,17 +25,101 @@ fs3combat:
                 - Groin
         Quadruped: 
             areas:
-                Body: [ 'Left Rear Leg', 'Right Rear Leg', 'Left Foreleg', 'Right Foreleg', 'Abdomen',  'Neck', 'Chest', 'Body', 'Body', 'Body' ]
+                Body: [ 'Tail', 'Left Foreleg', 'Right Foreleg', 'Abdomen',  'Abdomen', 'Neck', 'Chest', 'Body', 'Body', 'Body' ]
                 Chest: [ 'Left Rear Leg', 'Right Rear Leg',  'Left Foreleg', 'Right Foreleg', 'Head', 'Abdomen', 'Body', 'Chest', 'Chest', 'Chest' ]
-                Left Rear Leg: [ 'Left Foreleg', 'Chest', 'Right Rear Leg', 'Right Rear Leg', 'Abdomen', 'Body', 'Body', 'Left Rear Leg', 'Left Rear Leg', 'Left Rear Leg' ]
-                Right Rear Leg: [ 'Right Foreleg', 'Chest', 'Left Rear Leg', 'Left Rear Leg', 'Abdomen',  'Body', 'Body', 'Right Rear Leg', 'Right Rear Leg', 'Right Rear Leg' ]
+                Left Rear Leg: [ 'Left Foreleg', 'Chest', 'Tail', 'Right Rear Leg', 'Abdomen', 'Body', 'Body', 'Left Rear Leg', 'Left Rear Leg', 'Left Rear Leg' ]
+                Right Rear Leg: [ 'Right Foreleg', 'Chest', 'Tail', 'Left Rear Leg', 'Abdomen',  'Body', 'Body', 'Right Rear Leg', 'Right Rear Leg', 'Right Rear Leg' ]
                 Left Foreleg:  [ 'Left Rear Leg', 'Abdomen', 'Right Foreleg', 'Right Foreleg', 'Chest', 'Body', 'Body', 'Left Foreleg', 'Left Foreleg', 'Left Foreleg' ]
                 Right Foreleg:  [ 'Right Rear Leg', 'Abdomen', 'Left Foreleg', 'Left Foreleg', 'Chest', 'Body', 'Body', 'Right Foreleg', 'Right Foreleg', 'Right Foreleg' ]
                 Abdomen: [ 'Body', 'Body', 'Chest', 'Right Foreleg', 'Left Foreleg', 'Left Rear Leg', 'Right Rear Leg', 'Abdomen', 'Abdomen', 'Abdomen' ]
                 Head: [ 'Left Foreleg', 'Right Foreleg', 'Body', 'Chest', 'Chest', 'Neck', 'Neck', 'Head', 'Head', 'Head' ]
                 Neck: [ 'Left Foreleg', 'Right Foreleg', 'Body', 'Chest', 'Chest', 'Head', 'Head', 'Neck', 'Neck', 'Neck' ]
+                Tail: [ 'Left Rear Leg', 'Right Rear Leg', 'Abdomen', 'Abdomen', 'Body', 'Body', 'Body', 'Tail', 'Tail', 'Tail' ]
             vital_areas:
                 - Chest
+                - Abdomen
+                - Body
+            critical_areas:
+                - Head
+                - Neck
+        Fish:
+            areas:
+                Body: [ 'Tail', 'Tail', 'Head', 'Right Fin', 'Left Fin', 'Abdomen', 'Abdomen', 'Body', 'Body', 'Body' ]
+                Head: [ 'Right Fin', 'Left Fin', 'Abdomen', 'Abdomen', 'Body', 'Body', 'Body', 'Head', 'Head', 'Head' ]
+                Abdomen: [ 'Tail', 'Tail', 'Head', 'Head', 'Right Fin', 'Left Fin', 'Body', 'Body', 'Abdomen', 'Abdomen', 'Abdomen' ]
+                Left Fin: [ 'Tail', 'Head', 'Abdomen', 'Abdomen', 'Body', 'Body', 'Body', 'Left Fin', 'Left Fin', 'Left Fin' ]
+                Right Fin: [ 'Tail', 'Head', 'Abdomen', 'Abdomen', 'Body', 'Body', 'Body', 'Right Fin', 'Right Fin', 'Right Fin' ]
+                Tail: [ 'Right Fin', 'Left Fin', 'Abdomen', 'Abdomen', 'Body', 'Body', 'Body', 'Tail', 'Tail', 'Tail' ]
+            vital_areas:
+                - Body
+                - Abdomen
+            critical_areas:
+                - Head
+        Merfolk:
+            areas:
+                Chest: [ 'Tail', 'Tail',  'Left Arm', 'Right Arm', 'Abdomen', 'Abdomen', 'Head', 'Chest', 'Chest', 'Chest' ]
+                Left Hand: [ 'Chest', 'Chest', 'Abdomen', 'Abdomen', 'Left Arm', 'Left Arm', 'Left Arm', 'Left Hand', 'Left Hand', 'Left Hand' ]
+                Right Hand: [ 'Chest', 'Chest', 'Abdomen', 'Abdomen', 'Right Arm', 'Right Arm', 'Right Arm', 'Left Hand', 'Left Hand', 'Left Hand' ]
+                Left Arm:  [ 'Head', 'Chest', 'Chest', 'Abdomen', 'Abdomen', 'Left Hand', 'Left Hand', 'Left Arm', 'Left Arm', 'Left Hand' ]
+                Right Arm:  [ 'Head', 'Chest', 'Chest', 'Abdomen', 'Abdomen', 'Right Hand', 'Right Hand', 'Right Arm', 'Right Arm', 'Right Hand' ]
+                Abdomen: [ 'Tail', 'Tail',  'Right Arm', 'Left Arm', 'Chest', 'Chest', 'Chest', 'Abdomen', 'Abdomen', 'Abdomen' ]
+                Head: [ 'Right Arm', 'Right Arm', 'Left Arm', 'Chest', 'Chest', 'Neck', 'Neck', 'Head', 'Head', 'Head' ]
+                Neck: [ 'Right Arm', 'Right Arm', 'Left Arm', 'Chest', 'Chest', 'Head', 'Head', 'Neck', 'Neck', 'Neck' ]
+                Tail: [ 'Right Arm', 'Left Arm', 'Abdomen', 'Abdomen', 'Body', 'Body', 'Body', 'Tail', 'Tail', 'Tail' ]
+            vital_areas:
+                - Chest
+                - Abdomen
+            critical_areas:
+                - Head
+                - Neck
+        Flier:
+            areas:
+                Body: [ 'Left Wing', 'Right Wing', 'Left Wing', 'Right Wing', 'Head', 'Abdomen', 'Abdomen', 'Body', 'Body', 'Body' ]
+                Abdomen: [ 'Left Wing', 'Right Wing', 'Left Wing', 'Right Wing', 'Head', 'Body', 'Body', 'Abdomen', 'Abdomen', 'Abdomen' ]
+                Left Wing: ['Head', 'Abdomen', 'Abdomen', 'Body', 'Body', 'Body', 'Left Wing', 'Left Wing', 'Left Wing', 'Left Wing' ]
+                Right Wing: ['Head', 'Abdomen', 'Abdomen', 'Body', 'Body', 'Body', 'Right Wing', 'Right Wing', 'Right Wing', 'Right Wing' ]
+                Head: [ 'Left Wing', 'Right Wing', 'Left Wing', 'Right Wing', 'Abdomen', 'Body', 'Body', 'Head', 'Head', 'Head' ]
+            vital_areas:
+                - Body
+                - Abdomen
+            critical_areas:
+                - Head
+        Octopod:
+            areas:
+                Body: [ 'Left Fore Tentacle', 'Right Fore Tentacle', 'Tentacles', 'Tentacles', 'Tentacles', 'Tentacles', 'Tentacles', 'Body', 'Body', 'Body' ]
+                Left Fore Tentacle: ['Body', 'Body', 'Body', 'Tentacles', 'Tentacles', 'Tentacles', 'Tentacles', 'Left Fore Tentacle', 'Left Fore Tentacle', 'Left Fore Tentacle' ]
+                Right Fore Tentacle: ['Body', 'Body', 'Body', 'Tentacles', 'Tentacles', 'Tentacles', 'Tentacles', 'Left Fore Tentacle', 'Left Fore Tentacle', 'Left Fore Tentacle' ]
+                Tentacles: [ 'Left Fore Tentacle', 'Right Fore Tentacle', 'Body', 'Body', 'Body', 'Body', 'Tentacles', 'Tentacles', 'Tentacles', 'Tentacles' ]
+                Left Eye: [ 'Tentacles', 'Body', 'Body', 'Body', 'Body', 'Body', 'Body', 'Body', 'Left Eye', 'Left Eye' ]
+                Right Eye: [ 'Tentacles', 'Body', 'Body', 'Body', 'Body', 'Body', 'Body', 'Body', 'Right Eye', 'Right Eye' ]
+            vital_areas:
+                - Body
+            critical_areas:
+                - Left Eye
+                - Right Eye
+        Snake:
+            areas:
+                Body: [ 'Tail', 'Tail', 'Head', 'Abdomen', 'Abdomen', 'Abdomen', 'Body', 'Body', 'Body', 'Body' ]
+                Head: [ 'Tail', 'Abdomen', 'Abdomen', 'Body', 'Body', 'Body', 'Body', 'Head', 'Head', 'Head' ]
+                Abdomen: [ 'Tail', 'Tail', 'Head', 'Body', 'Body', 'Body', 'Body', 'Abdomen', 'Abdomen', 'Abdomen' ]
+                Tail: [ 'Head', 'Abdomen', 'Abdomen', 'Abdomen', 'Body', 'Body', 'Body', 'Tail', 'Tail', 'Tail' ]
+            vital_areas:
+                - Body
+                - Abdomen
+            critical_areas:
+                - Head
+        Dinosaur:
+            areas:
+                Body: [ 'Tail', 'Right Leg', 'Left Leg', 'Arms', 'Head', 'Neck', 'Abdomen', 'Body', 'Body', 'Body' ]
+                Abdomen: [ 'Tail', 'Right Leg', 'Left Leg', 'Arms', 'Head', 'Neck', 'Body', 'Abdomen', 'Abdomen', 'Abdomen' ]
+                Head: [ 'Arms', 'Abdomen', 'Abdomen', 'Body', 'Body', 'Neck', 'Neck', 'Head', 'Head', 'Head' ]
+                Neck: [ 'Arms', 'Abdomen', 'Abdomen', 'Body', 'Body', 'Head', 'Head', 'Neck', 'Neck', 'Neck' ]
+                Arms: [ 'Neck', 'Body', 'Body', 'Body', 'Body', 'Abdomen', 'Abdomen', 'Arms', 'Arms', 'Arms' ]
+                Right Leg: [ 'Left Leg', 'Tail', 'Tail', 'Abdomen', 'Abdomen', 'Body', 'Body', 'Right Leg', 'Right Leg', 'Right Leg' ]
+                Left Leg: [ 'Right Leg', 'Tail', 'Tail', 'Abdomen', 'Abdomen', 'Body', 'Body', 'Left Leg', 'Left Leg', 'Left Leg' ]
+                Tail: [ 'Left Leg', 'Right Leg', 'Left Leg', 'Right Leg', 'Body', 'Abdomen', 'Abdomen', 'Tail', 'Tail', 'Tail' ]
+            vital_areas:
+                - Body
                 - Abdomen
             critical_areas:
                 - Head
