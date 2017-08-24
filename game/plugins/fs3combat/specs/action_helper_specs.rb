@@ -195,7 +195,7 @@ module AresMUSH
         end
         
         it "should do nothing if KO roll fails" do
-          FS3Combat.should_receive(:make_ko_roll).with(@combatant) { 0 }
+          FS3Combat.should_receive(:make_ko_roll).with(@combatant, 3) { 0 }
           FS3Combat.check_for_unko(@combatant)
         end
         
@@ -203,7 +203,7 @@ module AresMUSH
           combat = double
           @combatant.stub(:name) { "Bob" }
           @combatant.should_receive(:update).with(is_ko: false)
-          FS3Combat.should_receive(:make_ko_roll).with(@combatant) { 1 }
+          FS3Combat.should_receive(:make_ko_roll).with(@combatant, 3) { 1 }
           @combatant.stub(:combat) { combat }
           combat.should_receive(:emit).with("fs3combat.is_no_longer_koed", nil, true)
           FS3Combat.check_for_unko(@combatant)
@@ -692,11 +692,14 @@ module AresMUSH
           FS3Combat.stub(:weapon_is_stun?) { false }
           FS3Combat.stub(:determine_hitloc) { "Chest" }
           FS3Combat.stub(:resolve_possible_crew_hit) { [] }
+          FS3Combat.stub(:weapon_stat) { "x" }
+          @target.stub(:log)
           @target.stub(:inflict_damage)
           @target.stub(:name) { "D" }
           @target.stub(:add_stress)
           @target.stub(:update).with(freshly_damaged: true)
           @target.stub(:damaged_by) { [] }
+          @target.stub(:luck) { "" }
           @target.stub(:update).with(damaged_by: [ "A" ]) {}
           @combatant.stub(:luck) { "" }
         end
@@ -723,17 +726,29 @@ module AresMUSH
           FS3Combat.resolve_attack(@combatant, "A", @target, "Knife")
         end
         
-        it "should update damaged by" do 
+        it "should update damaged by xxx" do 
           @target.stub(:damaged_by) { [ "X" ] }
           @target.should_receive(:update).with(damaged_by: [ "X", "A" ])
           FS3Combat.should_receive(:determine_damage).with(@target, "Chest", "Knife", 0, false) { "INCAP" }
           FS3Combat.resolve_attack(@combatant, "A", @target, "Knife")
         end
         
+        it "should add success to damage" do
+          FS3Combat.should_receive(:determine_damage).with(@target, "Chest", "Knife", 15, false) { "INCAP" }
+          FS3Combat.resolve_attack(@combatant, "A", @target, "Knife", 4)
+        end
+        
         it "should add luck to damage if luck spent on attack" do
           FS3Combat.stub(:determine_armor) { 22 }
           @combatant.stub(:luck) { "Attack" }
           FS3Combat.should_receive(:determine_damage).with(@target, "Chest", "Knife", 8, false) { "INCAP" }
+          FS3Combat.resolve_attack(@combatant, "A", @target, "Knife")
+        end
+        
+        it "should subtract luck from damage if luck spent on defense" do
+          FS3Combat.stub(:determine_armor) { 22 }
+          @target.stub(:luck) { "Defense" }
+          FS3Combat.should_receive(:determine_damage).with(@target, "Chest", "Knife", -52, false) { "INCAP" }
           FS3Combat.resolve_attack(@combatant, "A", @target, "Knife")
         end
         

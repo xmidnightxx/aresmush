@@ -6,14 +6,11 @@ module AresMUSH
       attr_accessor :dest
 
       def parse_args
-        self.name = trim_arg(cmd.args)
+        self.dest = trim_arg(cmd.args)
       end
       
       def required_args
-        {
-          args: [ self.dest ],
-          help: 'icstart'
-        }
+        [ self.dest ]
       end
       
       def check_can_build
@@ -22,17 +19,17 @@ module AresMUSH
       end
       
       def handle
-        find_result = ClassTargetFinder.find(self.dest, Room, enactor)
-        if (!find_result.found?)
-          client.emit_failure(find_result.error)
+        matched_rooms = Room.find_by_name_and_area self.dest, enactor_room
+        if (matched_rooms.count != 1)
+          client.emit_failure matched_rooms.count == 0 ? t('db.object_not_found') : t('db.object_ambiguous')
           return
         end
-        dest = find_result.target
-          
+        room = matched_rooms.first
         
+        Game.master.update(ic_start_room: room)
+        Status.reset_ic_start room
         
-        Game.master.update(ic_start_room: dest)
-        client.emit_success t('rooms.ic_start_set', :dest => dest.name)
+        client.emit_success t('rooms.ic_start_set', :name => room.name)
       end
     end
   end

@@ -1,13 +1,23 @@
 jobs:
     categories:
-        - APP
-        - BUILD
-        - BUG
-        - CODE
-        - MISC
-        - PLOT
-        - REQ
-        - RP
+        APP:
+            color: "%xm"
+        BUILD:
+            color: "%xc"
+        BUG:
+            color: "%xy"
+        CODE:
+            color: "%xy"
+        MISC:
+            color: "%xh"
+        PLOT:
+            color: "%xc"
+        REQ:
+            color: "%xm"
+        RP:
+            color: "%xc"
+        SYS:
+            color: "%xh"
 
     status:
         NEW:
@@ -15,7 +25,7 @@ jobs:
         OPEN:
             color: "%xb"
         HOLD:
-            color: "%xr"
+            color: "%xx%xh"
         DONE:
             color: "%xy"
     
@@ -24,6 +34,8 @@ jobs:
     closed_status: "DONE"
     
     request_category: "REQ"
+    
+    system_category: "SYS"
         
     shortcuts:
         # These must come first before the jobs -> job conversion

@@ -97,7 +97,7 @@ module AresMUSH
       
     def self.check_for_unko(combatant)
       return if !combatant.is_ko
-      roll = FS3Combat.make_ko_roll(combatant)
+      roll = FS3Combat.make_ko_roll(combatant, 3)
       
       if (roll > 0)
         combatant.update(is_ko: false)
@@ -105,7 +105,7 @@ module AresMUSH
       end
     end
     
-    def self.make_ko_roll(combatant)
+    def self.make_ko_roll(combatant, ko_mod = 0)
       pc_mod = combatant.is_npc? ? 0 : Global.read_config("fs3combat", "pc_knockout_bonus")
 
       composure = Global.read_config("fs3combat", "composure_skill")
@@ -119,10 +119,10 @@ module AresMUSH
       
       damage_mod = combatant.total_damage_mod
       
-      mod = damage_mod + damage_mod + pc_mod + vehicle_mod
+      mod = damage_mod + damage_mod + pc_mod + vehicle_mod + ko_mod
       roll = combatant.roll_ability(composure, mod)
       
-      combatant.log "#{combatant.name} checking KO. roll=#{roll} composure=#{composure} damage=#{damage_mod} vehicle=#{vehicle_mod} pc=#{pc_mod}"
+      combatant.log "#{combatant.name} checking KO. roll=#{roll} composure=#{composure} damage=#{damage_mod} vehicle=#{vehicle_mod} pc=#{pc_mod} mod=#{ko_mod}"
       
       roll
     end
@@ -334,9 +334,18 @@ module AresMUSH
                   
       reduced_by_armor = armor > 0 ? t('fs3combat.reduced_by_armor') : ""
 
-      luck_mod = (attacker && attacker.luck == "Attack") ? 30 : 0
+      attack_luck_mod = (attacker && attacker.luck == "Attack") ? 30 : 0
+      
+      defense_luck_mod = target.luck == "Defense" ? 30 : 0 
           
-      damage = FS3Combat.determine_damage(target, hitloc, weapon, luck_mod - armor, crew_hit)
+      hit_mod = [(attacker_net_successes - 1) * 5, 0].max
+      hit_mod = [25, hit_mod].min
+      
+      total_damage_mod = hit_mod + attack_luck_mod - defense_luck_mod - armor
+      target.log "Damage modifiers: attack_luck=#{attack_luck_mod} hit=#{hit_mod} defense_luck=#{defense_luck_mod} armor=#{armor} total=#{total_damage_mod}"
+      
+      
+      damage = FS3Combat.determine_damage(target, hitloc, weapon, total_damage_mod, crew_hit)
           
       is_stun = FS3Combat.weapon_is_stun?(weapon)
       desc = "#{weapon} - #{hitloc}"
@@ -356,9 +365,15 @@ module AresMUSH
       
       messages = []
       
+      if (FS3Combat.weapon_stat(weapon, 'weapon_type') == "Explosive")
+        weapon_name = t('fs3combat.concussion_from', :weapon => weapon)
+      else
+        weapon_name = weapon
+      end
+      
       messages << t('fs3combat.attack_hits', 
                     :name => attack_name, 
-                    :weapon => weapon,
+                    :weapon => weapon_name,
                     :target => target.name,
                     :hitloc => hitloc,
                     :armor => reduced_by_armor,

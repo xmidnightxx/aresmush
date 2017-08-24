@@ -29,7 +29,7 @@ module AresMUSH
       def format_output_for_html(output)
         return nil if !output
         text = AresMUSH::ClientFormatter.format output, false
-        text.strip.gsub(/[\r]/i, '<br/>')
+        text.strip.gsub(/[\n]/i, '<br/>')
       end
       
       def format_markdown_for_html(output)
@@ -77,7 +77,7 @@ module AresMUSH
         
         allow_html = Global.read_config('website', 'allow_html_in_markdown')
         text = AresMUSH::ClientFormatter.format output, false
-        html_formatter = AresMUSH::Website::WikiMarkdownFormatter.new(!allow_html, { musicplayer: music_player, image: image})
+        html_formatter = AresMUSH::Website::WikiMarkdownFormatter.new(!allow_html, {}, { musicplayer: music_player, image: image })
         text = html_formatter.to_html text
         #text = text.gsub(/\[\[musicplayer ([^\]]*)\]\]/i) { music_player(Regexp.last_match[1]) }
         text
