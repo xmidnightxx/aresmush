@@ -1,4 +1,10 @@
 module AresMUSH
+  class Character
+    def alts
+      AresCentral.alts(self)
+    end
+  end
+  
   module AresCentral
     
     # Emits a standard warning message to a client whenever they change a 
@@ -17,6 +23,12 @@ module AresMUSH
     def self.alts_of(handle)
       return [] if !handle
       Character.find_by_handle(handle).select { |c| c }
+    end
+    
+    def self.is_alt?(char1, char2)
+      return false if !char1.handle
+      return false if !char2.handle
+      char1.handle.id == char2.handle.id
     end
   end
 end

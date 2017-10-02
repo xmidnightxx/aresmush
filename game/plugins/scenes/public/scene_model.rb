@@ -16,8 +16,8 @@ module AresMUSH
     
     reference :room, "AresMUSH::Room"
     reference :owner, "AresMUSH::Character"
-    attribute :date_completed, :type => DataType::Date
-    attribute :date_shared, :type => DataType::Date
+    attribute :date_completed, :type => DataType::Time
+    attribute :date_shared, :type => DataType::Time
     
     attribute :title
     attribute :private_scene, :type => DataType::Boolean
@@ -31,6 +31,7 @@ module AresMUSH
     attribute :deletion_warned, :type => DataType::Boolean, :default => false
     attribute :icdate
     attribute :log
+    attribute :tags, :type => DataType::Array, :default => []
     
     collection :scene_poses, "AresMUSH::ScenePose"
     reference :scene_log, "AresMUSH::SceneLog"
