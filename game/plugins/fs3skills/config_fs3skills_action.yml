@@ -18,9 +18,17 @@ fs3skills:
   - name: Composure
     linked_attr: Grit
     desc: Coolness under pressure.
+  - name: Deception
+    linked_attr: Wits
+    desc: Lying convincingly (useable only against NPCs or to guide your own RP).
   - name: Faith
     linked_attr: Grit
-    desc: Calling on the gods or god to grant a boon. Only for people of extraordinary Faith.
+    desc: 'Calling on a deity for power. Only for people of extraordinary Faith.'
+    specialties:
+    - Abrahamic
+    - Paganism
+    - Shamanism
+    - Voodoo
   - name: Firearms
     linked_attr: Reflexes
     desc: Using pistols or rifles.
@@ -29,13 +37,16 @@ fs3skills:
     desc: Using cannon and other mounted firearms.
   - name: Healing
     linked_attr: Wits
-    desc: 'Tending to the ill and injured. Requires Specialty: Traditional or Surgery.'
+    desc: 'Tending to the ill and injured.'
     specialties:
     - Traditional
     - Surgery
   - name: Leadership
     linked_attr: Presence
     desc: Tactics, rallying speeches, and guiding groups of people.
+  - name: Persuasion
+    linked_attr: Presence
+    desc: Convincing people with the truth (useable only against NPCs).
   - name: Sailing
     linked_attr: Wits
     desc: Seamanship, navigation, knot-tying, and other nautical pursuits.

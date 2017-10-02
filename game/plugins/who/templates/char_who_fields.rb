@@ -17,11 +17,32 @@ module AresMUSH
       end
 
       def position(char)
-        char.group("Position")
+        if char.has_any_role?([ "admin", "staff", "gm", "builder" ]) then "%cmStaff%cn"
+          elsif !char.is_approved? then char.group("Position")
+          elsif char.group("Position").nil? || char.group("Position").empty? then "%chN/A%cn"
+          else char.group("Position")
+        end
       end
 
       def crew(char)
-        char.group("Crew")
+        char_crew = char.group("Crew")
+        if char.has_any_role?([ "admin", "staff", "gm", "builder" ]) then "%cmStaff%cn"
+          elsif !char.is_approved? then char_crew
+          elsif char_crew.nil? || char_crew.empty? then "%ccShore%cn"
+          else 
+           case char_crew
+            when "Reaver"
+              "%x8Reaver%cn"
+            when "Impudent"
+              "%ch%crImpudent%cn"
+            when "Santiago"
+              "%ch%cySantiago%cn"
+            when "Shore"
+              "%ccShore%cn"
+            else
+              char_crew
+           end
+        end
       end
 
       def rank(char)

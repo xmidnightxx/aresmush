@@ -97,13 +97,13 @@
               <div class="panel-body">
 
                   <div class="form-group row">
-                  <label for="faction" class="col-xs-2 col-form-label">Faction:</label> 
-                  <select name="faction">
-                    <% @factions['values'].each do |k, v| %>
-                    <option value="<%= k %>" <% if @user.group("Faction") == k %> selected <% end %> ><%= k %> - <%= v %></option>
+                  <label for="crew" class="col-xs-2 col-form-label">Crew:</label> 
+                  <select name="crew">
+                    <% @crews['values'].each do |k, v| %>
+                    <option value="<%= k %>" <% if @user.group("Crew") == k %> selected <% end %> ><%= k %> - <%= v %></option>
                     <% end %>
                   </select>
-                  <p class="cg-tip"><%= @factions['desc']%></p>
+                  <p class="cg-tip"><%= @crews['desc']%></p>
                   </div>
 
                   <div class="form-group row">
@@ -118,23 +118,13 @@
                   </div>
         
                   <div class="form-group row">
-                  <label for="department" class="col-xs-2 col-form-label">Department:</label> 
-                  <select name="department">
-                    <% @departments['values'].each do |k, v| %>
-                    <option value="<%= k %>" <% if @user.group("Department") == k %> selected <% end %> ><%= k %> - <%= v %></option>
+                  <label for="nationality" class="col-xs-2 col-form-label">Nationality:</label> 
+                  <select name="nationality">
+                    <% @nationalities['values'].each do |k, v| %>
+                    <option value="<%= k %>" <% if @user.group("Nationality") == k %> selected <% end %> ><%= k %> - <%= v %></option>
                     <% end %>
                   </select>
-                  <p class="cg-tip"><%= @departments['desc']%></p>
-                  </div>
-
-                  <div class="form-group row">
-                  <label for="colony" class="col-xs-2 col-form-label">Colony:</label> 
-                  <select name="colony">
-                    <% @colonies['values'].each do |k, v| %>
-                    <option value="<%= k %>" <% if @user.group("Colony") == k %> selected <% end %> ><%= k %> - <%= v %></option>
-                    <% end %>
-                  </select>
-                  <p class="cg-tip"><%= @colonies['desc']%></p>
+                  <p class="cg-tip"><%= @nationalities['desc']%></p>
                   </div>
         
                   <div class="form-group row">

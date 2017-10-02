@@ -1,6 +1,6 @@
 chargen:
     messages:
-        approval: "Congratulations!  Your application has been approved.  Type %xhonstage%xn to go forth and RP."
+        approval: "Congratulations!  Your application has been approved.  Please create your character page on the wiki: http://the8thsea.wikidot.com and use the password 'tempest' to join. Type %xhonstage%xn to go forth and RP."
         rejection: "Sorry, your character could not be approved at the present time for the reasons described below.  Please see %xhhelp app%xn for help making changes and resubmitting, and contact the person handling your application if you have any questions."
         post_approval: "Please create a wiki page and icon for them."
         welcome: "Please welcome %{name}, our latest %{position} to be approved!"
@@ -28,7 +28,7 @@ chargen:
         background:
             help: backgrounds
         abilities:
-            help: 'fs3 skills'
+            help: fs3_skills
         hooks:
             help: hooks
         desc:
@@ -40,7 +40,7 @@ chargen:
         profile:
             help: profile
         lastwill:
-            help: 'idle out'
+            help: idle_out
         review:
             help: apps
     shortcuts:

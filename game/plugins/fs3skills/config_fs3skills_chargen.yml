@@ -9,7 +9,7 @@ fs3skills:
     max_skill_rating: 7
     max_attr_rating: 5
     
-    max_ap: 45
+    max_ap: 50
     
     max_skills_at_or_above:
         5: 3
@@ -77,7 +77,6 @@ fs3skills:
             Priest:
                 skills:
                     Faith: 3
-            Other:
 
         Nationality:
             French:

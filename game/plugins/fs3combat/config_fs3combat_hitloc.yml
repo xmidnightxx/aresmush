@@ -161,6 +161,18 @@ fs3combat:
                 - Bow
                 - Stern
 
+        Boat:
+            areas:
+                Hull: [ 'Rigging', 'Mast', 'Mast', 'Waterline', 'Waterline', 'Hull', 'Hull', 'Hull', 'Hull', 'Hull' ]
+                Waterline: [ 'Mast', 'Hull', 'Hull', 'Hull', 'Hull', 'Hull', 'Hull', 'Waterline', 'Waterline', 'Waterline' ]
+                Mast: [ 'Hull', 'Hull', 'Hull', 'Rigging', 'Rigging', 'Rigging', 'Rigging', 'Mast', 'Mast', 'Mast' ]
+                Rigging: [ 'Hull', 'Hull', 'Hull', 'Hull', 'Mast', 'Mast', 'Mast', 'Rigging', 'Rigging', 'Rigging' ]
+            vital_areas:
+                - Waterline
+            critical_areas: []
+            crew_areas:
+                - Hull
+
         Target:
             areas:
                 Bullseye: [ 'Ring 3', 'Ring 3', 'Ring 3', 'Ring 3', 'Ring 2', 'Ring 2', 'Ring 2', 'Ring 1', 'Ring 1', 'Bullsye']

@@ -17,8 +17,8 @@ module AresMUSH
         char.group("Position")
       end
       
-      def callsign(char)
-        char.demographic(:callsign)
+      def nationality(char)
+        char.group("Nationality")
       end
     end
   end

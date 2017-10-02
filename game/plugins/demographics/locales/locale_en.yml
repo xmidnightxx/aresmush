@@ -45,7 +45,7 @@ en:
         gender_census_title: "Gender Census"
         skill_census_title: "Skill Census - %{type} Skills"
         rank_census_title: "Rank Census"
-        full_census_title: "Name                 Gender    Position              Callsign"
+        full_census_title: "Name                 Gender    Position              Nationality"
         invalid_skill_census_type: "Invalid skill census type.  Try one of these: %{types}."
         
         census_groups: "Census Groups Available"

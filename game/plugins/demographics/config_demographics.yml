@@ -48,7 +48,8 @@ demographics:
             values:
                 Impudent: "An English brig-of-war."
                 Santiago: "A Spanish merchant brig."
-                Reaver: "A pirate cutter that still sails despite being wrecked."
+                Reaver: "A pirate cutter that is part of the Brethren of the Coast."
+                Shore: "Not part of any crew, but a citizen of Tortuga itself."
 
         Position:
             desc: "Your character's background and training."
@@ -58,7 +59,7 @@ demographics:
                 Pirate: "A reaver, raider, and buccaneer."
                 Soldier: "Someone trained in firearms and fighting on land."
                 Gunner: "Specifically trained in the use of cannon."
-                Landlubber: "Catchall for other types of non-sailors."
+                Other: "Catchall for other types of non-sailors."
                 Carpenter: "Trained in constructing things from wood."
                 Smith: "Trained in creating things from metal."
                 Hougan: "A male practicioner of voodoo."

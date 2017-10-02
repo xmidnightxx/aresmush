@@ -8,7 +8,7 @@ fs3combat:
 
 
         Blast:
-            description: "A voodoo blessing which affects multiple targets."
+            description: "A burst of power which affects multiple targets."
             skill: Faith
             lethality: 0
             penetration: 3
@@ -87,7 +87,7 @@ fs3combat:
         Musket:
             description: "A flintlock musket."
             skill: Firearms
-            lethality: 0
+            lethality: 5
             penetration: 7
             weapon_type: Ranged
             is_automatic: false
@@ -142,7 +142,7 @@ fs3combat:
             has_shrapnel: false
 
         Bolt:
-            description: "A voodoo blessing which affects a single target."
+            description: "A surge of power which affects a single target."
             skill: Faith
             lethality: 0
             penetration: 5
@@ -289,7 +289,7 @@ fs3combat:
                 - 'Sparring'
                 
         Warding:
-            description: "A voodoo blessing intended to defend against melee assaults and attack lightly back."
+            description: "Power intended to defend against melee assaults and attack lightly back."
             skill: Faith
             lethality: -5
             penetration: 2
@@ -351,7 +351,7 @@ fs3combat:
         Culverin:
             description: "A relatively small 18-pounder cannon."
             skill: Gunnery
-            lethality: 30
+            lethality: 20
             penetration: 8
             weapon_type: Ranged
             is_automatic: false
@@ -376,11 +376,11 @@ fs3combat:
             lethality: -50
         Grapeshot:
             description: "Musket balls in a canister instead of a cannonball."
-            lethality: -20
+            lethality: -15
             accuracy: 6
             penetration: -4
         Chainshot:
             description: "Two half-cannonballs separated by a length of chain."
-            lethality: -10
+            lethality: -5
             accuracy: 2
             penetration: -2
