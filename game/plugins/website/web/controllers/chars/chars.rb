@@ -8,8 +8,17 @@ module AresMUSH
       
       def char_scenes_by_type(char, type)
         char.scenes_starring.select { |s| s.scene_type == type}
+<<<<<<< HEAD
             .select { |s| s.shared }
             .sort_by { |s| s.icdate }
+=======
+<<<<<<< HEAD
+            .select { |s| s.shared }
+            .sort_by { |s| s.icdate }
+            .reverse
+=======
+>>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'
+>>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
       end
       
       def can_manage_char?(char)

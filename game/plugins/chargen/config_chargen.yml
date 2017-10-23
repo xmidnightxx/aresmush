@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 chargen:
     messages:
         approval: "Congratulations!  Your application has been approved.  Please create your character page on the wiki: http://the8thsea.wikidot.com and use the password 'tempest' to join. Type %xhonstage%xn to go forth and RP."
@@ -47,4 +48,57 @@ chargen:
         "bg/approve": "app/approve"
         "bg/reject" : "app/reject"
         "bg/submit" : "app/submit"
+=======
+chargen:
+    messages:
+        approval: "Congratulations!  Your application has been approved.  Please create your character page on the wiki: http://the8thsea.wikidot.com and use the password 'tempest' to join. Type %xhonstage%xn to go forth and RP."
+        rejection: "Sorry, your character could not be approved at the present time for the reasons described below.  Please see %xhhelp app%xn for help making changes and resubmitting, and contact the person handling your application if you have any questions."
+        post_approval: "Please create a wiki page and icon for them."
+        welcome: "Please welcome %{name}, our latest %{position} to be approved!"
+    
+    arrivals_board: "New Arrivals"
+    
+    jobs:
+        app_category: "APP"
+        app_resubmit_status: "OPEN"
+        app_hold_status: "HOLD"
+
+    stages:
+        start:
+            tutorial: 'chargen.md'
+        app:
+            tutorial: 'app command.md'
+        sheet:
+            help: 'sheets'
+        demographics:
+            help: demographics
+        groups:
+            help: groups
+        ranks:
+            help: ranks
+        background:
+            help: backgrounds
+        abilities:
+            help: fs3_skills
+        hooks:
+            help: hooks
+        desc:
+            help: descriptions
+        handles:
+            help: handles
+        wiki:
+            help: wiki
+        profile:
+            help: profile
+        lastwill:
+            help: idle_out
+        review:
+            help: apps
+    shortcuts:
+        "chargen" : "cg"
+        "cg/back": "cg/prev"
+        "bg/approve": "app/approve"
+        "bg/reject" : "app/reject"
+        "bg/submit" : "app/submit"
+>>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
         "bg/unsubmit" : "app/unsubmit"

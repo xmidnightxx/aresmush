@@ -3,45 +3,19 @@ module AresMUSH
   
   class WebAppLoader
 
-    # Start he reactor
     def run(opts = {})
 
-      # define some defaults for our app
       server  = opts[:server] || 'thin'
       host    = opts[:host]   || '0.0.0.0'
       port    = opts[:port]   || '8181'
       web_app = WebApp
 
-      # create a base-mapping that our application will set at. If I
-      # have the following routes:
-      #
-      #   get '/hello' do
-      #     'hello!'
-      #   end
-      #
-      #   get '/goodbye' do
-      #     'see ya later!'
-      #   end
-      #
-      # Then I will get the following:
-      #
-      #   mapping: '/'
-      #   routes:
-      #     /hello
-      #     /goodbye
-      #
-      #   mapping: '/api'
-      #   routes:
-      #     /api/hello
-      #     /api/goodbye
       dispatch = Rack::Builder.app do
         map '/' do
           run web_app
         end
       end
 
-      # Start the web server. Note that you are free to run other tasks
-      # within your EM instance.
       Rack::Server.start({
         app:    dispatch,
         server: server,
@@ -54,7 +28,6 @@ module AresMUSH
     end
   end
 
-  # Our simple hello-world app
   class WebApp < Sinatra::Base
     def initialize
       AresMUSH::web_server = self
@@ -64,11 +37,27 @@ module AresMUSH
     # threaded - False: Will take requests on the reactor thread
     #            True:  Will queue request for background thread
     configure do
+<<<<<<< HEAD
       set :threaded, true #false
+=======
+      set :threaded, false
+<<<<<<< HEAD
+      #register Sinatra::Reloader
+      #enable :sessions
+=======
+>>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
       register Sinatra::Reloader
+>>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'
       register Sinatra::Flash
-      enable :sessions
+      disable :sessions
       set :public_folder, File.join(AresMUSH.game_path, 'plugins', 'website', 'web', 'public')
+
+      db_config = YAML.load(File.read(File.join(AresMUSH.game_path, 'config', 'database.yml')))
+      secret_config = YAML.load(File.read(File.join(AresMUSH.game_path, 'config', 'secrets.yml')))
+      
+      redis_url = AresMUSH::Database.build_url(db_config['database']['url'], secret_config['secrets']['database']['password']) 
+
+      use Rack::Session::Redis, :redis_server => "#{redis_url}/0/rack:session"
       
       Compass.configuration do |config|
          config.project_path = File.join(AresMUSH.game_path, 'plugins', 'website', 'web')

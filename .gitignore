@@ -1,46 +1,46 @@
+<<<<<<< HEAD
 calendar.ics
+=======
+<<<<<<< HEAD
+# Secret files
+# -----------------------------
+=======
+>>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
 tinkerfoo.rb
 .sass-cache
 *.log
+>>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'
 secrets.yml
-errors.txt
-save_pid.txt
-.DS_Store
 real_database.yml
-*.gem
-*.rbc
-.bundle
-.config
-coverage
-InstalledFiles
-lib/bundler/man
-pkg
-html
-rdoc
-spec/reports
-test/tmp
-test/version_tmp
-tmp
-todo.txt
-logs/
-killares
 
-# YARD artifacts
-.yardoc
-_yardoc
-doc/
-game/db/mongo.conf
-game/db/data
-game/db/*.log
-game/db/*.pid
-<<<<<<< HEAD
-game/plugins/profile/templates/profile_template.rb
-game/config/database.yml
-game/config/game.yml
-game/config/database.yml
-game/config/database.yml
-=======
->>>>>>> 0ca0a701ec61610907d6715d59a896081dc4a229
+# Logs and errors
+# -----------------------------
+*.log
+errors.txt
+logs/
+
+# Generated files
+# -----------------------------
+calendar.ics
+.sass-cache
+.DS_Store
+tmp/restart.txt
+
+# Process ID scripts
+# -----------------------------
+save_pid.txt
+killares
+*.pid
+*.pid.lock
+
+# Website file storage
+# -----------------------------
 game/plugins/website/web/public/files
+<<<<<<< HEAD
+=======
 game/plugins/website/config_website.yml
+<<<<<<< HEAD
 *.jpg
+=======
+>>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'
+>>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b

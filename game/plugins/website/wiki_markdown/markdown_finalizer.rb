@@ -95,7 +95,11 @@ module AresMUSH
       
   
       def self.clean_anchor(text)
+<<<<<<< HEAD
         anchor = (text || "").gsub(/[?&= ]/, '-').downcase
+=======
+        anchor = (text || "").parameterize('_').downcase
+>>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
         URI.escape(anchor)
       end
     end

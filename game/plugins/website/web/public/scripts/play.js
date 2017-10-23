@@ -102,6 +102,10 @@
       $('button.tourButton').show();
       $('button.whoButton').show();
       document.getElementById("sendMsg").focus();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
       //charId = $('#charId').val();
       //charToken = $('#charToken').val();
       //if (charId !== ' ') {
@@ -110,7 +114,21 @@
         //  'login_api_token': "" + charToken
             //};
         //send_cmd('connect', data);
+<<<<<<< HEAD
+=======
+      //}
+=======
+      charId = $('#charId').val();
+      charToken = $('#charToken').val();
+      if (charId !== ' ') {
+        data = {
+          'id': "" + charId,
+          'login_api_token': "" + charToken
+        };
+        send_cmd('connect', data);
+>>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
       }
+>>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'
     };
     on_disconnect = function() {
       connected = false;

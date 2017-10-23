@@ -1,7 +1,16 @@
 module AresMUSH
   class WebApp
     get '/char/:id/edit/?', :auth => :approved do |id|
+<<<<<<< HEAD
       @char = Character.find_one_by_name(id)
+=======
+<<<<<<< HEAD
+      @char = Character.find_one_by_name(id)
+      @files = uploaded_file_names.select { |f| f.start_with?(@char.name.downcase)}
+=======
+      @char = Character[id]
+>>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'
+>>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
       if (!@char)
         flash[:error] = "Character not found."
         redirect '/chars'
@@ -57,14 +66,29 @@ module AresMUSH
         @char.update_demographic name, value
       end
       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
       relationship_categories = (@params[:relationship_category_order] || "").split(',').map { |r| r.strip.titleize }
       @char.update(relationships_category_order: relationship_categories)
       
       @char.set_profile(profile)
+<<<<<<< HEAD
+=======
+      @char.update(bg_shared: params[:share_bg])
+      @char.update(relationships: relationships)
+      @char.update(profile_image: params[:profileimage] ? params[:profileimage].downcase : nil )
+      @char.update(profile_icon: params[:profileicon] ? params[:profileicon].downcase : nil )
+      @char.update(profile_gallery: params[:gallery] ? params[:gallery].downcase : nil )
+=======
+      @char.update(profile: profile)
+>>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
       @char.update(relationships: relationships)
       @char.update(profile_image: params[:profileimage])
       @char.update(profile_icon: params[:profileicon])
       @char.update(profile_gallery: params[:gallery])
+>>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'
       
       tags = params[:tags] || ""
       @char.update(profile_tags: tags.split(" ").map { |t| t.downcase })
