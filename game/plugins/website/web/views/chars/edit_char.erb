@@ -9,7 +9,6 @@
         <li class="active"><a data-toggle="tab" href="#demographics">Demographics</a></li>
         <li><a data-toggle="tab" href="#profile">Profile</a></li>
         <li><a data-toggle="tab" href="#relationships">Relationships</a></li>
-        <li><a data-toggle="tab" href="#hooks">RP Hooks</a></li>
         <li><a data-toggle="tab" href="#gallery">Gallery</a></li>
     </ul>
     
@@ -17,42 +16,29 @@
 
     <div class="tab-content">
 
-        <div id="demographics" class="tab-pane fade in active">
-            <%= erb :"chars/edit_demographics" %>
-        </div>
+      <div id="demographics" class="tab-pane fade in active">
+          <%= erb :"chars/edit_demographics" %>
+      </div>
       
-        <div id="profile" class="tab-pane fade in">
-            <%= erb :"chars/edit_profile" %>
-        </div>
+      <div id="profile" class="tab-pane fade in">
+          <%= erb :"chars/edit_profile" %>
+      </div>
     
-        <div id="relationships" class="tab-pane fade in">
+      <div id="relationships" class="tab-pane fade in">
           
-            <%= erb :"chars/edit_relationships" %>
+          <%= erb :"chars/edit_relationships" %>
           
-        </div>
-      
-        <div id="hooks" class="tab-pane fade in">
-            <%= erb :"chars/edit_hooks" %>
-          
-        </div>
+      </div>
       
       
-        <div id="gallery" class="tab-pane fade in">
-            <%= erb :"chars/edit_gallery" %>
-        </div>
-    </div>
+      <div id="gallery" class="tab-pane fade in">
+          <%= erb :"chars/edit_gallery" %>
+      </div>
+  </div>
     
-    <br/>
-        
-    <div class="panel panel-info">
-        <div class="panel-heading">
-            Character Tags
-        </div>
-        <div class="panel-body">
-            <input type="text" name="tags" size="100" value="<%= @char.profile_tags.join(" ") %>"/>
-        </div>
-    </div>
     
+    
+<<<<<<< HEAD
     <div class="panel panel-info">
         <div class="panel-heading">
             Files
@@ -69,16 +55,12 @@
                 
         </div>
     </div>
+=======
+>>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'
     
-    <div class="row">
-        <div class="col col-xs-12">
-            <div class="pull-right">
     
-                <p> <a href="<%= char_page_url(@char) %>" class="btn btn-default">Cancel</a>  <input class="btn btn-primary" type="submit" value="Save"> </p>
     
-            </div>
-        </div>
-    </div>
+    <p> <a href="/char/<%= @char.id %>" class="btn btn-default">Cancel</a>  <input class="btn btn-primary" type="submit" value="Save"> </p>
     
 </form>
 

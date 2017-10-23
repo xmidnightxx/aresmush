@@ -1,6 +1,5 @@
 $:.unshift File.dirname(__FILE__)
 load "lib/cron_event_handler.rb"
-load "lib/place_create_cmd.rb"
 load "lib/place_emit_cmd.rb"
 load "lib/place_delete_cmd.rb"
 load "lib/place_join_cmd.rb"
@@ -18,7 +17,7 @@ module AresMUSH
     end
  
     def self.shortcuts
-      Global.read_config("places", "shortcuts")
+      {}
     end
  
     def self.load_plugin
@@ -38,12 +37,10 @@ module AresMUSH
  
     def self.get_cmd_handler(client, cmd, enactor)
        case cmd.root
+       when "places"
+         return PlacesCmd
        when "place"
          case cmd.switch
-         when nil
-           return PlacesCmd
-         when "create"
-           return PlaceCreateCmd
          when "emit"
            return PlaceEmitCmd
          when "delete"

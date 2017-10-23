@@ -1,23 +1,17 @@
 module AresMUSH
   class WebApp
 
-    get '/help/:topic/?' do |search|
-      if (search.end_with?("."))
-        search = search.chop
-      end
+    get '/help/:topic/?' do |topic|
+      topic = Help.find_topic(topic)
       
-      topics = Help.find_topic(search)
-      
-      if (topics.empty?)
+      if (!topic == 0)
         flash[:error] = "Help topic not found!"
         redirect "/help"
       end
       
-      topic = topics.first
-      contents = Help.topic_contents(topic)
+      contents = Help.topic_contents(topic.first)
       @help =  format_markdown_for_html(contents)
       @search = params[:search]
-      @page_title = "Help - #{topic.titleize} - #{game_name}"
       erb :"help/help"
     end
 

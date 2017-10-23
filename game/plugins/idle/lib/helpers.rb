@@ -22,7 +22,13 @@ module AresMUSH
     def self.add_to_roster(char, contact = nil)
       char.update(roster_contact: contact || Global.read_config("idle", "default_contact"))
       char.update(idle_state: "Roster")
-      Idle.idle_cleanup(char)
+      char.reset_xp
+      # Reset their password.
+      Login.set_random_password(char)
+      # Remove their handle.              
+      if (char.handle)
+        char.handle.delete
+      end
     end
     
     def self.remove_from_roster(char)
@@ -31,16 +37,6 @@ module AresMUSH
     
     def self.is_exempt?(actor)
       actor.has_permission?("idle_exempt")
-    end
-    
-    def self.idle_cleanup(char)
-      # Remove their handle.              
-      if (char.handle)
-        char.handle.delete
-      end
-      Login.set_random_password(char)
-      char.update(profile_tags: char.profile_tags.select { |t| !t.start_with?("player:") })
-      char.reset_xp
     end
     
     def self.idle_action_color(action)

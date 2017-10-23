@@ -8,6 +8,7 @@ module AresMUSH
       def parse_args
         if (cmd.args !~ /\//)
           args = cmd.parse_args(ArgParser.arg1_equals_arg2)
+<<<<<<< HEAD
           
           self.title = trim_arg(args.arg1) || cmd.args
 
@@ -20,6 +21,11 @@ module AresMUSH
             self.description = args.arg2 || "--"
             self.category = Jobs.request_category
           end
+=======
+          self.title = trim_arg(args.arg1)
+          self.description = args.arg2
+          self.category = Jobs.request_category
+>>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'
         else          
           if (cmd.args =~ /^[^=\/]+=[^\/=]+\/.+/)
             args = cmd.parse_args(/(?<category>[^\=]+)=(?<title>[^\/]+)\/(?<description>.+)/)

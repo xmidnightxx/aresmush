@@ -20,10 +20,9 @@ module AresMUSH
         elsif (c.posed)
           posed = '%xg++%xn'
         else
-          last_posed = c.character.last_posed || "**"          
-          posed = "%xh%xr#{last_posed}%xn"
+          posed = '%xh%xr**%xn'
         end
-        "#{acted} / #{left(posed, 5)}   "
+        "#{acted} / #{posed}   "
       end
       
       def skill(c)

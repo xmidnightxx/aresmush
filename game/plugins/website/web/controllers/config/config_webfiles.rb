@@ -34,14 +34,6 @@ module AresMUSH
       erb :"admin/upload"
     end
     
-    get '/admin/config_web_favicon/?', :auth => :admin do
-      @name = "Web Favicon"
-      @hint = "The little icon shown in the tab bar of most browsers."
-      @dest_path = website_file_path
-      @filename = "favicon.ico"
-      erb :"admin/upload"
-    end
-    
     post '/admin/upload', :auth => :admin  do
       file = params[:file]
       

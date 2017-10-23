@@ -16,15 +16,15 @@ module AresMUSH
       end
       
       def handle
-        place = Places.find_place(enactor, self.name)
+        place = enactor_room.places.find(name: self.name).first
         
         if (!place)
-          client.emit_failure t('places.place_doesnt_exist')
+          client.emit_failure t('places.place_doesnt_exit')
           return
         end
         
         
-        Pose.emit(enactor, self.emit, place.name)
+        Pose.emit(enactor, self.emit, self.name)
       end
     end
   end

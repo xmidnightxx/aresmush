@@ -4,8 +4,6 @@
     ws = null;
     connected = false;
     window_visible = true;
-    idle_keepalive_ms = 60000;
-    keepalive_interval = null;
     
     $('button.disconnectButton').hide();
     $('button.connectButton').show();
@@ -44,19 +42,8 @@
     $(window).focus(function(){
         window_visible = true;
     });
-    idleKeepalive = function() {
-        if (connected) {
-            send_input("keepalive");
-        }
-        else {
-            clearInterval(keepalive_interval);
-        }
-    };
-    
     connect = function() {
       ws = new WebSocket(`ws://${config.host}:${config.port}/websocket`);
-      keepalive_interval = window.setInterval(function(){ idleKeepalive() }, idle_keepalive_ms);        
-          
       ws.onmessage = function(evt) {
         var html, is_json;
         var data = evt.data;
@@ -102,6 +89,7 @@
       $('button.tourButton').show();
       $('button.whoButton').show();
       document.getElementById("sendMsg").focus();
+<<<<<<< HEAD
       //charId = $('#charId').val();
       //charToken = $('#charToken').val();
       //if (charId !== ' ') {
@@ -111,6 +99,17 @@
             //};
         //send_cmd('connect', data);
       //}
+=======
+      charId = $('#charId').val();
+      charToken = $('#charToken').val();
+      if (charId !== ' ') {
+        data = {
+          'id': "" + charId,
+          'login_api_token': "" + charToken
+        };
+        send_cmd('connect', data);
+      }
+>>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'
     };
     on_disconnect = function() {
       connected = false;

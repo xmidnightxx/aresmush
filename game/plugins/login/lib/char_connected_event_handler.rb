@@ -3,12 +3,15 @@ module AresMUSH
     class CharConnectedEventHandler
       def on_event(event)
         client = event.client
+<<<<<<< HEAD
         char = Character[event.char_id]
+=======
+        char = event.char
+        Global.logger.info("Character Connected: #{char.name}")
+>>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'
         
         first_login = !char.last_ip
         Login.update_site_info(client, char)
-
-        Global.logger.info("Character Connected: #{char.name} #{char.last_ip} #{char.last_hostname}")
         
         if (first_login)
           Login.check_for_suspect(char)

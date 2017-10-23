@@ -46,12 +46,16 @@ module AresMUSH
             model.update(idle_state: nil)
           elsif (self.status == 'Npc')
             model.update(is_npc: true)
-            Idle.idle_cleanup(model)
           else
             model.update(idle_state: self.status)
-            Idle.idle_cleanup(model)
           end
 
+          # Reset their password and handle
+          Login.set_random_password(model)
+          if (model.handle)
+            model.handle.delete
+          end
+          
           client.emit_success t('idle.idle_status_set', :name => self.name, :status => self.status)
         end
       end

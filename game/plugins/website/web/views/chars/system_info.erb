@@ -1,5 +1,6 @@
 <ul class="nav nav-tabs">
   <li class="active"><a data-toggle="tab" href="#systeminfo">+</a></li>
+<<<<<<< HEAD
   <li><a data-toggle="tab" href="#systemhooks">RP Hooks</a></li>
   <% if @char.on_roster? || @char.bg_shared %>
   <li><a data-toggle="tab" href="#systembg">Background</a></li> 
@@ -7,6 +8,11 @@
   
   <li><a data-toggle="tab" href="#systemsheet">Sheet</a></li>
   <li><a data-toggle="tab" href="#systemdamage">Damage</a></li>
+=======
+  <li><a data-toggle="tab" href="#hooks">RP Hooks</a></li>
+  <li><a data-toggle="tab" href="#sheet">Sheet</a></li>
+  <li><a data-toggle="tab" href="#damage">Damage</a></li>
+>>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'
 </ul>
 
 <div class="tab-content">
@@ -17,17 +23,18 @@
   <div id="systemhooks" class="tab-pane fade">
       
       <p>
-          <div class="ansi">
+          
                 <ul>
                 <% @char.fs3_hooks.each do |h| %>
-                <li><b><%= h.name %></b> - <%= format_output_for_html h.description %></li>
+                <li><b><%= h.name %></b> - <%= h.description %></li>
                 <% end %>
                 </ul>
-          </div>
+                
      </p>
   </div>
   
   
+<<<<<<< HEAD
   <% if @char.on_roster? || @char.bg_shared %>
   <div id="systembg" class="tab-pane fade">
       <div class="ansi">
@@ -38,6 +45,9 @@
   <% end %>
   
   <div id="systemsheet" class="tab-pane fade">
+=======
+  <div id="sheet" class="tab-pane fade">
+>>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'
 
           <%= erb :"chars/fs3_sheet" %></p>
           

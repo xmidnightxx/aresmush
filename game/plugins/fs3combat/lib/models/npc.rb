@@ -30,9 +30,5 @@ module AresMUSH
       stats = FS3Combat.npc_type(self.level)
       stats[ability] || stats["Default"]   
     end
-    
-    def wound_modifier
-      self.ability_rating("Wounds") || 0
-    end
   end
 end

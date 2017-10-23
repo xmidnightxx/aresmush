@@ -1,5 +1,4 @@
 module AresMUSH
-  mattr_accessor :web_server
   
   class WebAppLoader
 
@@ -28,17 +27,16 @@ module AresMUSH
   end
 
   class WebApp < Sinatra::Base
-    def initialize
-      AresMUSH::web_server = self
-      super
-    end
-      
     # threaded - False: Will take requests on the reactor thread
     #            True:  Will queue request for background thread
     configure do
       set :threaded, false
+<<<<<<< HEAD
       #register Sinatra::Reloader
       #enable :sessions
+=======
+      register Sinatra::Reloader
+>>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'
       register Sinatra::Flash
       disable :sessions
       set :public_folder, File.join(AresMUSH.game_path, 'plugins', 'website', 'web', 'public')

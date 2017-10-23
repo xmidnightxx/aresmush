@@ -5,7 +5,6 @@ order: 2
 aliases:
 - describe
 - shortdesc
-- desc
 ---
 # Descriptions
 

@@ -1,22 +1,15 @@
+---
 fs3skills:
-    language_blurb: "Languages represent your ability to speak and read other languages.  Languages have a descriptive rating.   See [FS3: Languages](http://aresmush.com/fs3/fs3-3/chargen/#languages) for details."
-
-    starting_languages:
-        - English 
-
-    languages:
-        - 
-             name: English
-             desc: Primary language spoken on the British Isles.
-        - 
-             name: Spanish
-             desc: Spoken by Spaniards.
-        - 
-             name: Dutch
-             desc: Spoken in the Netherlands and Dutch colonies.
-        -  
-             name: French
-             desc: Spoken in French colonies.
-        - 
-             name: Carib
-             desc: The most common of the native languages.
+  languages:
+  - name: English
+    desc: Primary language spoken on the British Isles.
+  - name: Spanish
+    desc: Spoken by Spaniards.
+  - name: Dutch
+    desc: Spoken in the Netherlands and Dutch colonies.
+  - name: French
+    desc: Spoken in French colonies.
+  - name: Carib
+    desc: The most common of the native languages.
+  starting_languages:
+  - English

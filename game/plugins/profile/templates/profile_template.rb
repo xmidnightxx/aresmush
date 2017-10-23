@@ -124,8 +124,8 @@ module AresMUSH
       end
       
       def wiki
-        game_site = Game.web_portal_url
-        "#{game_site}/char:#{@char.name}"
+        game_site = Global.read_config("game", "website")
+        "#{game_site}/character:#{@char.name}"
       end
       
       def handle_profile

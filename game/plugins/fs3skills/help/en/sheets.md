@@ -2,7 +2,6 @@
 toc: Character Creation
 order: 3
 summary: Viewing character sheets.
-
 ---
 # FS3 - Character Sheet
 

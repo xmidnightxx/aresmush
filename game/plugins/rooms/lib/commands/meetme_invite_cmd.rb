@@ -39,7 +39,7 @@ module AresMUSH
               client.emit_failure t('rooms.cant_meetme_newbie', :name => invitee.name)
             else
               r.client.emit_ooc t('rooms.receive_meetme_invite', :name => enactor_name, :room => enactor_room.name)
-              r.client.program[:meetme] = enactor.id
+              r.client.program[:meetme] = enactor
               success_names << invitee.name
             end
           end

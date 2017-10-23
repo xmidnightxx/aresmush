@@ -3,34 +3,20 @@ module AresMUSH
     class ScenesCmd
       include CommandHandler
       
-      attr_accessor :mode
+      attr_accessor :set, :show_all
       
       def parse_args
-        case cmd.switch
-        when "all"
-          self.mode = :all
-        when "unshared"
-          self.mode = :unshared
-        else
-          self.mode = :active
-        end
+        self.show_all = cmd.switch_is?("all")
       end
       
       def handle
-        if (self.mode == :active)
-          scenes = Scene.all.select { |s| !s.completed }.reverse
-          template = SceneListTemplate.new(scenes)
-        else
-          
-          scenes = Scene.all.select { |s| Scenes.can_access_scene?(enactor, s) }.sort_by { |s| s.id.to_i }.reverse
-          
-          if (self.mode == :unshared)
-            scenes = scenes.select { |s| !s.shared && s.participants.include?(enactor) }.sort_by { |s| s.id.to_i }.reverse
-          end
-          
+        if (show_all)
+          scenes = Scene.all.select { |s| Scenes.can_access_scene?(enactor, s) }.reverse
           paginator = Paginator.paginate(scenes, cmd.page, 25)
           template = SceneSummaryTemplate.new(paginator)
-          
+        else
+          scenes = Scene.all.select { |s| !s.completed }.reverse
+          template = SceneListTemplate.new(scenes)
         end
         client.emit template.render
       end

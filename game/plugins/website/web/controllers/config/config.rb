@@ -38,7 +38,6 @@ module AresMUSH
       @plugin_config['website']["templates"] = template_files
           .select { |f| !File.directory?(f) }
           .map { |f| f.gsub(game_path, "") }
-          .sort
       
       
       erb :"admin/config_index"

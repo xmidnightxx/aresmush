@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 # Secret files
 # -----------------------------
+=======
+tinkerfoo.rb
+.sass-cache
+*.log
+>>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'
 secrets.yml
 real_database.yml
 
@@ -26,3 +32,7 @@ killares
 # Website file storage
 # -----------------------------
 game/plugins/website/web/public/files
+<<<<<<< HEAD
+=======
+game/plugins/website/config_website.yml
+>>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'

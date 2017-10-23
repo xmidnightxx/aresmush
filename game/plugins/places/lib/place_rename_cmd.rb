@@ -16,14 +16,13 @@ module AresMUSH
       end
             
       def handle
-        place = Places.find_place(enactor, self.old_name)
+        place = enactor_room.places.find(name: self.old_name).first
       
         if (!place)
-          client.emit_failure t('places.place_doesnt_exist')
+          client.emit_failure t('places.place_doesnt_exit')
           return
         end
         
-        self.old_name = place.name
         place.update(name: new_name)
         enactor_room.emit_ooc t('places.renamed_place', :name => enactor.name, 
           :old_name => self.old_name, :new_name => self.new_name)

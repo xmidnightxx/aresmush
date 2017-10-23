@@ -50,12 +50,12 @@ module AresMUSH
       end
 
       scene.update(completed: true)
-      scene.update(date_completed: Time.now)
+      scene.update(date_completed: DateTime.now)
     end
     
     def self.share_scene(scene)      
       scene.update(shared: true)
-      scene.update(date_shared: Time.now)
+      scene.update(date_shared: DateTime.now)
       Scenes.create_or_update_log(scene)
     end
     

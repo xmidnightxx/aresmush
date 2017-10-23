@@ -2,7 +2,6 @@ module AresMUSH
   class WebApp    
     
     get '/login/?', :auth => :not_user  do
-      @redirect = params[:redirect]
       erb :"login"
     end  
     
@@ -23,12 +22,11 @@ module AresMUSH
         flash[:error] = "Guests do not have a web portal account.  You can still use the 'Play' screen to play with the web client as a guest."
         redirect '/login'
       else
-        char.update(login_api_token: "#{SecureRandom.uuid}")
+        session[:user_id] = char.id
+        char.update(login_api_token: Character.random_link_code)
         char.update(login_api_token_expiry: Time.now + 86400)
         flash[:info] = "Welcome, #{char.name}!"
-        session[:user_id] = char.id
-        session[:login_token] = char.login_api_token
-        redirect params[:redirect] || '/'
+        redirect '/'
       end
     end
   end

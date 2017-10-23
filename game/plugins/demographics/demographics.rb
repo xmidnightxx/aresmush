@@ -11,6 +11,7 @@ load "lib/census_cmd.rb"
 load "lib/group_set_cmd.rb"
 load "lib/groups_cmd.rb"
 load "lib/groups_detail_cmd.rb"
+load "lib/icon_cmd.rb"
 load "public/demographics_api.rb"
 load "public/demo_char.rb"
 load "templates/actors_list.rb"
@@ -76,6 +77,8 @@ module AresMUSH
         return BasicDemographicCmd
       when "census"
         return CensusCmd
+      when "icon"
+        return IconCmd
       when "group"
         case cmd.switch
         when "set"

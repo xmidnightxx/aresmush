@@ -34,6 +34,7 @@ module AresMUSH
         flash[:error] = "There aren't that many pages."
         redirect "/scenes"
       end
+      @page_title = "Scenes"
       @scene_types = Scenes.scene_types
       erb :"scenes/scenes_index"
     end
@@ -41,14 +42,14 @@ module AresMUSH
     get '/scene/:id/?' do |id|
       @scene = Scene[id]
       
-      if (!@scene || !@scene.shared)
+      if (!@scene.shared)
         flash[:error] = "That scene has not been shared."
         redirect "/scenes"
       end
 
-      @page_title = "#{@scene.date_title} - #{game_name}"
+      @page_title = @scene.date_title
       
-      erb :"scenes/scene"
+      erb :"scenes/log"
     end
  
   end

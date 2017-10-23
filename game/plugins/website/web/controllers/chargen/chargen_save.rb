@@ -5,12 +5,12 @@ module AresMUSH
 
       if (@user.is_approved?)
         flash[:error] = "You are already approved."
-        redirect char_page_url(@user)
+        redirect "/char/#{@user.id}"
       end
             
       if (Chargen.check_chargen_locked(@user))
         flash[:error] = "Unsubmit your app (in-game) before making changes."
-        redirect char_page_url(@user)
+        redirect "/char/#{@user.id}"
       end
       
       #### ---------------------------------
@@ -115,10 +115,10 @@ module AresMUSH
       if (params['submit-app'])
         Chargen.submit_app(@user)
         flash[:info] = "Your application has been submitted.  You must log into the game to check on its status."
-        redirect char_page_url(@user)
+        redirect "/char/#{@user.id}"
       end
-        
-      redirect "/chargen?tab=#{params[:tab] || 'abilities'}"
+  
+      redirect  to "/chargen?tab=#{@params[:tab]}"
     end
   end
 end
