@@ -6,60 +6,144 @@ fs3combat:
             Bludgeons: 6
             Brawling: 6
             Firearms: 6
-            Thrown: 6
+            Athletics: 6
             Faith: 6
             Gunnery: 6
             Sailing: 4
+            Persuasion: 4
             Composure: 6
             Alertness: 4
-            Athletics: 4
             Healing: 4
             Reflexes: 3
+            Wounds: 30
         Henchman:
             Default: 6
             Blades: 9
             Bludgeons: 9
             Brawling: 9
             Firearms: 9
-            Thrown: 9
+            Athletics: 9
             Faith: 9
             Gunnery: 9
             Sailing: 6
-            Leadership: 6
+            Persuasion: 6
             Composure: 8
             Alertness: 6
-            Athletics: 6
             Healing: 6
-            Reflexes: 5
+            Reflexes: 4
+            Wounds: 15
         Boss:
             Default: 8
             Blades: 11
             Bludgeons: 11
             Brawling: 11
             Firearms: 11
-            Thrown: 11
+            Athletics: 11
             Faith: 11
             Gunnery: 11
             Sailing: 8
-            Leadership: 8
+            Persuasion: 8
             Composure: 10
             Alertness: 8
-            Athletics: 8
             Healing: 8
-            Reflexes: 7
+            Reflexes: 5
+            Wounds: 0
         Giant:
             Default: 6
             Blades: 9
             Bludgeons: 11
             Brawling: 11
             Firearms: 9
-            Thrown: 11
+            Athletics: 11
             Faith: 9
             Gunnery: 9
             Sailing: 6
-            Leadership: 6
+            Persuasion: 6
             Composure: 12
             Alertness: 6
-            Athletics: 8
             Healing: 6
+            Reflexes: 4
+            Wounds: -10
+        Chupacabra:
+            Default: 4
+            Brawling: 7
+            Composure: 6
+            Alertness: 6
+            Athletics: 5
+            Stealth: 6
+            Reflexes: 4
+            Wounds: 20
+        Cipactli:
+            Default: 6
+            Brawling: 10
+            Composure: 8
+            Alertness: 5
+            Athletics: 4
             Reflexes: 5
+            Wounds: -10
+        Dingonek:
+            Default: 6
+            Brawling: 9
+            Composure: 8
+            Alertness: 5
+            Athletics: 4
+            Reflexes: 5
+            Wounds: 5
+        Gbahali:
+            Default: 6
+            Brawling: 10
+            Composure: 9
+            Alertness: 5
+            Athletics: 4
+            Reflexes: 5
+            Wounds: 0
+        GiantSquid:
+            Default: 6
+            Brawling: 10
+            Composure: 10
+            Alertness: 5
+            Athletics: 4
+            Reflexes: 4
+            Wounds: -10
+        Kongamato:
+            Default: 5
+            Brawling: 7
+            Composure: 4
+            Alertness: 5
+            Athletics: 4
+            Reflexes: 5
+            Wounds: 30
+        Megaconda:
+            Default: 6
+            Brawling: 10
+            Composure: 8
+            Alertness: 7
+            Stealth: 7
+            Athletics: 7
+            Reflexes: 6
+            Wounds: 0
+        Megalodon:
+            Default: 6
+            Brawling: 11
+            Composure: 10
+            Alertness: 5
+            Athletics: 4
+            Reflexes: 4
+            Wounds: -10
+        SeaSerpent:
+            Default: 6
+            Brawling: 11
+            Composure: 7
+            Alertness: 6
+            Reflexes: 5
+            Wounds: -10
+        Troglodyte:
+            Default: 4
+            Brawling: 6
+            Blades: 6
+            Athletics: 6
+            Bludgeons: 6
+            Composure: 4
+            Alertness: 5
+            Reflexes: 3
+            Wounds: 40

@@ -1,0 +1,50 @@
+current directory: /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/redcarpet-3.3.4/ext/redcarpet
+/home/users/avyboy/.rvm/rubies/ruby-2.3.4/bin/ruby -r ./siteconf20171023-24593-1eqh7wr.rb extconf.rb
+Ignoring nokogiri-1.6.8.1 because its extensions are not built.  Try: gem pristine nokogiri --version 1.6.8.1
+Ignoring thin-1.7.0 because its extensions are not built.  Try: gem pristine thin --version 1.7.0
+creating Makefile
+
+current directory: /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/redcarpet-3.3.4/ext/redcarpet
+make "DESTDIR=" clean
+
+current directory: /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/redcarpet-3.3.4/ext/redcarpet
+make "DESTDIR="
+compiling stack.c
+compiling html_smartypants.c
+html_smartypants.c: In function ‘squote_len’:
+html_smartypants.c:104: warning: initialization discards qualifiers from pointer target type
+html_smartypants.c:104: warning: initialization discards qualifiers from pointer target type
+html_smartypants.c:104: warning: initialization discards qualifiers from pointer target type
+html_smartypants.c:104: warning: initialization discards qualifiers from pointer target type
+html_smartypants.c: In function ‘smartypants_squote’:
+html_smartypants.c:149: warning: comparison between signed and unsigned integer expressions
+html_smartypants.c: In function ‘smartypants_cb__amp’:
+html_smartypants.c:250: warning: ISO C90 forbids mixed declarations and code
+compiling rc_render.c
+compiling markdown.c
+markdown.c: In function ‘char_link’:
+markdown.c:1047: warning: ISO C90 forbids mixed declarations and code
+markdown.c:1087: warning: ISO C90 forbids mixed declarations and code
+markdown.c: In function ‘sd_markdown_render’:
+markdown.c:2820: warning: ISO C90 forbids mixed declarations and code
+markdown.c:2838: warning: passing argument 1 of ‘is_codefence’ discards qualifiers from pointer target type
+markdown.c:1391: note: expected ‘uint8_t *’ but argument is of type ‘const uint8_t *’
+markdown.c: At top level:
+markdown.c:94: warning: ‘char_underline’ declared ‘static’ but never defined
+markdown.c:95: warning: ‘char_highlight’ declared ‘static’ but never defined
+compiling autolink.c
+compiling html.c
+compiling buffer.c
+buffer.c: In function ‘bufcstr’:
+buffer.c:111: warning: passing argument 1 of ‘bufgrow’ discards qualifiers from pointer target type
+buffer.c:60: note: expected ‘struct buf *’ but argument is of type ‘const struct buf *’
+compiling rc_markdown.c
+rc_markdown.c: In function ‘rb_redcarpet_md_render’:
+rc_markdown.c:132: warning: ISO C90 forbids mixed declarations and code
+compiling houdini_href_e.c
+compiling houdini_html_e.c
+linking shared-object redcarpet.so
+
+current directory: /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/redcarpet-3.3.4/ext/redcarpet
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 redcarpet.so ./.gem.20171023-24593-1s4hblk

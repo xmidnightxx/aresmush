@@ -25,12 +25,10 @@ chargen:
             help: groups
         ranks:
             help: ranks
+        abilities:
+            help: skills
         background:
             help: backgrounds
-        abilities:
-            help: fs3_skills
-        hooks:
-            help: hooks
         desc:
             help: descriptions
         handles:
@@ -40,7 +38,7 @@ chargen:
         profile:
             help: profile
         lastwill:
-            help: idle_out
+            help: 'idle_out'
         review:
             help: apps
     shortcuts:

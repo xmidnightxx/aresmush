@@ -1,0 +1,30 @@
+current directory: /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/hiredis-0.6.1/ext/hiredis_ext
+/home/users/avyboy/.rvm/rubies/ruby-2.3.4/bin/ruby -r ./siteconf20171023-24593-pncvf3.rb extconf.rb
+Ignoring nokogiri-1.6.8.1 because its extensions are not built.  Try: gem pristine nokogiri --version 1.6.8.1
+Ignoring redcarpet-3.3.4 because its extensions are not built.  Try: gem pristine redcarpet --version 3.3.4
+Ignoring thin-1.7.0 because its extensions are not built.  Try: gem pristine thin --version 1.7.0
+checking for sys/socket.h... yes
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  net.c
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  hiredis.c
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  sds.c
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  async.c
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  read.c
+ar rcs libhiredis.a net.o hiredis.o sds.o async.o read.o
+checking for rb_thread_fd_select()... yes
+creating Makefile
+
+current directory: /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/hiredis-0.6.1/ext/hiredis_ext
+make "DESTDIR=" clean
+
+current directory: /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/hiredis-0.6.1/ext/hiredis_ext
+make "DESTDIR="
+compiling hiredis_ext.c
+compiling connection.c
+connection.c: In function ‘connection_read’:
+connection.c:451: warning: ‘reply’ may be used uninitialized in this function
+compiling reader.c
+linking shared-object hiredis/ext/hiredis_ext.so
+
+current directory: /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/hiredis-0.6.1/ext/hiredis_ext
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 hiredis_ext.so ./.gem.20171023-24593-1c1xtku/hiredis/ext

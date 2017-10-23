@@ -5,7 +5,7 @@ fs3skills:
     desc: Noticing things and being aware of your surroundings.
   - name: Athletics
     linked_attr: Brawn
-    desc: General running, jumping, climbing, etc.
+    desc: Running, jumping, climbing, throwing weapons, etc.
   - name: Blades
     linked_attr: Reflexes
     desc: Fighting with knives, swords, and other bladed weapons.
@@ -41,18 +41,12 @@ fs3skills:
     specialties:
     - Traditional
     - Surgery
-  - name: Leadership
-    linked_attr: Presence
-    desc: Tactics, rallying speeches, and guiding groups of people.
   - name: Persuasion
     linked_attr: Presence
-    desc: Convincing people with the truth (useable only against NPCs).
+    desc: Convincing people with the truth (useable only against NPCs). Also the defense skill for large ships.
   - name: Sailing
     linked_attr: Wits
     desc: Seamanship, navigation, knot-tying, and other nautical pursuits.
   - name: Stealth
     linked_attr: Reflexes
     desc: Being sneaky, legerdemain, hiding.
-  - name: Thrown
-    linked_attr: Reflexes
-    desc: Throwing knives, harpoons, rocks, and other weapons.

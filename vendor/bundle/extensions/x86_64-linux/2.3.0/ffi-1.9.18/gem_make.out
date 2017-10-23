@@ -1,0 +1,55 @@
+current directory: /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/ffi-1.9.18/ext/ffi_c
+/home/users/avyboy/.rvm/rubies/ruby-2.3.4/bin/ruby -r ./siteconf20171023-24593-11uzol3.rb extconf.rb
+Ignoring eventmachine-1.0.9.1 because its extensions are not built.  Try: gem pristine eventmachine --version 1.0.9.1
+Ignoring hiredis-0.6.1 because its extensions are not built.  Try: gem pristine hiredis --version 0.6.1
+Ignoring http_parser.rb-0.6.0 because its extensions are not built.  Try: gem pristine http_parser.rb --version 0.6.0
+Ignoring nokogiri-1.6.8.1 because its extensions are not built.  Try: gem pristine nokogiri --version 1.6.8.1
+Ignoring redcarpet-3.3.4 because its extensions are not built.  Try: gem pristine redcarpet --version 3.3.4
+Ignoring thin-1.7.0 because its extensions are not built.  Try: gem pristine thin --version 1.7.0
+checking for ffi_call() in -lffi... yes
+checking for ffi_prep_closure()... yes
+checking for ffi_raw_call()... yes
+checking for ffi_prep_raw_closure()... yes
+checking for shlwapi.h... no
+checking for rb_thread_blocking_region()... no
+checking for rb_thread_call_with_gvl()... yes
+checking for rb_thread_call_without_gvl()... yes
+checking for ffi_prep_cif_var()... no
+creating extconf.h
+creating Makefile
+
+current directory: /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/ffi-1.9.18/ext/ffi_c
+make "DESTDIR=" clean
+
+current directory: /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/ffi-1.9.18/ext/ffi_c
+make "DESTDIR="
+compiling AbstractMemory.c
+compiling StructLayout.c
+compiling StructByReference.c
+compiling MethodHandle.c
+compiling Platform.c
+compiling Buffer.c
+compiling Struct.c
+compiling StructByValue.c
+compiling Types.c
+compiling MappedType.c
+compiling ClosurePool.c
+compiling Call.c
+compiling FunctionInfo.c
+compiling ffi.c
+compiling LongDouble.c
+compiling MemoryPointer.c
+compiling Pointer.c
+compiling Function.c
+compiling Type.c
+compiling DynamicLibrary.c
+compiling ArrayType.c
+compiling Thread.c
+compiling DataConverter.c
+compiling LastError.c
+compiling Variadic.c
+linking shared-object ffi_c.so
+
+current directory: /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/ffi-1.9.18/ext/ffi_c
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 ffi_c.so ./.gem.20171023-24593-1odofg7

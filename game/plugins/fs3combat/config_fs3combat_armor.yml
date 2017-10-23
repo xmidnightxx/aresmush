@@ -8,57 +8,81 @@ fs3combat:
         Corset:
             description: "A corsetted dress with a whalebone or wooden insert."
             protection: 
-                Abdomen: 5
+                Abdomen: 4
                 
         Fencing Jacket:
             description: "A thick, padded jacket meant for practicing fencing."
             protection: 
-                Chest: 4
-                Abdomen: 4
-                Left Arm: 4
-                Right Arm: 4
+                Chest: 3
+                Abdomen: 3
+                Left Arm: 3
+                Right Arm: 3
 
         Buff Coat:
             description: "Thick leather coat with gloves and a leather skullcap."
             protection: 
-                Chest: 5
-                Abdomen: 5
-                Head: 5
-                Left Arm: 5
-                Right Arm: 5
-                Left Hand: 4
-                Right Hand: 4
+                Chest: 4
+                Abdomen: 4
+                Head: 4
+                Left Arm: 4
+                Right Arm: 4
+                Left Hand: 3
+                Right Hand: 3
 
         Breastplate:
             description: "A solid steel cuirass with leather coat and pants. You cannot swim in this."
             protection:
-                Neck: 6
-                Chest: 6
-                Abdomen: 6
-                Left Arm: 4
-                Right Arm: 4
-                Left Leg: 4
-                Right Leg: 4
-                Left Foot: 4
-                Right Foot: 4
-                Groin: 4
+                Neck: 5
+                Chest: 5
+                Abdomen: 5
+                Left Arm: 3
+                Right Arm: 3
+                Left Leg: 3
+                Right Leg: 3
+                Left Foot: 3
+                Right Foot: 3
+                Groin: 3
 
         Pitch Coat:
             description: "A jacket and pants stiffened with pitch."
             protection:
-                Chest: 4
-                Abdomen: 4
-                Left Arm: 4
-                Right Arm: 4
-                Left Leg: 4
-                Left Leg: 4
-                Right Leg: 4
-                Left Foot: 4
-                Right Foot: 4
-                Groin: 4
+                Chest: 3
+                Abdomen: 3
+                Left Arm: 3
+                Right Arm: 3
+                Left Leg: 3
+                Left Leg: 3
+                Right Leg: 3
+                Left Foot: 3
+                Right Foot: 3
+                Groin: 3
                 
         Light Hide:
-            description: "The tough hide of some animals."
+            description: "The leathery hide of some animals."
+            protection:
+                Body: 3
+                Head: 3
+                Neck: 3
+                Tail: 3
+                Left Foreleg: 3
+                Right Foreleg: 3
+                Left Rear Leg: 3
+                Right Rear Leg: 3
+                Abdomen: 3
+                Chest: 3
+                Left Fin: 3
+                Right Fin: 3
+                Left Wing: 2
+                Right Wing: 2
+                Tentacles: 3
+                Left Fore Tentacle: 3
+                Right Fore Tentacle: 3
+                Arms: 3
+                Right Leg: 3
+                Left Leg: 3
+
+        Medium Hide:
+            description: "The tough hide or scales of some animals."
             protection:
                 Body: 4
                 Head: 4
@@ -75,35 +99,35 @@ fs3combat:
                 Left Wing: 3
                 Right Wing: 3
                 Tentacles: 4
-                Left Fore Tentacles: 4
-                Right Fore Tentacles: 4
+                Left Fore Tentacle: 4
+                Right Fore Tentacle: 4
                 Arms: 4
                 Right Leg: 4
                 Left Leg: 4
-            
+                
         Heavy Hide:
             description: "The exceptionally tough hide or scales of some animals."
             protection:
-                Body: 6
-                Head: 6
-                Neck: 6
-                Tail: 6
-                Left Foreleg: 6
-                Right Foreleg: 6
-                Left Rear Leg: 6
-                Right Rear Leg: 6
-                Abdomen: 5
-                Chest: 6
-                Left Fin: 6
-                Right Fin: 6
+                Body: 5
+                Head: 5
+                Neck: 5
+                Tail: 5
+                Left Foreleg: 5
+                Right Foreleg: 5
+                Left Rear Leg: 5
+                Right Rear Leg: 5
+                Abdomen: 4
+                Chest: 5
+                Left Fin: 5
+                Right Fin: 5
                 Left Wing: 4
                 Right Wing: 4
                 Tentacles: 5
-                Left Fore Tentacles: 5
-                Right Fore Tentacles: 5
-                Arms: 6
-                Right Leg: 6
-                Left Leg: 6
+                Left Fore Tentacle: 5
+                Right Fore Tentacle: 5
+                Arms: 5
+                Right Leg: 5
+                Left Leg: 5
                 
         Brig of War:
             description: "The heavy timbers of a medium warship."

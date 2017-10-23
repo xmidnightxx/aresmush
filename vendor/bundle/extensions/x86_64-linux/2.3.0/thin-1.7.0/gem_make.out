@@ -1,0 +1,25 @@
+current directory: /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/thin-1.7.0/ext/thin_parser
+/home/users/avyboy/.rvm/rubies/ruby-2.3.4/bin/ruby -r ./siteconf20171023-24593-17n3o8z.rb extconf.rb
+checking for main() in -lc... yes
+creating Makefile
+
+current directory: /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/thin-1.7.0/ext/thin_parser
+make "DESTDIR=" clean
+
+current directory: /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/thin-1.7.0/ext/thin_parser
+make "DESTDIR="
+compiling thin.c
+thin.c: In function ‘Thin_HttpParser_alloc’:
+thin.c:242: warning: implicit declaration of function ‘thin_http_parser_init’
+thin.c: In function ‘Thin_HttpParser_finish’:
+thin.c:294: warning: implicit declaration of function ‘thin_http_parser_finish’
+thin.c:296: warning: implicit declaration of function ‘thin_http_parser_is_finished’
+thin.c: In function ‘Thin_HttpParser_execute’:
+thin.c:334: warning: implicit declaration of function ‘thin_http_parser_execute’
+thin.c:338: warning: implicit declaration of function ‘thin_http_parser_has_error’
+compiling parser.c
+linking shared-object thin_parser.so
+
+current directory: /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/thin-1.7.0/ext/thin_parser
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 thin_parser.so ./.gem.20171023-24593-1ea983b

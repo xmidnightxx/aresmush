@@ -5,6 +5,6 @@ game:
     
     description: "format_input_for_html(@config['description']) %>"
     
-    website: "http://the8thsea.wikidot.com"
+    website: "http://scrozzle.noderunner.net:8000"
         
     public_game: false

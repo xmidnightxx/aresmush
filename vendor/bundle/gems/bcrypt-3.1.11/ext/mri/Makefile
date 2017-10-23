@@ -7,16 +7,17 @@ Q1 = $(V:1=)
 Q = $(Q1:0=@)
 ECHO1 = $(V:1=@:)
 ECHO = $(ECHO1:0=@echo)
+NULLCMD = :
 
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /home/users/avyboy/.rvm/rubies/ruby-2.0.0-p598/include/ruby-2.0.0
+topdir = /home/users/avyboy/.rvm/rubies/ruby-2.3.4/include/ruby-2.3.0
 hdrdir = $(topdir)
-arch_hdrdir = /home/users/avyboy/.rvm/rubies/ruby-2.0.0-p598/include/ruby-2.0.0/x86_64-linux
+arch_hdrdir = /home/users/avyboy/.rvm/rubies/ruby-2.3.4/include/ruby-2.3.0/x86_64-linux
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = /home/users/avyboy/.rvm/rubies/ruby-2.0.0-p598
+prefix = $(DESTDIR)/home/users/avyboy/.rvm/rubies/ruby-2.3.4
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -30,8 +31,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = ./.gem.20170517-6024-zhw92p
-sitelibdir = ./.gem.20170517-6024-zhw92p
+sitearchdir = $(DESTDIR)./.gem.20171023-24593-xs98
+sitelibdir = $(DESTDIR)./.gem.20171023-24593-xs98
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -49,7 +50,7 @@ dvidir = $(docdir)
 htmldir = $(docdir)
 infodir = $(datarootdir)/info
 docdir = $(datarootdir)/doc/$(PACKAGE)
-oldincludedir = /usr/include
+oldincludedir = $(DESTDIR)/usr/include
 includedir = $(prefix)/include
 localstatedir = $(prefix)/var
 sharedstatedir = $(prefix)/com
@@ -66,17 +67,18 @@ CC = gcc
 CXX = g++
 LIBRUBY = $(LIBRUBY_SO)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
-LIBRUBYARG_SHARED = -Wl,-R -Wl,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)
-LIBRUBYARG_STATIC = -Wl,-R -Wl,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)-static
+LIBRUBYARG_SHARED = -Wl,-R$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)
+LIBRUBYARG_STATIC = -Wl,-R$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)-static
 empty =
 OUTFLAG = -o $(empty)
 COUTFLAG = -o $(empty)
 
 RUBY_EXTCONF_H = 
 cflags   =  $(optflags) $(debugflags) $(warnflags)
+cxxflags =  $(optflags) $(debugflags) $(warnflags)
 optflags = -O3 -fno-fast-math
 debugflags = -ggdb3
-warnflags = -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration
+warnflags = -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat
 CCDLFLAGS = -fPIC
 CFLAGS   = $(CCDLFLAGS) $(cflags)  -fPIC $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
@@ -92,7 +94,7 @@ LDSHAREDXX = $(CXX) -shared
 AR = ar
 EXEEXT = 
 
-RUBY_INSTALL_NAME = ruby
+RUBY_INSTALL_NAME = $(RUBY_BASE_NAME)
 RUBY_SO_NAME = ruby
 RUBYW_INSTALL_NAME = 
 RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
@@ -101,10 +103,10 @@ RUBY_BASE_NAME = ruby
 
 arch = x86_64-linux
 sitearch = $(arch)
-ruby_version = 2.0.0
-ruby = $(bindir)/ruby
+ruby_version = 2.3.0
+ruby = $(bindir)/$(RUBY_BASE_NAME)
 RUBY = $(ruby)
-ruby_headers = $(hdrdir)/ruby.h $(hdrdir)/ruby/defines.h $(arch_hdrdir)/ruby/config.h
+ruby_headers = $(hdrdir)/ruby.h $(hdrdir)/ruby/ruby.h $(hdrdir)/ruby/defines.h $(hdrdir)/ruby/missing.h $(hdrdir)/ruby/intern.h $(hdrdir)/ruby/st.h $(hdrdir)/ruby/subst.h $(arch_hdrdir)/ruby/config.h
 
 RM = rm -f
 RM_RF = $(RUBY) -run -e rm -- -rf
@@ -144,19 +146,20 @@ DLLIB = $(TARGET).so
 EXTSTATIC = 
 STATIC_LIB = 
 
-BINDIR        = $(DESTDIR)$(bindir)
-RUBYCOMMONDIR = $(DESTDIR)$(sitedir)$(target_prefix)
-RUBYLIBDIR    = $(DESTDIR)$(sitelibdir)$(target_prefix)
-RUBYARCHDIR   = $(DESTDIR)$(sitearchdir)$(target_prefix)
-HDRDIR        = $(DESTDIR)$(rubyhdrdir)/ruby$(target_prefix)
-ARCHHDRDIR    = $(DESTDIR)$(rubyhdrdir)/$(arch)/ruby$(target_prefix)
+TIMESTAMP_DIR = .
+BINDIR        = $(bindir)
+RUBYCOMMONDIR = $(sitedir)$(target_prefix)
+RUBYLIBDIR    = $(sitelibdir)$(target_prefix)
+RUBYARCHDIR   = $(sitearchdir)$(target_prefix)
+HDRDIR        = $(rubyhdrdir)/ruby$(target_prefix)
+ARCHHDRDIR    = $(rubyhdrdir)/$(arch)/ruby$(target_prefix)
 
 TARGET_SO     = $(DLLIB)
 CLEANLIBS     = $(TARGET).so 
 CLEANOBJS     = *.o  *.bak
 
 all:    $(DLLIB)
-static: $(STATIC_LIB)
+static: $(STATIC_LIB) install-rb
 .PHONY: all install static install-so install-rb
 .PHONY: clean clean-so clean-static clean-rb
 
@@ -179,7 +182,7 @@ distclean: clean distclean-so distclean-static distclean-rb-default distclean-rb
 realclean: distclean
 install: install-so install-rb
 
-install-so: $(DLLIB) ./.RUBYARCHDIR.time
+install-so: $(DLLIB) $(TIMESTAMP_DIR)/.RUBYARCHDIR.time
 	$(INSTALL_PROG) $(DLLIB) $(RUBYARCHDIR)
 clean-static::
 	-$(Q)$(RM) $(STATIC_LIB)
@@ -188,44 +191,64 @@ install-rb-default: pre-install-rb-default
 pre-install-rb: Makefile
 pre-install-rb-default: Makefile
 pre-install-rb-default:
-	$(ECHO) installing default bcrypt_ext libraries
-./.RUBYARCHDIR.time:
-	$(Q) $(MAKEDIRS) $(RUBYARCHDIR)
+	@$(NULLCMD)
+$(TIMESTAMP_DIR)/.RUBYARCHDIR.time:
+	$(Q) $(MAKEDIRS) $(@D) $(RUBYARCHDIR)
 	$(Q) $(TOUCH) $@
 
 site-install: site-install-so site-install-rb
 site-install-so: install-so
 site-install-rb: install-rb
 
-.SUFFIXES: .c .m .cc .mm .cxx .cpp .C .o
+.SUFFIXES: .c .m .cc .mm .cxx .cpp .o .S
 
 .cc.o:
 	$(ECHO) compiling $(<)
 	$(Q) $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
 
+.cc.S:
+	$(ECHO) translating $(<)
+	$(Q) $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -S $<
+
 .mm.o:
 	$(ECHO) compiling $(<)
 	$(Q) $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
+
+.mm.S:
+	$(ECHO) translating $(<)
+	$(Q) $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -S $<
 
 .cxx.o:
 	$(ECHO) compiling $(<)
 	$(Q) $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
 
+.cxx.S:
+	$(ECHO) translating $(<)
+	$(Q) $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -S $<
+
 .cpp.o:
 	$(ECHO) compiling $(<)
 	$(Q) $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
 
-.C.o:
-	$(ECHO) compiling $(<)
-	$(Q) $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
+.cpp.S:
+	$(ECHO) translating $(<)
+	$(Q) $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -S $<
 
 .c.o:
 	$(ECHO) compiling $(<)
 	$(Q) $(CC) $(INCFLAGS) $(CPPFLAGS) $(CFLAGS) $(COUTFLAG)$@ -c $<
 
+.c.S:
+	$(ECHO) translating $(<)
+	$(Q) $(CC) $(INCFLAGS) $(CPPFLAGS) $(CFLAGS) $(COUTFLAG)$@ -S $<
+
 .m.o:
 	$(ECHO) compiling $(<)
 	$(Q) $(CC) $(INCFLAGS) $(CPPFLAGS) $(CFLAGS) $(COUTFLAG)$@ -c $<
+
+.m.S:
+	$(ECHO) translating $(<)
+	$(Q) $(CC) $(INCFLAGS) $(CPPFLAGS) $(CFLAGS) $(COUTFLAG)$@ -S $<
 
 $(DLLIB): $(OBJS) Makefile
 	$(ECHO) linking shared-object $(DLLIB)

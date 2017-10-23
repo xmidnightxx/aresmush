@@ -10,7 +10,7 @@ fs3combat:
     vehicles:
         Brig of War:
             description: "A brig-rigged ship designed for combat. 115-150 Crew, 12 guns per broadside."
-            pilot_skill: Leadership
+            pilot_skill: Persuasion
             toughness: 3
             hitloc_chart: Brig
             armor: Brig of War
@@ -20,7 +20,7 @@ fs3combat:
             
         Brigantine:
             description: "A merchant-built brig with two masts. 40-100 crew, 8 guns per broadside."
-            pilot_skill: Leadership
+            pilot_skill: Persuasion
             toughness: 1
             hitloc_chart: Brig
             armor: Brigantine

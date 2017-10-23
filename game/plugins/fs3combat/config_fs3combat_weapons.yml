@@ -23,7 +23,7 @@ fs3combat:
 
         Grenadoe:
             description: "A cast-iron sphere filled with gunpowder and a fuse."
-            skill: Thrown
+            skill: Athletics
             lethality: 10
             penetration: 4
             weapon_type: Explosive
@@ -33,7 +33,7 @@ fs3combat:
             damage_type: Physical
             accuracy: -1
             has_shrapnel: true
-            initiative: -2
+            initiative: -3
             
         Shrapnel:
             description: "Random Shrapnel"
@@ -95,13 +95,13 @@ fs3combat:
             recoil: 0
             damage_type: Physical
             accuracy: 0
-            initiative: 1
+            initiative: 0
             has_shrapnel: false
             reload_turns: 3
  
         Harpoon:
             description: "A thrown spear, often with a rope tied to it for whaling."
-            skill: Thrown
+            skill: Athletics
             lethality: 0
             penetration: 4
             weapon_type: Ranged
@@ -115,7 +115,7 @@ fs3combat:
 
         Thrown Knife:
             description: "A thrown knife or dagger."
-            skill: Thrown
+            skill: Athletics
             lethality: 0
             penetration: 3
             weapon_type: Ranged
@@ -129,7 +129,7 @@ fs3combat:
                         
         Thrown Rock:
             description: "A rock or other improvised weapon thrown at the target."
-            skill: Thrown
+            skill: Athletics
             lethality: 0
             penetration: 1
             weapon_type: Ranged
@@ -171,7 +171,7 @@ fs3combat:
             recoil: 0
             damage_type: Physical
             accuracy: -1
-            initiative: -2
+            initiative: -3
             has_shrapnel: false
             allowed_specials: 
                 - 'Sparring'
@@ -235,7 +235,7 @@ fs3combat:
             recoil: 0
             damage_type: Physical
             accuracy: 0
-            initiative: 2
+            initiative: 3
             has_shrapnel: false
             allowed_specials: 
                 - 'Sparring'
@@ -320,7 +320,7 @@ fs3combat:
             description: "Claws, teeth, and other natural weapons of large animals."
             skill: Brawling
             lethality: 5
-            penetration: 5
+            penetration: 6
             weapon_type: Melee
             is_automatic: false
             # ammo: 0
@@ -334,7 +334,7 @@ fs3combat:
             description: "Claws, teeth, and other natural weapons of huge animals."
             skill: Brawling
             lethality: 15
-            penetration: 7
+            penetration: 8
             weapon_type: Melee
             is_automatic: false
             # ammo: 0
@@ -359,7 +359,7 @@ fs3combat:
             recoil: 0
             damage_type: Physical
             accuracy: -3
-            initiative: -2
+            initiative: -3
             has_shrapnel: false
             allowed_specials: 
                 - 'Grapeshot'
