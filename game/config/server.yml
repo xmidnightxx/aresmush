@@ -1,6 +1,6 @@
 server:
     # The host name for your game.
-    hostname: scrozzle.noderunner.net
+    hostname: 8thsea.noderunner.net
 
     # The port number your game will listen on
     port: 4005
