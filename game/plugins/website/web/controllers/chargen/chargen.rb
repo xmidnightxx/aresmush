@@ -24,7 +24,7 @@ module AresMUSH
       
       @ranks = []
       @crews['values'].each do |k, v|
-        @ranks.concat Ranks.allowed_ranks_for_group(k)
+        @ranks.compact.concat Ranks.allowed_ranks_for_group(k)
       end
       
       @allowed_ranks = Ranks.allowed_ranks_for_group(@user.group("Crew"))      

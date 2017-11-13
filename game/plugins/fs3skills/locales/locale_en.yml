@@ -7,7 +7,6 @@ en:
         good_rating: "Good"
         great_rating: "Great"
         exceptional_rating: "Exceptional"
-<<<<<<< HEAD
         unskilled_rating: "Unskilled"
         
         everyman_rating: "Everyman"
@@ -15,15 +14,6 @@ en:
         competent_rating: "Competent"
         amazing_rating: "Amazing"
         legendary_rating: "Legendary"
-=======
-        fair_rating: "Fair"
-        expert_rating: "Expert"
-        elite_rating: "Elite"
-        legendary_rating: "Legendary"
-        everyman_rating: "Everyman"
-        unskilled_rating: "Unskilled"
-        amateur_rating: "Amateur"
->>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
         
         # Background Skill Ratings
         interest_rating: "Interest"
@@ -36,22 +26,14 @@ en:
         fluent_rating: "Fluent"
         
         # Chargen Values Set
-<<<<<<< HEAD
-        attribute_set: "Attribute '%{name} is now %{rating}."
-=======
         attribute_set: "Attribute '%{name}' is now %{rating}."
->>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
         action_set: "Action Skill '%{name}' is now %{rating}."
         language_set: "Language '%{name}' is now %{rating}."
         background_set: "Background Skill '%{name}' is now %{rating}."
         admin_ability_set: "You set %{name}'s %{ability_name} ability (%{ability_type}) to %{rating}."
         max_rating_is: "You can't raise that ability any higher."
         min_rating_is: "You can't lower that ability any lower."
-<<<<<<< HEAD
-        invalid_rating: That is not a valid ability rating.
-=======
         invalid_rating: "That is not a valid ability rating."
->>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
         no_special_characters: "Ability and hook names may not contain special characters."
         
         hook_set: "RP hook %{name} added."
@@ -62,15 +44,9 @@ en:
         invalid_specialty_skill: "That skill cannot have a specialty."
         invalid_specialty: "That is not a valid specialty for that skill.  Try one of these: %{names}."
         specialty_added: "Specialty %{name} added."
-<<<<<<< HEAD
         specialty_not_found: "%{name} doesn't have that specialty."
         specialty_removed: "Specialty %{name} removed."
         specialty_already_exists: "%{name} already has that specialty."
-=======
-        specialty_not_found: "You don't have that specialty."
-        specialty_removed: "Specialty %{name} removed."
-        specialty_already_exists: "You already have that specialty."
->>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
         
         # Reset
         reset_complete: "Reset complete.  Note that nothing comes for free, so even default items cost character points."
@@ -116,12 +92,7 @@ en:
         too_many_attributes: "%xh%xr< Too many points on attributes. (%{max} max) >%xn"
         unusual_abilities_check: "Checking for unusual skills."
         unusual_skill: "%xh%xy< %{skill} is an unusual skill.  Be sure there's good reason for it. >%xn"
-<<<<<<< HEAD
         high_bg: "%xh%xy< %{skill} is pretty high for a hobby.  Be sure there's good reason for it. >%xn"
-=======
-        high_bg: "%xh%xy< %{skill} is at a professional level.  Be sure there's good reason for it. >%xn"
->>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
-
 
         # ------------------------------------------------------
         # LUCK
@@ -169,11 +140,7 @@ en:
         not_enough_xp: "You don't have any XP."
         invalid_xp_award: "That is not a valid number of XP."
         xp_awarded: "You award %{xp} XP to %{name}."
-<<<<<<< HEAD
         xp_summary: "Learning Progress - %{name}"
-=======
-        xp_summary: "Learning Progress"
->>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
         xp_progress_title: "Ability                 Progress                 Learn Again In"
         xp_days: "%{days} days"
         xp_days_now: "Now"

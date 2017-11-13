@@ -5,7 +5,6 @@ channels:
     default_channels:
         - Questions
         - Chat
-        - RP Requests
 
     shortcuts:
         "chan": "channel"

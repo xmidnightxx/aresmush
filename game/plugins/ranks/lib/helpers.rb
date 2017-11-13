@@ -25,7 +25,7 @@ module AresMUSH
       config.values.each do |t|
         ranks << t.select { |t, v| v }
       end
-      ranks.collect { |r| r.keys }.flatten
+      ranks.collect { |r| r.keys }.flatten.compact
     end
     
     def self.check_rank(char, rank, allow_all)

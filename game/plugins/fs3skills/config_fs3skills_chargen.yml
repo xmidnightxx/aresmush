@@ -77,6 +77,12 @@ fs3skills:
             Priest:
                 skills:
                     Faith: 3
+            Nun:
+                skills:
+                    Faith: 3
+            Shaman:
+                skills:
+                    Faith: 3
 
         Nationality:
             French:

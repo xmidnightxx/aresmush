@@ -48,11 +48,7 @@ module AresMUSH
     end
     
     get '/wiki/recent_changes/?' do
-<<<<<<< HEAD
-      @recent = Wiki.recent_changes
-=======
       @recent = recent_changes
->>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
       
       erb :"wiki/recent_changes"
     end
@@ -85,8 +81,6 @@ module AresMUSH
       erb :"wiki/page_source"
     end
     
-<<<<<<< HEAD
-=======
     get '/wiki/:page/preview/?', :auth => :approved  do |name_or_id|
       
       @page = WikiPage.find_by_name_or_id(name_or_id)
@@ -109,7 +103,6 @@ module AresMUSH
       erb :"wiki/edit_page"
     end
     
->>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
     get '/wiki/:page/edit/?', :auth => :approved  do |name_or_id|
       
       @page = WikiPage.find_by_name_or_id(name_or_id)
@@ -124,14 +117,11 @@ module AresMUSH
         redirect '/wiki'
       end
       
-<<<<<<< HEAD
-=======
       @text = @page.text
       @name = @page.name
       @title = @page.display_title
       @tags = @page.tags_text
       
->>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
       erb :"wiki/edit_page"
     end
     
@@ -201,17 +191,10 @@ module AresMUSH
             
       @page_title = "#{@page.display_title} - #{game_name}"
       
-<<<<<<< HEAD
-      @dynamic_page = Website::WikiMarkdownExtensions.is_dynamic_page?(@page.text)
-                  
-      # Update cached version.      
-      if (@page.html && !@dynamic_page)
-=======
       dynamic_page = Website::WikiMarkdownExtensions.is_dynamic_page?(@page.text)
                   
       # Update cached version.      
       if (@page.html && !dynamic_page)
->>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
         @page_html = @page.html
       else
         @page_html = format_markdown_for_html @page.text

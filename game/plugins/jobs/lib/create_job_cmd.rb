@@ -8,21 +8,6 @@ module AresMUSH
       def parse_args
         if (cmd.args !~ /\//)
           args = cmd.parse_args(ArgParser.arg1_equals_arg2)
-<<<<<<< HEAD
-          
-          self.title = trim_arg(args.arg1)
-
-          # If first arg is a category, then second arg is the title
-          if (Jobs.categories.include?(title.upcase))
-            self.description = "--"
-            self.category = self.title
-            self.title = trim_arg(args.arg2)
-          else            
-            self.description = args.arg2
-            self.category = Jobs.request_category
-          end
-=======
-<<<<<<< HEAD
           
           self.title = trim_arg(args.arg1) || cmd.args
 
@@ -35,12 +20,6 @@ module AresMUSH
             self.description = args.arg2 || "--"
             self.category = Jobs.request_category
           end
-=======
-          self.title = trim_arg(args.arg1)
-          self.description = args.arg2
-          self.category = Jobs.request_category
->>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'
->>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
         else          
           if (cmd.args =~ /^[^=\/]+=[^\/=]+\/.+/)
             args = cmd.parse_args(/(?<category>[^\=]+)=(?<title>[^\/]+)\/(?<description>.+)/)

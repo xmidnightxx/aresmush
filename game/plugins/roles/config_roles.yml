@@ -16,3 +16,4 @@ roles:
         "roles" : "role"
         "staff" : "admin"
         "role/set" : "role/assign"
+        "role/add" : "role/assign"

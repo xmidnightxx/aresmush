@@ -1,25 +1,10 @@
 <h1>Files</h1>
 
-<<<<<<< HEAD
-<p>This central file directory allows you to upload images that can be used on character, scene and wiki pages.  For help uploading and using images, see the <a href="/help/web_files">online help</a>.</p>
-
-
-<% @files.sort.each do |file| %>
-<p><a href="/file/detail?file=<%= File.basename(file) %>"><%= File.basename(file) %></a> <%= file_size_kb(file) %>kB 
-=======
-<<<<<<< HEAD
 <p>This central file directory allows you to upload images that can be used on character, scene and wiki pages.  For help uploading and using images, see the <a href="/help/web_files">online help</a>.</p>
 
 
 <% @files.each do |file| %>
 <p><a href="/file/detail?file=<%= File.basename(file) %>"><%= File.basename(file) %></a> <%= file_size_kb(file) %>kB 
-=======
-<% @files.each do |file| %>
-<p><a href="/files/<%= File.basename(file) %>"><%= File.basename(file) %></a> 
-    <%= file_size_kb(file) %>kB 
-    <a href="/file/delete?file=<%= file %>"><i class="fa fa-trash" aria-hidden="true"></i></a>
->>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'
->>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
 </p>
 <% end %>
 

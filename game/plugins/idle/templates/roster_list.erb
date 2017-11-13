@@ -7,7 +7,7 @@
 <%= center( r.roster_played.yesno, 5 ) -%>
 <%= center( r.demographic('gender'), 13 ) -%>
 <%= left( r.group("Position"), 20 ) -%>
-<%= left( r.group("Faction"), 20 ) %>
+<%= left( r.group("Crew"), 20 ) %>
    <% if r.roster_notes %><%= r.roster_notes %>%R<% end %>
 <% end %>
 <%= paginator.page_footer %>

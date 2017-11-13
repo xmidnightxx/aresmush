@@ -22,9 +22,9 @@ This game uses the FS3 skills system, Third Edition.  The complete rulebook can 
 
 ## Resetting Skills
 
-To get started, or at any point you wish to reset yourself, use the reset command.
+%ch%cwTo get started, or at any point you wish to reset yourself, use the%cn %ch%crreset%cn %ch%cwcommand.%cn
 
-`reset` - Resets your abilities, setting default values based on your groups.
+`reset` - Resets your abilities, setting default values based on your groups. %ch%crDO THIS FIRST!%cn
          **This will erase any abilities you have, so do this first!**
 
 ## Viewing Your Sheet

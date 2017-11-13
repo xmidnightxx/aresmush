@@ -7,11 +7,7 @@ module AresMUSH
     attribute :name_upcase
     attribute :title
     attribute :html
-<<<<<<< HEAD
-
-=======
     attribute :preview, :type => DataType::Hash, :default => {}
->>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
     attribute :tags, :type => DataType::Array, :default => []
 
     index :name_upcase

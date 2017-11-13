@@ -24,7 +24,6 @@ module AresMUSH
         signals: false,
       })
     
-    
     end
   end
 
@@ -37,17 +36,9 @@ module AresMUSH
     # threaded - False: Will take requests on the reactor thread
     #            True:  Will queue request for background thread
     configure do
-<<<<<<< HEAD
-      set :threaded, true #false
-=======
       set :threaded, false
-<<<<<<< HEAD
       #register Sinatra::Reloader
       #enable :sessions
-=======
->>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
-      register Sinatra::Reloader
->>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'
       register Sinatra::Flash
       disable :sessions
       set :public_folder, File.join(AresMUSH.game_path, 'plugins', 'website', 'web', 'public')

@@ -10,7 +10,7 @@
         <th>Name</th>
         <th>Gender</th>
         <th>Position</th>
-        <th>Callsign</th>
+        <th>Nickname</th>
     </tr>
     
     
@@ -20,7 +20,7 @@
     <td><%= c.name %></td>
     <td><%= c.demographic(:gender) %></td>
     <td><%= c.group('Position') %></td>
-    <td><%= c.demographic(:callsign) %></td>
+    <td><%= c.demographic(:nickname) %></td>
 </tr>
 
 <% end %>

@@ -8,6 +8,10 @@ ranks:
     
     ranks:
         
+        Shore:
+            Civilian:
+                Civilian: false
+
         Impudent:
             Officer:
                 Surgeon: true

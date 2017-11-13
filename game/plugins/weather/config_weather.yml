@@ -52,12 +52,46 @@ weather:
                 temperature: cold cold cold cold cold cold cold cool cool freezing freezing
                 condition:  clear clear clear fair fair fair flurrying flurrying overcast snowing
                 stability: 70
+        tropical:
+            summer:
+                temperature: hot hot hot hot hot warm warm warm warm cool
+                condition:  clear clear clear fair fair drizzling drizzling overcast raining storming
+                stability: 70
+            spring:
+                temperature: hot hot hot cool cool warm warm warm warm warm
+                condition:  clear fair fair drizzling drizzling overcast raining raining storming storming
+                stability: 40
+            fall:
+                temperature: cool cool cool cool cool warm warm warm warm warm
+                condition:  clear clear clear fair fair drizzling drizzling overcast raining raining
+                stability: 50
+            winter:
+                temperature: cool cool cool cool cool cool cool cool cool warm warm
+                condition:  clear clear clear fair fair fair overcast overcast overcast raining
+                stability: 70 
+        storm:
+            summer:
+                temperature: cool cool cool cool cool cool cool warm warm warm warm
+                condition:  overcast overcast overcast overcast storming drizzling drizzling overcast raining raining
+                stability: 70
+            spring:
+                temperature: cool cool cool cool cool cool cool cool cool warm warm
+                condition:  overcast overcast overcast storming storming drizzling drizzling overcast raining raining
+                stability: 40
+            fall:
+                temperature: cool cool cool cool cool cool cool cool cool cold cold
+                condition:  overcast overcast overcast storming storming drizzling drizzling overcast raining raining
+                stability: 50
+            winter:
+                temperature: cool cool cool cool cool cool cool cold cold cold cold
+                condition:  raining raining storming storming overcast overcast overcast overcast drizzling storming
+                stability: 70
 
-    default_climate: temperate
+    default_climate: storm
 
     climate_for_area:
         Offstage: none
-        North: polar
+        Island: storm
      
     cron:
         minute: 

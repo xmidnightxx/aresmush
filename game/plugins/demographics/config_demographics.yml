@@ -62,10 +62,13 @@ demographics:
                 Other: "Catchall for other types of non-sailors."
                 Carpenter: "Trained in constructing things from wood."
                 Smith: "Trained in creating things from metal."
+                Surgeon: "Someone classically trained in medicine."
                 Hougan: "A male practicioner of voodoo."
                 Mambo: "A female practicioner of voodoo."
-                Priest: "A shepherd of the Christian flock."
-                Surgeon: "Someone classically trained in medicine."
+                Priest: "A shepherd of the Christian flock or a pagan practitioner."
+                Nun: "A woman wedded to the Christian God."
+                Shaman: "A communer with native spirits."
+
             
     shortcuts:
         "groups": "group"

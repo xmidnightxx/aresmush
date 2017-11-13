@@ -10,12 +10,9 @@ module AresMUSH
           IncludeMarkdownExtension,
           WikidotHeading,
           WikidotAnchor,
-<<<<<<< HEAD
-=======
           WikidotCenter,
           WikidotEndCenter,
           WikidotHtml
->>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
         ]
       end
       

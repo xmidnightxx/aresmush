@@ -1,6 +1,6 @@
 fs3skills:
 
-    periodic_xp: 0
+    periodic_xp: 1
     
     days_between_learning: 30
     
