@@ -1,0 +1,70 @@
+fs3combat:
+    # Vehicle stats explained:
+    #   description: Free-form text.  Use double quotes around it.
+    #   pilot_skill:  Skill used for piloting and defense rolls.
+    #   toughness:  Value used for knockout rolls.  2 is wimpy, 4 is average, 8 is super-tough.
+    #   hitloc_chart:  Tells which hit location chart (in config_hitlocs.yml) to use.
+    #   armor:  Which armor type (in config_armor.yml) to use.
+    #   dodge: Dice added to/subtracted from defense rolls.
+
+    vehicles:
+        Brig of War:
+            description: "A brig-rigged ship designed for combat. 115-150 Crew, 12 guns per broadside."
+            pilot_skill: Persuasion
+            toughness: 3
+            hitloc_chart: Brig
+            armor: Brig of War
+            weapons:
+                - Culverin
+            dodge: -3
+            
+        Brigantine:
+            description: "A merchant-built brig with two masts. 40-100 crew, 8 guns per broadside."
+            pilot_skill: Persuasion
+            toughness: 1
+            hitloc_chart: Brig
+            armor: Brigantine
+            weapons:
+                - Culverin
+            dodge: -4
+
+        Cutter:
+            description: "A small warship with a single mast. 70-100 crew, 8 guns per broadside."
+            pilot_skill: Sailing
+            toughness: 2
+            hitloc_chart: Cutter
+            armor: Cutter
+            weapons:
+                - Culverin
+            dodge: -2
+            
+        Sloop:
+            description: "A merchant-built sloop with a single mast. 20-75 crew, 4 guns per broadside."
+            pilot_skill: Sailing
+            toughness: 1
+            hitloc_chart: Cutter
+            armor: Sloop
+            weapons:
+                - Culverin
+            dodge: -2
+            
+        Lugger:
+            description: "A fishing vessel with two small masts. 10-30 crew, 2 guns total if any."
+            pilot_skill: Sailing
+            toughness: -1
+            hitloc_chart: Boat
+            armor: Boat
+            weapons:
+                - Culverin
+            dodge: -1
+        
+        Pinnace:
+            description: "A ship's boat attached to a military ship. 20 crew, 1 gun total if any."
+            pilot_skill: Sailing
+            toughness: -1
+            hitloc_chart: Boat
+            armor: Boat
+            weapons:
+                - Culverin
+            dodge: 0
+            

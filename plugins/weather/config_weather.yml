@@ -1,0 +1,98 @@
+weather:  
+    temperatures: 
+        - hot
+        - warm
+        - cool
+        - cold
+        - freezing
+    
+    conditions:
+        - clear
+        - fair
+        - misty
+        - overcast
+        - drizzling
+        - raining
+        - storming
+        - flurrying
+        - snowing
+
+    climates:
+        polar:
+            spring:
+                temperature: cold cold cold cold cold freezing freezing freezing cool cool
+                condition:  clear clear clear fair fair fair flurrying flurrying overcast snowing
+                stability: 80
+            summer:
+                temperature: cold cold cold cold cold freezing freezing freezing cool cool
+                condition:  clear clear clear fair fair fair flurrying flurrying overcast snowing
+                stability: 80
+            fall:
+                temperature: cold cold cold cold cold freezing freezing freezing cool cool
+                condition:  clear clear clear fair fair fair flurrying flurrying overcast snowing
+                stability: 80
+            winter:
+                temperature: cold cold cold cold cold freezing freezing freezing cool cool
+                condition:  clear clear clear fair fair fair flurrying flurrying overcast snowing
+                stability: 80
+        temperate:
+            summer:
+                temperature: hot hot hot hot hot warm warm warm cool cool
+                condition:  clear clear clear fair fair fair drizzling drizzling overcast raining
+                stability: 70
+            spring:
+                temperature: cool cool cool cool cool warm warm warm warm warm
+                condition:  clear clear clear fair fair fair drizzling drizzling overcast raining
+                stability: 70
+            fall:
+                temperature: cool cool cool cool cool cool cool freezing warm warm
+                condition:  clear clear clear fair fair fair drizzling drizzling overcast raining
+                stability: 70
+            winter:
+                temperature: cold cold cold cold cold cold cold cool cool freezing freezing
+                condition:  clear clear clear fair fair fair flurrying flurrying overcast snowing
+                stability: 70
+        tropical:
+            summer:
+                temperature: hot hot hot hot hot warm warm warm warm cool
+                condition:  clear clear clear fair fair drizzling drizzling overcast raining storming
+                stability: 70
+            spring:
+                temperature: hot hot hot cool cool warm warm warm warm warm
+                condition:  clear fair fair drizzling drizzling overcast raining raining storming storming
+                stability: 40
+            fall:
+                temperature: cool cool cool cool cool warm warm warm warm warm
+                condition:  clear clear clear fair fair drizzling drizzling overcast raining raining
+                stability: 50
+            winter:
+                temperature: cool cool cool cool cool cool cool cool cool warm warm
+                condition:  clear clear clear fair fair fair overcast overcast overcast raining
+                stability: 70 
+        storm:
+            summer:
+                temperature: cool cool cool cool cool cool cool warm warm warm warm
+                condition:  overcast overcast overcast overcast storming drizzling drizzling overcast raining raining
+                stability: 70
+            spring:
+                temperature: cool cool cool cool cool cool cool cool cool warm warm
+                condition:  overcast overcast overcast storming storming drizzling drizzling overcast raining raining
+                stability: 40
+            fall:
+                temperature: cool cool cool cool cool cool cool cool cool cold cold
+                condition:  overcast overcast overcast storming storming drizzling drizzling overcast raining raining
+                stability: 50
+            winter:
+                temperature: cool cool cool cool cool cool cool cold cold cold cold
+                condition:  raining raining storming storming overcast overcast overcast overcast drizzling storming
+                stability: 70
+
+    default_climate: storm
+
+    climate_for_area:
+        Offstage: none
+        Island: storm
+     
+    cron:
+        minute: 
+            - 00

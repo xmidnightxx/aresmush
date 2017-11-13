@@ -1,0 +1,11 @@
+website:
+    website_tagline: "The Eight Sea"
+    website_welcome: "High seas adventure, piracy, and the supernatural..."
+    
+    allow_html_in_markdown: true
+    
+    max_upload_size_kb: 1000
+    
+    character_gallery_group: 'Crew'
+    
+    character_gallery_subgroup: 'Position'

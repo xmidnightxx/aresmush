@@ -1,0 +1,127 @@
+fs3combat:
+    default_type: Sailor
+  
+    
+    stances:
+        Aggressive:
+            attack_mod: 2
+            defense_mod: -2
+        Reckless:
+            attack_mod: 4
+            defense_mod: -4
+        Normal:
+            attack_mod: 0
+            defense_mod: 0
+        Defensive:
+            attack_mod: -2
+            defense_mod: 2
+        Evasive:
+            attack_mod: -4
+            defense_mod: 4
+        Cover:
+            attack_mod: 0
+            defense_mod: 0
+        Hidden:
+            attack_mod: 0
+            defense_mod: 0
+
+
+    combatant_types:
+
+        # ----------------------------------------
+        # SPECIAL TYPES
+        # ----------------------------------------
+
+        Observer:
+            hitloc: Humanoid
+            #weapon:
+            #weapon_specials:
+            #armor:
+
+        # ----------------------------------------
+        # CUSTOM TYPES
+        # ----------------------------------------
+
+        Sailor:
+            weapon: Sword
+            hitloc: Humanoid
+            defense_skill: Reflexes
+        Soldier:
+            weapon: Musket
+            armor: Buff Coat
+            hitloc: Humanoid
+            defense_skill: Reflexes
+        Voodoo:
+            weapon: Bolt
+            hitloc: Humanoid
+            defense_skill: Reflexes
+        Unarmed:
+            weapon: Brawling
+            hitloc: Humanoid
+            defense_skill: Reflexes
+        Gunner:
+            weapon: Culverin
+            hitloc: Humanoid
+            defense_skill: Reflexes
+        Quadruped:
+            weapon: Natural Weapons
+            hitloc: Quadruped
+            defense_skill: Reflexes
+        Fish:
+            weapon: Natural Weapons
+            hitloc: Fish
+            defense_skill: Reflexes
+        Flier:
+            weapon: Natural Weapons
+            hitloc: Flier
+            defense_skill: Reflexes
+        Dinosaur:
+            weapon: Natural Weapons
+            hitloc: Dinosaur
+            defense_skill: Reflexes
+        Octopod:
+            weapon: Natural Weapons
+            hitloc: Octopod
+            defense_skill: Reflexes
+        Snake:
+            weapon: Natural Weapons
+            hitloc: Snake
+            defense_skill: Reflexes
+        Target:
+            hitloc: Target
+            weapon: Unarmed
+            defense_skill: None
+        Brig:
+            hitloc: Humanoid
+            vehicle: Brig of War
+            defense_skill: Reflexes
+        Brigantine:
+            hitloc: Humanoid
+            vehicle: Brigantine
+            defense_skill: Reflexes
+        Cutter:
+            hitloc: Humanoid
+            vehicle: Cutter
+            defense_skill: Reflexes
+        Sloop:
+            hitloc: Humanoid
+            vehicle: Sloop
+            defense_skill: Reflexes
+        Pinnace:
+            hitloc: Humanoid
+            vehicle: Pinnace
+            defense_skill: Reflexes
+        Lugger:
+            hitloc: Humanoid
+            vehicle: Lugger
+            defense_skill: Reflexes
+            
+    shortcuts:
+        "weapons": "weapon"
+        "combat/skill": "combat/summary"
+        "combat/skills": "combat/summary"
+        "combat/slackers": "combat/summary"
+        "vehicles": "vehicle"
+        "hospitals": "hospital/list"
+        "healing": "heal/list"
+        "weapons": "weapon"
