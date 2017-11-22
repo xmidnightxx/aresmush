@@ -21,7 +21,9 @@ module AresMUSH
       
       list = Scene.all.select { |s| s.shared }.sort_by { |s| s.date_shared || s.created_at }.reverse
       if (@tab == "Recent")
-        list = list[0..15]
+        list = list[0..25]
+      elsif (@tab == "Popular")
+        list = list.sort_by { |s| [s.likes, s.date_shared || s.created_at] }.reverse[0..25]
       else
         list = list.select { |s| s.scene_type == @tab }
       end
@@ -38,6 +40,33 @@ module AresMUSH
       erb :"scenes/scenes_index"
     end
     
+    get '/scene/:id/like' do |id|
+      @scene = Scene[id]
+      
+      if (!@scene || !@scene.shared)
+        flash[:error] = "That scene has not been shared."
+        redirect "/scenes"
+      end
+      
+      @scene.like(@user)
+      flash[:info] = "Scene liked."
+      redirect "/scene/#{id}"
+    end
+
+    get '/scene/:id/unlike' do |id|
+      @scene = Scene[id]
+      
+      if (!@scene || !@scene.shared)
+        flash[:error] = "That scene has not been shared."
+        redirect "/scenes"
+      end
+      
+      @scene.unlike(@user)
+      flash[:info] = "Scene un-liked."
+      redirect "/scene/#{id}"
+    end
+    
+    # MUST BE LAST
     get '/scene/:id/?' do |id|
       @scene = Scene[id]
       
@@ -50,6 +79,6 @@ module AresMUSH
       
       erb :"scenes/scene"
     end
- 
+     
   end
 end

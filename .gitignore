@@ -1,15 +1,10 @@
-<<<<<<< HEAD
 calendar.ics
-=======
-<<<<<<< HEAD
+
 # Secret files
 # -----------------------------
-=======
->>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
 tinkerfoo.rb
 .sass-cache
 *.log
->>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'
 secrets.yml
 real_database.yml
 
@@ -36,11 +31,8 @@ killares
 # Website file storage
 # -----------------------------
 game/plugins/website/web/public/files
-<<<<<<< HEAD
-=======
 game/plugins/website/config_website.yml
-<<<<<<< HEAD
 *.jpg
 =======
->>>>>>> parent of f74f1de2... Merge remote-tracking branch 'upstream/master'
->>>>>>> f4c65b68ee0ea5d11c5138bd391a3246bd32752b
+game/files
+*.zip
