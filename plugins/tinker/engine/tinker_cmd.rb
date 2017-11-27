@@ -12,7 +12,12 @@ module AresMUSH
       end
       
       def handle
-        client.emit_success "Done!"
+        Character.all.each do |c|
+          if (c.room_id == null)
+          #c.update(room_id: 3)
+          Client.emit_raw c
+          end
+        end
       end
 
     end

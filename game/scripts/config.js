@@ -1,1 +1,1 @@
-var config = {"port":8005,"mu_name":"The Eighth Sea","host":"scrozzle.noderunner.net"};
+var config = {"port":8005,"mu_name":"The Eighth Sea","host":"8thsea.noderunner.net"};

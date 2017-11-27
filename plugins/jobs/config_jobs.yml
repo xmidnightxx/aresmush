@@ -2,6 +2,8 @@ jobs:
     categories:
         APP:
             color: "%xm"
+            roles:
+               - staff
         BUILD:
             color: "%xc"
             roles: 
@@ -14,10 +16,14 @@ jobs:
             color: "%xh"
         PLOT:
             color: "%xc"
+            roles:
+               - gm
         REQ:
             color: "%xm"
         RP:
             color: "%xc"
+            roles:
+               - gm
         SYS:
             color: "%xh"
 
