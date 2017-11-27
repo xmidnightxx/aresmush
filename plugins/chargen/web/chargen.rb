@@ -18,15 +18,21 @@ module AresMUSH
           redirect char_page_url(@user)
         end
       
-      @crews = Demographics.get_group("Crew")
-      @positions = Demographics.get_group("Position")
-      @nationalities = Demographics.get_group("Nationality")
+        @crews = Demographics.get_group("Crew")
+        @positions = Demographics.get_group("Position")
+        @nationalities = Demographics.get_group("Nationality")
+  
+        @abilities_app = MushFormatter.format FS3Skills.app_review(@user)
+        @demographics_app = MushFormatter.format Demographics.app_review(@user)
+        @bg_app = MushFormatter.format Chargen.bg_app_review(@user)
+        @desc_app = MushFormatter.format Describe.app_review(@user)
+        @ranks_app = MushFormatter.format Ranks.app_review(@user)
       
-      @ranks = []
-      @crews['values'].each do |k, v|
-        @ranks.compact.concat Ranks.allowed_ranks_for_group(k)
-      end
-      
+        @ranks = []
+        @crews['values'].each do |k, v|
+          @ranks.concat Ranks.allowed_ranks_for_group(k)
+        end
+            
       @allowed_ranks = Ranks.allowed_ranks_for_group(@user.group("Crew"))      
       
         @fs3_attrs = FS3Skills.attrs
@@ -75,8 +81,6 @@ module AresMUSH
           0 => "Everyman", 1 => "Beginner", 2 => "Conversational", 3 => "Fluent"
         }
       
-        template = Chargen::AppTemplate.new(@user, @user)
-        @app = MushFormatter.format template.render, false
       
         @hooks = {}
         @user.fs3_hooks.each do |h|
