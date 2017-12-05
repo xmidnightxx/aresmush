@@ -28,12 +28,12 @@ module AresMUSH
         @desc_app = MushFormatter.format Describe.app_review(@user)
         @ranks_app = MushFormatter.format Ranks.app_review(@user)
       
-        @ranks = []
+        @ranks = [" "]
         @crews['values'].each do |k, v|
           @ranks.concat Ranks.allowed_ranks_for_group(k)
         end
             
-      @allowed_ranks = Ranks.allowed_ranks_for_group(@user.group("Crew"))      
+        @allowed_ranks = Ranks.allowed_ranks_for_group(@user.group("Crew"))      
       
         @fs3_attrs = FS3Skills.attrs
         @fs3_attr_ratings = {
@@ -42,8 +42,8 @@ module AresMUSH
       
         @fs3_action_skills = FS3Skills.action_skills
         @fs3_action_skill_ratings = {
-          1 => "Everyman", 2 => "Fair", 3 => "Competent", 4 => "Good",
-          5 => "Great", 6 => "Exceptional", 7 => "Amazing"
+          0 => "Unskilled", 1 => "Everyman", 2 => "Fair", 3 => "Competent", 
+          4 => "Good", 5 => "Great", 6 => "Exceptional", 7 => "Amazing"
         }
       
         @fs3_specialties = {}

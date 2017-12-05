@@ -46,6 +46,7 @@ fs3combat:
             weapon: Sword
             hitloc: Humanoid
             defense_skill: Reflexes
+            armor: None
         Soldier:
             weapon: Musket
             armor: Buff Coat
@@ -55,66 +56,82 @@ fs3combat:
             weapon: Bolt
             hitloc: Humanoid
             defense_skill: Reflexes
+            armor: None
         Unarmed:
             weapon: Brawling
             hitloc: Humanoid
             defense_skill: Reflexes
+            armor: None
         Gunner:
             weapon: Culverin
             hitloc: Humanoid
             defense_skill: Reflexes
+            armor: None
         Quadruped:
             weapon: Natural Weapons
             hitloc: Quadruped
             defense_skill: Reflexes
+            armor: None
         Fish:
             weapon: Natural Weapons
             hitloc: Fish
             defense_skill: Reflexes
+            armor: None
         Flier:
             weapon: Natural Weapons
             hitloc: Flier
             defense_skill: Reflexes
+            armor: None
         Dinosaur:
             weapon: Natural Weapons
             hitloc: Dinosaur
             defense_skill: Reflexes
+            armor: None
         Octopod:
             weapon: Natural Weapons
             hitloc: Octopod
             defense_skill: Reflexes
+            armor: None
         Snake:
             weapon: Natural Weapons
             hitloc: Snake
             defense_skill: Reflexes
+            armor: None
         Target:
             hitloc: Target
             weapon: Unarmed
             defense_skill: None
+            armor: None
         Brig:
             hitloc: Humanoid
             vehicle: Brig of War
             defense_skill: Reflexes
+            armor: Brig of War
         Brigantine:
             hitloc: Humanoid
             vehicle: Brigantine
             defense_skill: Reflexes
+            armor: Brigantine
         Cutter:
             hitloc: Humanoid
             vehicle: Cutter
             defense_skill: Reflexes
+            armor: Cutter
         Sloop:
             hitloc: Humanoid
             vehicle: Sloop
             defense_skill: Reflexes
+            armor: Sloop
         Pinnace:
             hitloc: Humanoid
             vehicle: Pinnace
             defense_skill: Reflexes
+            armor: Boat
         Lugger:
             hitloc: Humanoid
             vehicle: Lugger
             defense_skill: Reflexes
+            armor: Boat
             
     shortcuts:
         "weapons": "weapon"

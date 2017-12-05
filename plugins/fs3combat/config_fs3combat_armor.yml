@@ -19,15 +19,17 @@ fs3combat:
                 Right Arm: 4
 
         Buff Coat:
-            description: "Thick leather coat with gloves and a leather skullcap."
+            description: "Thick stiff leather coat with heavy gloves."
             protection: 
                 Chest: 5
                 Abdomen: 5
-                Head: 5
                 Left Arm: 5
                 Right Arm: 5
                 Left Hand: 4
                 Right Hand: 4
+            allowed_specials: 
+                - Helmet
+
 
         Breastplate:
             description: "A solid steel cuirass with leather coat and pants. You cannot swim in this."
@@ -42,6 +44,9 @@ fs3combat:
                 Left Foot: 4
                 Right Foot: 4
                 Groin: 4
+            allowed_specials: 
+                - Helmet
+
 
         Pitch Coat:
             description: "A jacket and pants stiffened with pitch."
@@ -182,3 +187,9 @@ fs3combat:
                 Waterline: 8
                 Mast: 8
                 Rigging: 7
+
+    armor specials:
+        Helmet:
+            description: "A helmet"
+            protection:
+                Head: 5

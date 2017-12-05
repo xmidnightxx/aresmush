@@ -3,8 +3,8 @@
     <div class="panel-body">
 
         <div class="form-group row">
-            <label for="nationalities" class="col-xs-2 col-form-label">Nationality:</label> 
-            <select name="nationalities">
+            <label for="nationality" class="col-xs-2 col-form-label">Nationality:</label> 
+            <select name="nationality">
                 <% @nationalities['values'].each do |k, v| %>
                 <option value="<%= k %>" <% if @user.group("Nationality") == k %> selected <% end %> ><%= k %> - <%= v %></option>
                 <% end %>
@@ -41,7 +41,7 @@
                 <% end %>
             </select>
             
-            <p class="cg-tip">Available ranks vary by faction.  See the wiki for details.</p>
+            <p class="cg-tip">Available ranks vary by faction.  See the wiki for details. If you select Shore as your "Crew" then please select the top blank line for Rank.</p>
         </div>
 
     </div>

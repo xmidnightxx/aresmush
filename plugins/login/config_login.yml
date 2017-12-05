@@ -1,10 +1,10 @@
 login:    
     
     suspect_sites:
-        - "delete me and put a real site here"
+        - 173.59.41.*
 
     banned_sites:
-        - "delete me and put a real site here"
+        - 173.59.41.60
         
     allow_web_registration: true
     

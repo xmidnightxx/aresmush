@@ -12,12 +12,21 @@ module AresMUSH
       end
       
       def handle
-        Character.all.each do |c|
-          if (c.room_id == null)
-          #c.update(room_id: 3)
-          Client.emit_raw c
-          end
+        crews = Demographics.get_group("Crew")
+        ranks = []
+        ranks << " "
+        crews['values'].each do |k, v|
+          ranks.concat Ranks.allowed_ranks_for_group(k)
         end
+        
+        allowed_ranks = Ranks.allowed_ranks_for_group(enactor.group("Crew"))
+        
+        ranks.each do |k, v|
+          client.emit_ooc k
+        end
+        
+        client.emit_ooc allowed_ranks
+      
       end
 
     end

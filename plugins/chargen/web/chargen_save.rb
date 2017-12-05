@@ -23,7 +23,7 @@ module AresMUSH
       @user.update_demographic :eyes, titlecase_arg(params[:eyes])
       @user.update_demographic :height, titlecase_arg(params[:height])
       @user.update_demographic :physique, titlecase_arg(params[:physique])
-      @user.update_demographic :callsign, titlecase_arg(params[:callsign])
+      @user.update_demographic :nickname, titlecase_arg(params[:nickname])
       @user.update_demographic :gender, params[:gender]
       @user.update_demographic :actor, params[:actor]
       
@@ -38,9 +38,8 @@ module AresMUSH
       #### GROUPS
       #### ---------------------------------
 
-      Demographics.set_group(@user, "Faction", params[:faction])
-      Demographics.set_group(@user, "Department", params[:department])
-      Demographics.set_group(@user, "Colony", params[:colony])
+      Demographics.set_group(@user, "Crew", params[:crew])
+      Demographics.set_group(@user, "Nationality", params[:nationality])
       Demographics.set_group(@user, "Position", params[:position])
       
       @user.update(ranks_rank: params[:rank])
