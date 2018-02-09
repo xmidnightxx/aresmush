@@ -1,0 +1,26 @@
+current directory: /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/passenger-5.0.30/src/helper-scripts/download_binaries
+/home/users/avyboy/.rvm/rubies/ruby-2.3.4/bin/ruby -r ./siteconf20171023-13361-1q17cd5.rb extconf.rb
+Attempting to download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.0.30/rubyext-ruby-2.3.4-x86_64-linux.tar.gz into /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/passenger-5.0.30/download_cache
+*** Could not download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.0.30/rubyext-ruby-2.3.4-x86_64-linux.tar.gz: name lookup timed out
+Attempting to download https://s3.amazonaws.com/phusion-passenger/binaries/passenger/by_release/5.0.30/rubyext-ruby-2.3.4-x86_64-linux.tar.gz into /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/passenger-5.0.30/download_cache
+*** Could not download https://s3.amazonaws.com/phusion-passenger/binaries/passenger/by_release/5.0.30/rubyext-ruby-2.3.4-x86_64-linux.tar.gz: name lookup timed out
+Attempting to download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.0.30/nginx-1.10.1-x86_64-linux.tar.gz into /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/passenger-5.0.30/download_cache
+*** Could not download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.0.30/nginx-1.10.1-x86_64-linux.tar.gz: name lookup timed out
+Attempting to download https://s3.amazonaws.com/phusion-passenger/binaries/passenger/by_release/5.0.30/nginx-1.10.1-x86_64-linux.tar.gz into /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/passenger-5.0.30/download_cache
+*** Could not download https://s3.amazonaws.com/phusion-passenger/binaries/passenger/by_release/5.0.30/nginx-1.10.1-x86_64-linux.tar.gz: name lookup timed out
+Attempting to download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.0.30/agent-x86_64-linux.tar.gz into /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/passenger-5.0.30/download_cache
+*** Could not download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.0.30/agent-x86_64-linux.tar.gz: name lookup timed out
+Attempting to download https://s3.amazonaws.com/phusion-passenger/binaries/passenger/by_release/5.0.30/agent-x86_64-linux.tar.gz into /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/passenger-5.0.30/download_cache
+*** Could not download https://s3.amazonaws.com/phusion-passenger/binaries/passenger/by_release/5.0.30/agent-x86_64-linux.tar.gz: name lookup timed out
+
+current directory: /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/passenger-5.0.30/src/helper-scripts/download_binaries
+make "DESTDIR=" clean
+true
+
+current directory: /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/passenger-5.0.30/src/helper-scripts/download_binaries
+make "DESTDIR="
+true
+
+current directory: /home/users/avyboy/LostColony/aresmush/vendor/bundle/gems/passenger-5.0.30/src/helper-scripts/download_binaries
+make "DESTDIR=" install
+true
