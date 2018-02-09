@@ -14,38 +14,58 @@ fs3combat:
             Composure: 6
             Alertness: 4
             Healing: 4
+            Brawn: 2
             Reflexes: 3
             Wounds: 30
         Henchman:
             Default: 6
-            Blades: 9
-            Bludgeons: 9
-            Brawling: 9
-            Firearms: 9
-            Athletics: 9
-            Faith: 9
-            Gunnery: 9
+            Blades: 8
+            Bludgeons: 8
+            Brawling: 8
+            Firearms: 8
+            Athletics: 8
+            Faith: 8
+            Gunnery: 8
             Sailing: 6
             Persuasion: 6
-            Composure: 8
+            Composure: 7
             Alertness: 6
             Healing: 6
+            Brawn: 3
+            Reflexes: 3
+            Wounds: 20
+        Miniboss:
+            Default: 7
+            Blades: 10
+            Bludgeons: 10
+            Brawling: 10
+            Firearms: 10
+            Athletics: 10
+            Faith: 10
+            Gunnery: 10
+            Sailing: 7
+            Persuasion: 7
+            Composure: 8
+            Alertness: 7
+            Healing: 7
+            Brawn: 4
             Reflexes: 4
-            Wounds: 15
+            Wounds: 10
         Boss:
             Default: 8
-            Blades: 11
-            Bludgeons: 11
-            Brawling: 11
-            Firearms: 11
-            Athletics: 11
-            Faith: 11
-            Gunnery: 11
+            Blades: 12
+            Bludgeons: 12
+            Brawling: 12
+            Firearms: 12
+            Athletics: 12
+            Faith: 12
+            Gunnery: 12
             Sailing: 8
             Persuasion: 8
-            Composure: 10
+            Composure: 11
             Alertness: 8
             Healing: 8
+            Brawn: 5
             Reflexes: 5
             Wounds: 0
         Giant:
@@ -62,6 +82,7 @@ fs3combat:
             Composure: 12
             Alertness: 6
             Healing: 6
+            Brawn: 7
             Reflexes: 4
             Wounds: -10
         Chupacabra:
@@ -72,6 +93,7 @@ fs3combat:
             Athletics: 5
             Stealth: 6
             Reflexes: 4
+            Brawn: 3
             Wounds: 20
         Cipactli:
             Default: 6
@@ -79,6 +101,7 @@ fs3combat:
             Composure: 8
             Alertness: 5
             Athletics: 4
+            Brawn: 7
             Reflexes: 5
             Wounds: -10
         Dingonek:
@@ -87,6 +110,7 @@ fs3combat:
             Composure: 8
             Alertness: 5
             Athletics: 4
+            Brawn: 4
             Reflexes: 5
             Wounds: 5
         Gbahali:
@@ -95,6 +119,7 @@ fs3combat:
             Composure: 9
             Alertness: 5
             Athletics: 4
+            Brawn: 5
             Reflexes: 5
             Wounds: 0
         GiantSquid:
@@ -103,14 +128,16 @@ fs3combat:
             Composure: 10
             Alertness: 5
             Athletics: 4
+            Brawn: 7
             Reflexes: 4
             Wounds: -10
         Kongamato:
             Default: 5
-            Brawling: 7
+            Brawling: 6
             Composure: 4
             Alertness: 5
             Athletics: 4
+            Brawn: 2
             Reflexes: 5
             Wounds: 30
         Megaconda:
@@ -120,6 +147,7 @@ fs3combat:
             Alertness: 7
             Stealth: 7
             Athletics: 7
+            Brawn: 6
             Reflexes: 6
             Wounds: 0
         Megalodon:
@@ -128,6 +156,7 @@ fs3combat:
             Composure: 10
             Alertness: 5
             Athletics: 4
+            Brawn: 7
             Reflexes: 4
             Wounds: -10
         SeaSerpent:
@@ -135,6 +164,7 @@ fs3combat:
             Brawling: 11
             Composure: 7
             Alertness: 6
+            Brawn: 6
             Reflexes: 5
             Wounds: -10
         Troglodyte:
@@ -145,5 +175,24 @@ fs3combat:
             Bludgeons: 6
             Composure: 4
             Alertness: 5
+            Brawn: 2
             Reflexes: 3
             Wounds: 40
+        Werewolf:
+            Default: 6
+            Brawling: 9
+            Athletics: 9
+            Composure: 8
+            Alertness: 8
+            Brawn: 5
+            Reflexes: 5
+            Wounds: 10
+        Zombi:
+            Default: 6
+            Brawling: 7
+            Athletics: 4
+            Composure: 7
+            Alertness: 4
+            Brawn: 4
+            Reflexes: 3
+            Wounds: -5

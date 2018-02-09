@@ -117,7 +117,7 @@ fs3combat:
             description: "A thrown knife or dagger."
             skill: Athletics
             lethality: 0
-            penetration: 3
+            penetration: 2
             weapon_type: Ranged
             is_automatic: false
             ammo: 2
@@ -130,7 +130,7 @@ fs3combat:
         Thrown Rock:
             description: "A rock or other improvised weapon thrown at the target."
             skill: Athletics
-            lethality: 0
+            lethality: -5
             penetration: 1
             weapon_type: Ranged
             is_automatic: false
@@ -195,7 +195,7 @@ fs3combat:
         Knife:
             description: "A simple dagger or knife, up to the size of a short sword."
             skill: Blades
-            lethality: -5
+            lethality: 0
             penetration: 2
             weapon_type: Melee
             is_automatic: false
@@ -259,13 +259,13 @@ fs3combat:
         Brawling:
             description: "Fighting with improvised weapons or without weapons at all."
             skill: Brawling
-            lethality: 0
+            lethality: -10
             penetration: 0
             weapon_type: Melee
             is_automatic: false
             # ammo: 0
             recoil: 0
-            damage_type: Stun
+            damage_type: Physical
             accuracy: 0
             initiative: 0
             has_shrapnel: false

@@ -16,6 +16,8 @@ fs3combat:
                 Head: [ 'Right Arm', 'Right Arm', 'Left Arm', 'Chest', 'Chest', 'Neck', 'Neck', 'Head', 'Head', 'Head' ]
                 Neck: [ 'Right Arm', 'Right Arm', 'Left Arm', 'Chest', 'Chest', 'Head', 'Head', 'Neck', 'Neck', 'Neck' ]
                 Abdomen: [ 'Left Leg', 'Right Leg',  'Left Leg', 'Right Leg', 'Chest', 'Chest', 'Chest', 'Abdomen', 'Abdomen', 'Abdomen' ]
+                Left Foot: [ 'Abdomen', 'Right Leg', 'Groin', 'Left Leg', 'Left Leg', 'Left Leg', 'Left Foot', 'Left Foot', 'Left Foot', 'Left Foot' ]
+                Right Foot: [ 'Abdomen', 'Left Leg', 'Groin', 'Right Leg', 'Right Leg', 'Right Leg', 'Right Foot', 'Right Foot', 'Right Foot', 'Right Foot' ]
             vital_areas:
                 - Chest
                 - Abdomen
