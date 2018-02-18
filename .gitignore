@@ -38,3 +38,5 @@ killares
 game/plugins/website/web/public/files
 game/plugins/website/config_website.yml
 game/uploads
+
+vendor/bundle
