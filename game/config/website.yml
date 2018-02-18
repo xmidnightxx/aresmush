@@ -1,0 +1,12 @@
+---
+website:
+  allow_html_in_markdown: true
+  character_gallery_group: Crew
+  character_gallery_subgroup: Position
+  max_upload_size_kb: 5000
+  portal_requires_registration: false
+  website_code_path: "~/ares-webportal"
+  website_tagline: HERE, THERE BE MONSTERS...
+  website_welcome: |-
+    The Eighth Sea is a game of piracy and the supernatural, of wooden ships, iron men, and the dark myths that slipped through the cracks of civilization. It will explore the edges of reason and the tensions between civilization, outlaws, and the unknown.
+    While there will be no prohibition on individual CvC conflict (piracy and the supernatural are dangerous), the focus will be on collaborative CvE, on determining the cause of The Storm and on working together to return to the world of the real. We are playing a Hollywood version of history, with similarly Hollywood interpretations of real-world religions and myths. There will be darkness, but there will also be swashbuckling and derring-do.

@@ -1,5 +1,5 @@
 database:
-    url: "127.0.0.1:6380"
-
+    #url: "127.0.0.1:6380"
+    url: "127.0.0.1:6379"
     # The database password is kept in the game/config/secrets.yml file for security reasons.
     path: "/home/users/avyboy/LostColony/redis-stable/dump.rdb"

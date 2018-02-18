@@ -7,4 +7,6 @@ game:
     
     website: "http://scrozzle.noderunner.net:8000"
         
-    public_game: false
+    public_game: true
+    
+    status: Open

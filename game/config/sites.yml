@@ -1,0 +1,8 @@
+---
+sites:
+  banned: 
+      - 173.59.41.60
+  suspect:
+      - 173.59.41
+      
+  ban_proxies: false

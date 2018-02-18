@@ -1,6 +1,0 @@
-page:
-    page_color: "%xy"
-    shortcuts:
-        "p": "page"
-        "page/lock": "page/ignore"
-        "pagelock": "page/ignore"

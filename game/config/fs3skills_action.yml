@@ -1,0 +1,56 @@
+---
+fs3skills:
+  action_skills:
+  - name: Alertness
+    linked_attr: Perception
+    desc: Noticing things and being aware of your surroundings.
+  - name: Athletics
+    linked_attr: Brawn
+    desc: Running, jumping, climbing, throwing weapons, etc.
+  - name: Blades
+    linked_attr: Reflexes
+    desc: Fighting with knives, swords, and other bladed weapons.
+  - name: Bludgeons
+    linked_attr: Brawn
+    desc: Fighting with axes, mauls, and other weighted weapons.
+  - name: Brawling
+    linked_attr: Brawn
+    desc: Fighting unarmed or with improvised weapons.
+  - name: Composure
+    linked_attr: Grit
+    desc: Coolness under pressure.
+  - name: Deception
+    linked_attr: Wits
+    desc: Lying convincingly (useable only against NPCs or to guide your own RP).
+  - name: Faith
+    linked_attr: Grit
+    desc: 'Calling on a deity for power. Only for people of extraordinary Faith.'
+    specialties:
+    - Abrahamic
+    - Paganism
+    - Shamanism
+    - Voodoo
+  - name: Firearms
+    linked_attr: Reflexes
+    desc: Using pistols or muskets.
+  - name: Gunnery
+    linked_attr: Wits
+    desc: Using cannon and other mounted firearms.
+  - name: Healing
+    linked_attr: Wits
+    desc: 'Tending to the ill and injured.'
+    specialties:
+    - Traditional
+    - Surgery
+  - name: Persuasion
+    linked_attr: Presence
+    desc: Convincing people with the truth (useable only against NPCs). Also the defense skill for large ships.
+  - name: Sailing
+    linked_attr: Wits
+    desc: Seamanship, navigation, knot-tying, and other nautical pursuits.
+  - name: Stealth
+    linked_attr: Reflexes
+    desc: Being sneaky, legerdemain, hiding.
+  action_skills_blurb: 'Action Skills represent your ability in areas deemed important
+    for gameplay.  Action Skills are rated from 0-8. See [FS3: Action Skills](http://aresmush.com/fs3/fs3-3/chargen/#action-skills)
+    for details.'

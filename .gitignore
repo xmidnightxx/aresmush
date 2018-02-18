@@ -20,6 +20,11 @@ calendar.ics
 .sass-cache
 .DS_Store
 tmp/restart.txt
+*.zip
+blacklist.txt
+*.css
+aresconfig.js
+_last_install.txt
 
 # Process ID scripts
 # -----------------------------
@@ -32,7 +37,4 @@ killares
 # -----------------------------
 game/plugins/website/web/public/files
 game/plugins/website/config_website.yml
-*.jpg
-=======
-game/files
-*.zip
+game/uploads

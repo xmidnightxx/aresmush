@@ -1,14 +1,14 @@
 server:
-    # The host name for your game.
-    hostname: 8thsea.noderunner.net
-
-    # The port number your game will listen on
-    port: 4005
+    hostname: localhost
+    port: 4201
+    websocket_port: 4202
+    engine_api_port: 4203
+    web_portal_port: 4200
     
-    # These two ports are used for the game's web interface.  
-    # The web server port is the one you connect to directly.  80 is the standard port, but 
-    # that might not be available on some systems.  8181 is usually safe.
-    # The web socket port is the one the web client connects to.  It must be different than
-    # both the web server and regular port.
-    websocket_port: 8005
-    webserver_port: 8000
+    
+    # The host name for your game.
+    #hostname: 8thsea.noderunner.net
+    #port: 4005
+    #engine_api_port: 4006    
+    #websocket_port: 8005
+    #web_portal_port: 8000
