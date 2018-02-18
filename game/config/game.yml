@@ -3,7 +3,7 @@ game:
 
     category: Fantasy
     
-    description: "format_input_for_html(@config['description']) %>"
+    description: "The Eighth Sea is a game of piracy and the supernatural, of wooden ships, iron men, and the dark myths that slipped through the cracks of civilization. It will explore the edges of reason and the tensions between civilization, outlaws, and the unknown."
     
     website: "http://scrozzle.noderunner.net:8000"
         
