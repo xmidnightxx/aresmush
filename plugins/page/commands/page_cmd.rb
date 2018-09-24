@@ -49,64 +49,17 @@ module AresMUSH
           recipient_names = recipients.map { |r| r.name }.join(",")
         
           client.emit t('page.to_sender', 
-            :autospace => enactor.page_autospace, 
-            :color => enactor.page_color, 
-            :recipients => recipient_names, 
-            :message => message)
+          :autospace => enactor.page_autospace, 
+          :color => enactor.page_color, 
+          :recipients => recipient_names, 
+          :message => message)
           results.each do |r|
-            page_recipient(r.client, r.char, recipient_names, message)
+            Page.page_recipient(enactor, r.client, r.char, recipients, message)
           end
           
+          Page.add_to_history(enactor, enactor, recipients, message)
+          
           enactor.update(last_paged: self.names)
-        end
-      end
-      
-      def page_recipient(other_client, other_char, recipients, message)
-        if (other_char.page_do_not_disturb)
-          client.emit_ooc t('page.recipient_do_not_disturb', :name => other_char.name)
-        else          
-          other_client.emit t('page.to_recipient', 
-            :autospace => other_char.page_autospace, 
-            :color => other_char.page_color, 
-            :recipients => recipients, 
-            :message => message)
-          send_afk_message(other_client, other_char)
-        end
-        
-        
-        if (other_char.is_monitoring?(enactor))
-          add_to_monitor(other_char, enactor.name, message)
-        end
-        
-        if (enactor.is_monitoring?(other_char))
-          add_to_monitor(enactor, other_char.name, message)
-        end
-      end
-      
-      def add_to_monitor(char, monitor_name, message)
-        monitor = char.page_monitor
-        
-        if (monitor[monitor_name].count > 30)
-          monitor[monitor_name].shift
-        end
-        monitor[monitor_name] << "#{Time.now} #{message}"
-        char.update(page_monitor: monitor)
-      end
-            
-      def send_afk_message(other_client, other_char)
-        if (other_char.is_afk)
-          afk_message = ""
-          if (other_char.afk_display)
-            afk_message = "(#{other_char.afk_display})"
-          end
-          afk_message = t('page.recipient_is_afk', :name => other_char.name, :message => afk_message)
-          client.emit_ooc afk_message
-          other_client.emit_ooc afk_message
-        elsif (Status.is_idle?(other_client))
-          time = TimeFormatter.format(other_client.idle_secs)
-          afk_message = t('page.recipient_is_idle', :name => other_char.name, :time => time)
-          client.emit_ooc afk_message
-          other_client.emit_ooc afk_message
         end
       end
       

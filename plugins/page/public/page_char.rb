@@ -5,8 +5,14 @@ module AresMUSH
     attribute :page_autospace, :default => "%r"
     attribute :page_color, :default => "%xc"
     attribute :page_monitor, :type => DataType::Hash, :default => {}
+    attribute :page_history, :type => DataType::Hash, :default => {}
+    attribute :page_history_enabled, :type => DataType::Boolean
+    
     set :page_ignored, "AresMUSH::Character"
     
+    def page_history_enabled?
+      self.page_history_enabled
+    end
     
     def is_monitoring?(char)
       return false if !page_monitor

@@ -908,6 +908,16 @@ input[type='file'] {
     max-height: 400px;
     overflow-y: scroll;
     overflow-x: hidden;
+    margin-bottom: 15px;
+}
+
+.chat-nav {
+    height: 100%;
+    max-height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #ccc;
+    padding: 10px;
 }
 
 .job-status-DONE {

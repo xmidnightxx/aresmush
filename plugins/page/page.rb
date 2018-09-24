@@ -20,6 +20,8 @@ module AresMUSH
           return PageColorCmd
         when "dnd"
           return PageDoNotDisturbCmd
+        when "history"
+          return PageHistoryCmd
         when "ignore"
           return PageIgnoreCmd
         when "log"
@@ -42,6 +44,15 @@ module AresMUSH
       end 
           
        nil
+    end
+    
+    def self.get_web_request_handler(request)
+      case request.cmd
+      when "pages"
+        return PagesListRequestHandler
+      when "sendPage"
+        return SendPageRequestHandler
+      end
     end
   end
 end

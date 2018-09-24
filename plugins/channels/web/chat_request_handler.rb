@@ -30,9 +30,7 @@ module AresMUSH
             timestamp: OOCTime.local_long_timestr(enactor, m['timestamp']) }} : nil
           }}
         
-        {
-          channels: channels
-        }
+        channels
       end
     end
   end

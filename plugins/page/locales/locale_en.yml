@@ -29,3 +29,4 @@ en:
         page_reported_body: "%{reporter} has reported an issue with the following pages from %{name}.%R%RReason:%R"
         
         page_monitoring: "Page Monitoring"
+        history_set: "Page history %{value}."
