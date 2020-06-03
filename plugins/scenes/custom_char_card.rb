@@ -5,7 +5,7 @@ module AresMUSH
       
       # Return nil if you don't need any custom fields.
       {
-        traits: (char.traits || {}).map { |k, v| {name: k, description: v } }
+        Website.format_markdown_for_html(traits): (char.traits || {}).map { |k, v| {name: k, description: v } }
       }
       
       # Otherwise return a hash of data.  For example, if you want to show traits you could do:
