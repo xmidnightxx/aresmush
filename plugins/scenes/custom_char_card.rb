@@ -4,7 +4,7 @@ module AresMUSH
        # This sets a temporary variable named 'traits' with
        # includes the name and description
        traits=(char.traits || {}).map { |k, v| {name: k, description: Website.format_markdown_for_html(v)}
-      { traits: traits }
+       {traits: traits}
     end
   end
 end
