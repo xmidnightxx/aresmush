@@ -5,6 +5,7 @@ traits = (char.traits || {}).map { |k, v| {name: k, description: v}
 {
   traits: Website.format_markdown_for_html(traits)
 }
+  
   end
  end
 end
