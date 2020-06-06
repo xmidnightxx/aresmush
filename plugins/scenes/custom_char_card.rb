@@ -1,10 +1,9 @@
 module AresMUSH
   module Scenes
-   def self.custom_char_card_fields(char, viewer)
-traits = (char.traits || {}).map { |k, v| {name: k, description: v}  
+    def self.custom_char_card_fields(char, viewer)
   {
-  traits: Website.format_markdown_for_html(char.traits)
+     traits: Website.format_markdown_for_html(traits)
   }
-  end
+end
  end
 end
