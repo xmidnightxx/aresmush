@@ -1,6 +1,6 @@
 ---
 toc: 4 - Writing the Story
-summary: Starting scenes.
+summary: Understanding the scene system.
 order: 1
 tutorial: true
 aliases:
@@ -85,3 +85,5 @@ Through the web portal, you can create "plots", which are a way to organize rela
 [Scene Commands](/help/scenes)
 [Posing](/help/posing)
 [Pose Order](/help/pose_order)
+[Pose Formatting](/help/pose_format)
+[Out-of-Character Remarks](/help/ooc)
